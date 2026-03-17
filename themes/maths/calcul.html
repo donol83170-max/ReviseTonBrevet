@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours calcul & fractions brevet + 20 QCM corrigés : fractions, puissances, racines carrées, priorités, notation scientifique. ReviseTonBrevet."/>
+  <title>Calcul & fractions — Maths Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 .15rem; font-size: .95em; line-height: 1.2; }
+    .frac span:first-child { border-bottom: 1.5px solid currentColor; padding: 0 .2rem; }
+    .frac span:last-child  { padding: 0 .2rem; }
+    sup { font-size: .7em; vertical-align: super; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/maths.html">Maths</a> → Calcul & fractions</p>
+    <h1>🔢 Calcul & fractions</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <!-- ════════════════════════════════════════════
+       FICHE DE COURS
+  ════════════════════════════════════════════ -->
+  <div class="cours-section">
+
+    <h2>🍕 Les fractions</h2>
+    <p>Une fraction, c'est un partage. Si Jul a <strong>3 pizzas</strong>, qu'il les coupe en <strong>4 parts</strong> chacune (ça fait 12 parts), puis qu'il s'en fait un petit kiff et en mange 5 → il a mangé <strong><span class="frac"><span>5</span><span>12</span></span></strong> du total.</p>
+
+    <h3>Simplifier</h3>
+    <p>Diviser le numérateur (en haut) et le dénominateur (en bas) par le même nombre.</p>
+    <div class="formule">
+      <span class="frac"><span>6</span><span>8</span></span> = <span class="frac"><span>3</span><span>4</span></span> &nbsp;(on a divisé par 2)
+    </div>
+
+    <h3>Additionner / Soustraire</h3>
+    <p>Il faut <strong>obligatoirement le même dénominateur !</strong></p>
+    <div class="formule">
+      <span class="frac"><span>1</span><span>3</span></span> + <span class="frac"><span>1</span><span>4</span></span> = <span class="frac"><span>4</span><span>12</span></span> + <span class="frac"><span>3</span><span>12</span></span> = <span class="frac"><span>7</span><span>12</span></span>
+    </div>
+
+    <h3>Multiplier</h3>
+    <p>Le plus simple, on tire tout droit ! Numérateur × numérateur, dénominateur × dénominateur.</p>
+    <div class="formule">
+      <span class="frac"><span>2</span><span>3</span></span> × <span class="frac"><span>3</span><span>5</span></span> = <span class="frac"><span>6</span><span>15</span></span> = <span class="frac"><span>2</span><span>5</span></span>
+    </div>
+
+    <h3>Diviser</h3>
+    <p>Diviser par une fraction, c'est multiplier par son <strong>inverse</strong>.</p>
+    <div class="formule">
+      <span class="frac"><span>2</span><span>3</span></span> ÷ <span class="frac"><span>4</span><span>5</span></span> = <span class="frac"><span>2</span><span>3</span></span> × <span class="frac"><span>5</span><span>4</span></span> = <span class="frac"><span>10</span><span>12</span></span> = <span class="frac"><span>5</span><span>6</span></span>
+    </div>
+
+    <h2>💎 Les puissances</h2>
+    <p>SCH a 2<sup>3</sup> = <strong>8</strong> chaînes en or. Les règles de base (à connaître par cœur, mathafack) :</p>
+    <div class="formule">a<sup>0</sup> = 1 &nbsp;&nbsp;(même le 67 Elephant vaut 1 à la puissance 0)</div>
+    <div class="formule">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></div>
+    <div class="formule">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></div>
+    <div class="formule">(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></div>
+    <div class="formule">a<sup>−n</sup> = <span class="frac"><span>1</span><span>a<sup>n</sup></span></span></div>
+
+    <div class="exemple">💡 <strong>Exemple :</strong> 2<sup>3</sup> = 2 × 2 × 2 = 8 &nbsp;·&nbsp; 3<sup>4</sup> = 3 × 3 × 3 × 3 = 81</div>
+
+    <h2>🐱 Les racines carrées</h2>
+    <p><strong>Règle d'or :</strong> on peut séparer les multiplications sous la racine.</p>
+    <div class="formule">√(a × b) = √a × √b &nbsp;→&nbsp; √12 = √(4 × 3) = 2√3</div>
+    <div class="retenir">🍓 Le saviez-vous ? Le <strong>Strawberry Cat</strong> a √9 = <strong>3</strong> vies.</div>
+
+    <h3>Simplifier une racine</h3>
+    <p>Chercher le plus grand <strong>carré parfait</strong> (1, 4, 9, 16, 25, 36…) qui divise le nombre.</p>
+    <div class="exemple">√48 = √(16 × 3) = √16 × √3 = 4√3</div>
+
+    <h2>🚦 Priorités opératoires</h2>
+    <p>Dans la rue comme en maths, y'a des règles de priorité :</p>
+    <ol>
+      <li><strong>Parenthèses</strong> (le boss final)</li>
+      <li><strong>Puissances / Racines</strong></li>
+      <li><strong>× et ÷</strong> de gauche à droite</li>
+      <li><strong>+ et −</strong> de gauche à droite</li>
+    </ol>
+    <div class="retenir">⚠️ <strong>Attention :</strong> 3 + 4 × 2 = 3 + 8 = <strong>11</strong> (pas 14 ! La multiplication passe en premier)</div>
+
+    <h2>💿 Notation scientifique</h2>
+    <p>Jul a vendu <strong>3 400 000</strong> albums. Pour l'écrire comme un scientifique :</p>
+    <div class="formule">3 400 000 = 3,4 × 10<sup>6</sup></div>
+    <p>Un <strong>exposant positif</strong> → grand nombre (virgule vers la droite)<br>
+    Un <strong>exposant négatif</strong> → petit nombre (virgule vers la gauche)</p>
+    <div class="exemple">0,00045 = 4,5 × 10<sup>−4</sup> &nbsp;·&nbsp; 7,3 × 10<sup>5</sup> = 730 000</div>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <!-- ════════════════════════════════════════════
+       QCM
+  ════════════════════════════════════════════ -->
+  <section class="qcm-section">
+    <p class="section-label">— Teste tes connaissances</p>
+    <h2 class="section-title">20 questions chrono 🎯</h2>
+    <div id="qcm-container"></div>
+  </section>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Quelle est la forme simplifiée de 18/24 ?",
+      options: ["3/4", "6/8", "9/12", "2/3"],
+      correct: 0,
+      explication: "On divise en haut et en bas par le plus grand diviseur commun, ici 6. 18÷6 = 3 et 24÷6 = 4, donc ça fait 3/4."
+    },
+    {
+      q: "SCH veut calculer 2/5 + 1/3. Le résultat est :",
+      options: ["3/8", "11/15", "2/15", "3/15"],
+      correct: 1,
+      explication: "Pas de même dénominateur = on bloque. On passe tout sur 15. 2/5 = 6/15 et 1/3 = 5/15. On additionne : 6/15 + 5/15 = 11/15."
+    },
+    {
+      q: "Jul divise 3/4 par 2/5. Il obtient :",
+      options: ["6/20", "3/10", "15/8", "8/15"],
+      correct: 2,
+      explication: "Diviser, c'est multiplier par l'inverse de la deuxième fraction. 3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8. Le J c'est le S."
+    },
+    {
+      q: "Combien vaut 3⁴ ?",
+      options: ["12", "64", "81", "27"],
+      correct: 2,
+      explication: "C'est pas 3×4 ! C'est 3×3×3×3 = 9×9 = 81."
+    },
+    {
+      q: "Le 67 Elephant calcule 2⁵ × 2³. Le résultat est :",
+      options: ["4⁸", "2⁸", "2¹⁵", "2²"],
+      correct: 1,
+      explication: "Quand on multiplie des puissances avec la même base, on additionne les exposants : 2⁵⁺³ = 2⁸ (ce qui fait 256 en vrai)."
+    },
+    {
+      q: "Que vaut 5⁰ ?",
+      options: ["0", "5", "1", "Impossible"],
+      correct: 2,
+      explication: "La règle ultime : tout nombre (non nul) élevé à la puissance 0 vaut 1. Cherche pas à comprendre, c'est la loi."
+    },
+    {
+      q: "Simplifier √48 :",
+      options: ["4√3", "6√2", "2√12", "8√3"],
+      correct: 0,
+      explication: "On cherche le plus grand carré parfait caché dans 48. √48 = √(16×3) = √16 × √3 = 4√3."
+    },
+    {
+      q: "Le Strawberry Cat calcule 3 + 2 × 4 − 1. Il trouve :",
+      options: ["19", "10", "16", "13"],
+      correct: 1,
+      explication: "Priorité à la multiplication ! 2×4 = 8. Puis on fait de gauche à droite : 3 + 8 − 1 = 10."
+    },
+    {
+      q: "Quelle est la notation scientifique de 0,00045 ?",
+      options: ["45 × 10⁻⁵", "4,5 × 10⁻⁴", "4,5 × 10⁴", "0,45 × 10⁻³"],
+      correct: 1,
+      explication: "On décale la virgule de 4 crans vers la droite pour avoir un chiffre entre 1 et 9. Petit nombre → exposant négatif : 4,5 × 10⁻⁴."
+    },
+    {
+      q: "Jul a 2⁻³ grammes d'or (très peu pour le coup !). Cela vaut :",
+      options: ["−8", "1/6", "1/8", "−1/8"],
+      correct: 2,
+      explication: "Une puissance négative, c'est l'inverse de la puissance positive. 2⁻³ = 1/2³ = 1/8."
+    },
+    {
+      q: "3/7 × 14/9 = ?",
+      options: ["42/63", "2/3", "3/9", "6/7"],
+      correct: 1,
+      explication: "En brut ça fait 42/63, mais on simplifie en croisant avant de calculer (les vrais savent) : 3×14 / 7×9 = 42/63 = 2/3."
+    },
+    {
+      q: "SCH calcule (2³)². Le résultat est :",
+      options: ["2⁵", "2⁶", "4⁶", "2⁹"],
+      correct: 1,
+      explication: "La puissance d'une puissance, ça se multiplie : (aᵐ)ⁿ = aᵐˣⁿ. Donc 2³ˣ² = 2⁶ (soit 64)."
+    },
+    {
+      q: "√(25/49) = ?",
+      options: ["5/7", "25/7", "5/49", "√25/7"],
+      correct: 0,
+      explication: "On sépare le haut et le bas : √25 / √49 = 5/7."
+    },
+    {
+      q: "Le résultat de (3 + 5)² − 4 × 3 est :",
+      options: ["52", "28", "16", "40"],
+      correct: 0,
+      explication: "On respecte l'ordre ! Parenthèses : (8)². Puissance : 64. Multiplication : 4×3 = 12. Soustraction : 64 − 12 = 52."
+    },
+    {
+      q: "3/4 − 1/6 = ?",
+      options: ["2/10", "7/12", "1/2", "5/12"],
+      correct: 1,
+      explication: "Dénominateur commun : le plus petit multiple de 4 et 6 = 12. 3/4 = 9/12 et 1/6 = 2/12. Résultat : 7/12."
+    },
+    {
+      q: "Le 67 Elephant écrit 7,3 × 10⁵. C'est égal à :",
+      options: ["73 000", "730 000", "7 300 000", "0,000073"],
+      correct: 1,
+      explication: "L'exposant est positif (5), on décale la virgule de 5 crans vers la droite. Bam : 730 000."
+    },
+    {
+      q: "10⁶ ÷ 10² = ?",
+      options: ["10³", "10¹²", "10⁴", "5⁴"],
+      correct: 2,
+      explication: "Division de puissances = on soustrait les exposants. 10⁶⁻² = 10⁴ (soit 10 000)."
+    },
+    {
+      q: "Jul simplifie 5/8 ÷ 15/4. Le résultat est :",
+      options: ["75/32", "1/6", "4/6", "3/8"],
+      correct: 1,
+      explication: "On retourne la deuxième fraction et on multiplie : 5/8 × 4/15. On simplifie en croix et il reste 1/6."
+    },
+    {
+      q: "Que vaut √3 × √12 ?",
+      options: ["√15", "3√4", "6", "√36"],
+      correct: 2,
+      explication: "On rassemble sous la même racine : √(3×12) = √36 = 6. Ça tombe pile poil !"
+    },
+    {
+      q: "SCH calcule 2 × (3 + 4²) − 5. Il obtient :",
+      options: ["33", "29", "45", "37"],
+      correct: 0,
+      explication: "4² = 16. Parenthèses : 3+16 = 19. Multiplication : 2×19 = 38. Soustraction : 38−5 = 33."
+    }
+  ]);
+  </script>
+</body>
+</html>
