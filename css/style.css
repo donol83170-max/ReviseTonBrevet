@@ -341,8 +341,8 @@ section { padding: 6rem 4rem; }
   opacity: .5;
 }
 
-.cours-section { max-width: 820px; margin: 0 auto; padding: 4rem 2rem; }
-.cours-section h2 {
+.fiche-section { max-width: 820px; margin: 0 auto; padding: 4rem 2rem; }
+.fiche-section h2 {
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 800;
@@ -351,8 +351,8 @@ section { padding: 6rem 4rem; }
   padding-top: 2rem;
   border-top: 1.5px solid var(--cream-dark);
 }
-.cours-section h2:first-child { border-top: none; margin-top: 0; }
-.cours-section h3 {
+.fiche-section h2:first-child { border-top: none; margin-top: 0; }
+.fiche-section h3 {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
@@ -362,13 +362,13 @@ section { padding: 6rem 4rem; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.cours-section p { margin-bottom: 1rem; color: #374151; }
-.cours-section ul, .cours-section ol {
+.fiche-section p { margin-bottom: 1rem; color: #374151; }
+.fiche-section ul, .fiche-section ol {
   margin: .5rem 0 1rem 1.5rem;
   color: #374151;
 }
-.cours-section li { margin-bottom: .4rem; }
-.cours-section .exemple {
+.fiche-section li { margin-bottom: .4rem; }
+.fiche-section .exemple {
   background: linear-gradient(135deg, #f3e8ff, #fce7f3);
   border-left: 4px solid var(--pink);
   border-radius: 0 8px 8px 0;
@@ -376,7 +376,7 @@ section { padding: 6rem 4rem; }
   margin: 1rem 0;
   font-size: .95rem;
 }
-.cours-section .formule {
+.fiche-section .formule {
   background: var(--ink);
   color: var(--paper);
   border-radius: 8px;
@@ -386,7 +386,7 @@ section { padding: 6rem 4rem; }
   font-size: 1rem;
   text-align: center;
 }
-.cours-section .retenir {
+.fiche-section .retenir {
   background: #fef9c3;
   border: 1.5px solid #fde047;
   border-radius: 8px;
