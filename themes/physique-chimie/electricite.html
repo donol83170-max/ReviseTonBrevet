@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours électricité brevet + 20 QCM corrigés : circuits, tension, intensité, loi d'Ohm, effets du courant. ReviseTonBrevet."/>
+  <title>Électricité — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
+    .key-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.1rem; margin: .7rem 0; font-size: .9rem; color: #4c1d95; }
+    .law-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .law-card { background: #faf5ff; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 1rem; }
+    .law-card h4 { font-weight: 800; color: #7c3aed; font-size: .92rem; margin-bottom: .5rem; }
+    .law-card p { font-size: .85rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/physique-chimie.html">Physique-Chimie</a> → Électricité</p>
+    <h1>⚡ Électricité</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>🔌 Grandeurs électriques fondamentales</h2>
+    <p>Le courant électrique c'est le flux d'électrons. Imagine SCH qui met de la musique — il faut de l'énergie électrique pour alimenter son enceinte !</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.4;font-size:.95rem">
+      <li><strong>Tension (U) :</strong> différence de potentiel, "pression" qui pousse le courant. Unité : Volt (V). Mesurée avec un <strong>voltmètre</strong> en <strong>dérivation</strong>.</li>
+      <li><strong>Intensité (I) :</strong> débit du courant, nombre d'électrons qui passent. Unité : Ampère (A). Mesurée avec un <strong>ampèremètre</strong> en <strong>série</strong>.</li>
+      <li><strong>Résistance (R) :</strong> opposition au passage du courant. Unité : Ohm (Ω).</li>
+    </ul>
+
+    <!-- SVG circuit simple -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="160" viewBox="0 0 220 160">
+          <!-- Générateur (batterie) -->
+          <rect x="20" y="65" width="30" height="30" rx="4" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+          <text x="35" y="84" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">bat.</text>
+          <!-- Fil haut -->
+          <line x1="50" y1="70" x2="110" y2="70" stroke="#374151" stroke-width="2.5"/>
+          <line x1="110" y1="70" x2="170" y2="70" stroke="#374151" stroke-width="2.5"/>
+          <!-- Ampoule -->
+          <circle cx="170" cy="80" r="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+          <text x="170" y="84" text-anchor="middle" font-size="12">💡</text>
+          <!-- Fil bas -->
+          <line x1="170" y1="96" x2="110" y2="110" stroke="#374151" stroke-width="2.5"/>
+          <line x1="110" y1="110" x2="50" y2="110" stroke="#374151" stroke-width="2.5"/>
+          <line x1="50" y1="110" x2="20" y2="95" stroke="#374151" stroke-width="2.5"/>
+          <!-- Interrupteur -->
+          <circle cx="110" cy="70" r="4" fill="#374151"/>
+          <line x1="110" y1="70" x2="124" y2="60" stroke="#374151" stroke-width="2"/>
+          <circle cx="124" cy="65" r="3" fill="#374151"/>
+          <text x="110" y="60" text-anchor="middle" font-size="9" fill="#6b7280">inter.</text>
+          <!-- Flèche courant -->
+          <polygon points="75,65 90,70 75,75" fill="#8b5cf6"/>
+          <text x="82" y="58" font-size="9" fill="#7c3aed">I →</text>
+          <!-- Voltmètre (dérivation) -->
+          <rect x="155" y="120" width="30" height="20" rx="4" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+          <line x1="155" y1="125" x2="155" y2="96" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="185" y1="125" x2="185" y2="70" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <line x1="185" y1="70" x2="170" y2="70" stroke="#059669" stroke-width="1" stroke-dasharray="3,2"/>
+          <text x="170" y="134" text-anchor="middle" font-size="9" fill="#059669" font-weight="700">V (dérivation)</text>
+        </svg>
+        <div class="vis-caption">Circuit simple avec ampoule, interrupteur<br/>et voltmètre en dérivation</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2rem">⚖️ La loi d'Ohm</h2>
+    <p>La loi d'Ohm relie tension, intensité et résistance. C'est la loi fondamentale de l'électricité !</p>
+
+    <div class="formula-box">U = R × I   (Tension = Résistance × Intensité)</div>
+
+    <p>On peut en déduire : R = U/I et I = U/R</p>
+
+    <h2 style="margin-top:2.5rem">🔗 Circuits série vs dérivation</h2>
+
+    <div class="law-grid">
+      <div class="law-card">
+        <h4>Circuit en série</h4>
+        <p>Les composants sont branchés les uns à la suite des autres.<br/>
+        • L'intensité est la même partout : I₁ = I₂ = I<br/>
+        • La tension se répartit : U = U₁ + U₂</p>
+      </div>
+      <div class="law-card">
+        <h4>Circuit en dérivation (parallèle)</h4>
+        <p>Les composants sont branchés sur des branches distinctes.<br/>
+        • La tension est la même aux bornes de chaque branche : U₁ = U₂ = U<br/>
+        • L'intensité se répartit : I = I₁ + I₂</p>
+      </div>
+    </div>
+
+    <div class="key-box">🏠 Dans une maison, les appareils sont branchés en <strong>dérivation</strong>. Si une ampoule grille, les autres continuent de fonctionner !</div>
+
+    <h2 style="margin-top:2.5rem">⚡ Les effets du courant</h2>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.92rem">
+      <li><strong>Effet thermique (Joule) :</strong> le courant chauffe les conducteurs (radiateur électrique, grille-pain)</li>
+      <li><strong>Effet lumineux :</strong> ampoule, LED</li>
+      <li><strong>Effet magnétique :</strong> électroaimant, moteur électrique</li>
+      <li><strong>Effet chimique (électrolyse) :</strong> décomposition d'une solution par le courant</li>
+    </ul>
+
+    <div class="formula-box">P = U × I   (Puissance électrique en Watts)</div>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/physique-chimie.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Quelle est la loi d'Ohm ?",
+      options: ["I = U + R", "U = R × I", "R = U + I", "I = R / U"],
+      correct: 1,
+      explication: "Loi d'Ohm : U = R × I (Tension = Résistance × Intensité). On peut aussi écrire R = U/I et I = U/R."
+    },
+    {
+      q: "Un résistor de 100 Ω est traversé par un courant de 0,5 A. Quelle est la tension à ses bornes ?",
+      options: ["50 V", "200 V", "0,005 V", "100,5 V"],
+      correct: 0,
+      explication: "U = R × I = 100 × 0,5 = 50 V."
+    },
+    {
+      q: "Avec quelle unité mesure-t-on l'intensité du courant ?",
+      options: ["Volt (V)", "Ohm (Ω)", "Ampère (A)", "Watt (W)"],
+      correct: 2,
+      explication: "L'intensité se mesure en Ampères (A), à l'aide d'un ampèremètre branché en série dans le circuit."
+    },
+    {
+      q: "Comment branche-t-on un voltmètre pour mesurer la tension ?",
+      options: ["En série", "En dérivation (en parallèle)", "Entre deux générateurs", "N'importe comment"],
+      correct: 1,
+      explication: "Le voltmètre se branche en dérivation (parallèle) aux bornes du composant dont on veut mesurer la tension."
+    },
+    {
+      q: "Comment branche-t-on un ampèremètre pour mesurer l'intensité ?",
+      options: ["En dérivation", "En série dans le circuit", "Aux bornes du générateur", "N'importe comment"],
+      correct: 1,
+      explication: "L'ampèremètre doit être en série : le courant passe à travers lui. Un branchement en dérivation endommagerait l'appareil."
+    },
+    {
+      q: "Dans un circuit en série, que peut-on dire de l'intensité ?",
+      options: ["Elle est différente en chaque point", "Elle est la même partout dans le circuit", "Elle est nulle aux bornes des résistors", "Elle dépend de la résistance"],
+      correct: 1,
+      explication: "Dans un circuit en série, l'intensité est identique en tous points. I₁ = I₂ = … = I (conservation du courant en série)."
+    },
+    {
+      q: "Dans un circuit en dérivation (parallèle), quelle grandeur est identique pour toutes les branches ?",
+      options: ["L'intensité", "La résistance", "La tension", "La puissance"],
+      correct: 2,
+      explication: "En dérivation, la tension est la même aux bornes de chaque branche. L'intensité, elle, se répartit entre les branches."
+    },
+    {
+      q: "Pourquoi les appareils dans une maison sont-ils branchés en dérivation ?",
+      options: ["Pour économiser l'énergie", "Car si un appareil tombe en panne, les autres continuent de fonctionner", "C'est moins cher à installer", "La tension est ainsi plus forte"],
+      correct: 1,
+      explication: "En dérivation, chaque appareil fonctionne indépendamment. Si une ampoule grille, cela ne coupe pas les autres circuits."
+    },
+    {
+      q: "Quel est l'effet Joule ?",
+      options: ["La production de lumière par le courant", "L'échauffement d'un conducteur traversé par un courant électrique", "La décomposition d'une solution par le courant", "La production d'un champ magnétique"],
+      correct: 1,
+      explication: "L'effet Joule = transformation d'énergie électrique en chaleur dans un conducteur résistif. Ex : radiateur, grille-pain, fil de tungstène d'une ampoule."
+    },
+    {
+      q: "La puissance électrique d'un appareil se calcule avec :",
+      options: ["P = U + I", "P = U × I", "P = U / I", "P = R × U"],
+      correct: 1,
+      explication: "Puissance P = U × I (Watts = Volts × Ampères). Ex : un fer à repasser 230V/5A a une puissance de 1150 W."
+    },
+    {
+      q: "Un grille-pain consomme 900 W sous 230 V. Quelle est l'intensité du courant ?",
+      options: ["0,26 A", "3,9 A", "207 100 A", "1,3 A"],
+      correct: 1,
+      explication: "I = P/U = 900/230 ≈ 3,9 A."
+    },
+    {
+      q: "Quelle est l'unité de la résistance électrique ?",
+      options: ["Volt (V)", "Ampère (A)", "Ohm (Ω)", "Watt (W)"],
+      correct: 2,
+      explication: "La résistance se mesure en Ohms (Ω), en hommage au physicien allemand Georg Ohm."
+    },
+    {
+      q: "Dans un circuit en série avec deux résistors R₁ et R₂, la tension totale U est :",
+      options: ["U = U₁ = U₂", "U = U₁ × U₂", "U = U₁ + U₂", "U = U₁ - U₂"],
+      correct: 2,
+      explication: "En série, les tensions s'ajoutent : U_total = U₁ + U₂ + … (loi des tensions en série)."
+    },
+    {
+      q: "Qu'est-ce que l'électrolyse ?",
+      options: ["Un effet magnétique du courant", "La décomposition d'une solution chimique par le passage du courant électrique", "La mesure de la tension", "Un type de résistance"],
+      correct: 1,
+      explication: "L'électrolyse = effet chimique du courant. Ex : décomposition de l'eau en H₂ et O₂, dépôt de métaux (galvanoplastie)."
+    },
+    {
+      q: "SCH a un circuit en dérivation avec deux ampoules de même résistance 60 Ω. La tension est 12 V. Quelle est l'intensité dans chaque branche ?",
+      options: ["0,1 A", "0,2 A", "0,4 A", "1 A"],
+      correct: 1,
+      explication: "I = U/R = 12/60 = 0,2 A dans chaque branche (la tension est identique dans chaque branche d'un circuit dérivation)."
+    },
+    {
+      q: "Quel effet du courant est utilisé dans un moteur électrique ?",
+      options: ["Effet thermique", "Effet lumineux", "Effet magnétique", "Effet chimique"],
+      correct: 2,
+      explication: "Le moteur électrique utilise l'effet magnétique du courant : un conducteur parcouru par un courant dans un champ magnétique subit une force (force de Laplace)."
+    },
+    {
+      q: "Un conducteur de résistance 25 Ω avec une tension de 100 V → l'intensité est :",
+      options: ["0,25 A", "4 A", "2 500 A", "75 A"],
+      correct: 1,
+      explication: "I = U/R = 100/25 = 4 A."
+    },
+    {
+      q: "Comment appelle-t-on un circuit où le courant ne peut pas circuler (interrupteur ouvert) ?",
+      options: ["Circuit court", "Circuit ouvert", "Circuit fermé", "Circuit en dérivation"],
+      correct: 1,
+      explication: "Circuit ouvert = interrupteur ouvert (coupé) → le courant ne peut pas circuler. Circuit fermé = interrupteur fermé → courant circule."
+    },
+    {
+      q: "Quelle est la valeur de la tension secteur en France ?",
+      options: ["12 V", "110 V", "230 V", "380 V"],
+      correct: 2,
+      explication: "La tension du secteur en France est 230 V (alternatif 50 Hz). Attention au danger : à partir de 25V alternatif, le courant peut être mortel."
+    },
+    {
+      q: "Dans un circuit en série, si un composant est retiré (circuit ouvert), les autres composants :",
+      options: ["Continuent de fonctionner", "S'éteignent aussi (plus de courant dans le circuit)", "Brillent plus fort", "Fonctionnent à demi-puissance"],
+      correct: 1,
+      explication: "En série, si un composant est coupé → le circuit est ouvert → plus de courant → tous les composants s'arrêtent. C'est le défaut des guirlandes en série."
+    }
+  ]);
+  </script>
+</body>
+</html>

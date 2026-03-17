@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours mécanique & mouvement brevet + 20 QCM corrigés : vitesse, forces, principe d'inertie, poids. ReviseTonBrevet."/>
+  <title>Mécanique & mouvement — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
+    .key-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.1rem; margin: .7rem 0; font-size: .9rem; color: #4c1d95; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/physique-chimie.html">Physique-Chimie</a> → Mécanique & mouvement</p>
+    <h1>🏎️ Mécanique & mouvement</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>⏱️ La vitesse</h2>
+    <p>67 Elephant roule en voiture. Pour savoir s'il va vite, il faut connaître la distance parcourue et le temps mis. C'est la vitesse !</p>
+
+    <div class="formula-box">v = d / t   (m/s ou km/h)</div>
+
+    <p>Conversions utiles :</p>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2;font-size:.92rem">
+      <li>1 m/s = 3,6 km/h</li>
+      <li>Pour convertir km/h → m/s : diviser par 3,6</li>
+      <li>Pour convertir m/s → km/h : multiplier par 3,6</li>
+    </ul>
+
+    <!-- SVG graphique distance-temps -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="180" viewBox="0 0 220 180">
+          <!-- Axes -->
+          <line x1="30" y1="150" x2="200" y2="150" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="30" y1="150" x2="30" y2="20" stroke="#9ca3af" stroke-width="1.5"/>
+          <polygon points="200,146 210,150 200,154" fill="#9ca3af"/>
+          <polygon points="26,20 30,10 34,20" fill="#9ca3af"/>
+          <text x="205" y="154" font-size="11" fill="#6b7280">t</text>
+          <text x="18" y="16" font-size="11" fill="#6b7280">d</text>
+          <!-- Grille -->
+          <line x1="80" y1="150" x2="80" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="130" y1="150" x2="130" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="180" y1="150" x2="180" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+          <!-- Droite vitesse uniforme -->
+          <line x1="30" y1="150" x2="180" y2="50" stroke="#8b5cf6" stroke-width="2.5"/>
+          <text x="155" y="40" font-size="11" font-weight="700" fill="#7c3aed">MRU</text>
+          <!-- Labels temps -->
+          <text x="76" y="165" font-size="9" fill="#6b7280">1h</text>
+          <text x="126" y="165" font-size="9" fill="#6b7280">2h</text>
+          <text x="176" y="165" font-size="9" fill="#6b7280">3h</text>
+        </svg>
+        <div class="vis-caption">MRU : droite oblique en d=f(t)<br/>Pente = vitesse</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2rem">💪 Les forces</h2>
+    <p>Une force est une action exercée sur un objet. Elle est représentée par un <strong>vecteur</strong> (direction, sens, valeur, point d'application).</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.95rem">
+      <li><strong>Poids (P) :</strong> attraction gravitationnelle vers le bas. P = m × g (N). Sur Terre : g ≈ 9,8 m/s² ≈ 10 N/kg</li>
+      <li><strong>Réaction normale (R) :</strong> force exercée par un support sur l'objet posé dessus (perpendiculaire au plan)</li>
+      <li><strong>Friction / frottement :</strong> s'oppose au mouvement</li>
+      <li><strong>Poussée d'Archimède :</strong> force exercée par un fluide sur un objet immergé (vers le haut)</li>
+    </ul>
+
+    <div class="formula-box">P = m × g   (Poids = masse × intensité gravitationnelle)</div>
+
+    <h2 style="margin-top:2.5rem">🛑 Le principe d'inertie (Newton 1)</h2>
+    <p>SCH est dans sa voiture à l'arrêt. Si aucune force ne s'exerce (ou si elles se compensent), il reste à l'arrêt. En mouvement, il resterait en mouvement rectiligne uniforme — c'est le principe d'inertie !</p>
+
+    <div class="key-box">⚖️ Si les forces sont <strong>équilibrées</strong> (somme = 0) → l'objet est <strong>immobile ou en MRU</strong> (mouvement rectiligne uniforme)<br/>⚡ Si les forces sont <strong>déséquilibrées</strong> → l'objet accélère, décélère ou change de direction</div>
+
+    <h2 style="margin-top:2.5rem">📊 Types de mouvements</h2>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.92rem">
+      <li><strong>MRU (mouvement rectiligne uniforme) :</strong> vitesse constante, en ligne droite</li>
+      <li><strong>MRUA (accéléré) :</strong> vitesse augmente régulièrement</li>
+      <li><strong>MRUF (freiné) :</strong> vitesse diminue régulièrement</li>
+      <li><strong>Circulaire uniforme :</strong> vitesse constante mais direction change → force centripète nécessaire</li>
+    </ul>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/physique-chimie.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "67 Elephant parcourt 150 km en 2 heures. Quelle est sa vitesse moyenne ?",
+      options: ["50 km/h", "75 km/h", "100 km/h", "300 km/h"],
+      correct: 1,
+      explication: "v = d/t = 150/2 = 75 km/h. Il faut diviser la distance par le temps."
+    },
+    {
+      q: "Convertir 72 km/h en m/s :",
+      options: ["7,2 m/s", "20 m/s", "25,9 m/s", "259 m/s"],
+      correct: 1,
+      explication: "Pour convertir km/h en m/s : diviser par 3,6. 72 ÷ 3,6 = 20 m/s."
+    },
+    {
+      q: "Quelle est la formule du poids ?",
+      options: ["P = m/g", "P = m × g", "P = g/m", "P = m + g"],
+      correct: 1,
+      explication: "Poids P = masse m × intensité gravitationnelle g. Sur Terre, g ≈ 10 N/kg. Poids en Newtons (N), masse en kg."
+    },
+    {
+      q: "Un objet a une masse de 5 kg sur Terre (g = 10 N/kg). Quel est son poids ?",
+      options: ["5 N", "2 N", "50 N", "500 N"],
+      correct: 2,
+      explication: "P = m × g = 5 × 10 = 50 N. Attention : la masse (kg) ne change pas selon le lieu, mais le poids (N) varie."
+    },
+    {
+      q: "Sur la Lune (g = 1,6 N/kg), quel est le poids de ce même objet de 5 kg ?",
+      options: ["5 N", "8 N", "16 N", "50 N"],
+      correct: 1,
+      explication: "P = 5 × 1,6 = 8 N. Sur la Lune, le poids est 6 fois plus faible. Mais la masse reste 5 kg !"
+    },
+    {
+      q: "Selon le principe d'inertie, que se passe-t-il si les forces qui s'exercent sur un objet se compensent ?",
+      options: ["L'objet accélère", "L'objet reste immobile ou continue en MRU", "L'objet tourne", "L'objet disparaît"],
+      correct: 1,
+      explication: "Principe d'inertie (Newton 1) : si la somme des forces = 0, l'objet est immobile ou en mouvement rectiligne uniforme (MRU)."
+    },
+    {
+      q: "Un objet en MRU (mouvement rectiligne uniforme) a une vitesse :",
+      options: ["Qui augmente régulièrement", "Qui diminue régulièrement", "Constante en ligne droite", "Nulle"],
+      correct: 2,
+      explication: "MRU = mouvement en ligne droite à vitesse constante. C'est le cas quand les forces se compensent exactement."
+    },
+    {
+      q: "La poussée d'Archimède est :",
+      options: ["Une force vers le bas exercée par un fluide", "Une force vers le haut exercée par un fluide sur un objet immergé", "La résistance de l'air", "La force magnétique"],
+      correct: 1,
+      explication: "La poussée d'Archimède est une force vers le haut exercée par tout fluide (eau, air) sur un objet immergé. Elle explique pourquoi les bateaux flottent."
+    },
+    {
+      q: "Sur un graphique d=f(t) en MRU, la courbe est :",
+      options: ["Une parabole", "Une droite horizontale", "Une droite oblique passant par l'origine", "Une courbe exponentielle"],
+      correct: 2,
+      explication: "En MRU, d = v×t donc d est proportionnel à t → droite oblique passant par l'origine. La pente de cette droite = vitesse."
+    },
+    {
+      q: "Quelle est l'unité de la force dans le SI ?",
+      options: ["Kilogramme (kg)", "Joule (J)", "Newton (N)", "Pascal (Pa)"],
+      correct: 2,
+      explication: "La force se mesure en Newtons (N), en hommage à Isaac Newton. 1 N ≈ le poids d'un objet de 100g sur Terre."
+    },
+    {
+      q: "Jul conduit à 108 km/h. En m/s, ça fait :",
+      options: ["10,8 m/s", "30 m/s", "38,9 m/s", "108 m/s"],
+      correct: 1,
+      explication: "108 ÷ 3,6 = 30 m/s. Pratique à savoir : 108 km/h = 30 m/s (vitesse d'une voiture sur autoroute)."
+    },
+    {
+      q: "Un objet posé sur une table : quel force équilibre son poids ?",
+      options: ["La friction", "La poussée d'Archimède", "La réaction normale de la table", "La force magnétique"],
+      correct: 2,
+      explication: "La réaction normale (R) exercée par la table sur l'objet vers le haut équilibre le poids (P) vers le bas. Équilibre : P = R."
+    },
+    {
+      q: "La friction s'oppose au mouvement. Si elle est absente (dans le vide), un objet lancé :",
+      options: ["S'arrête immédiatement", "Ralentit progressivement", "Continue à la même vitesse indéfiniment (MRU)", "Accélère"],
+      correct: 2,
+      explication: "Sans friction ni résistance de l'air, un objet en mouvement continue en MRU indéfiniment (principe d'inertie). C'est ce qui se passe dans l'espace."
+    },
+    {
+      q: "Quelle est la différence entre la masse et le poids ?",
+      options: ["Ce sont deux mots pour la même chose", "La masse est une quantité de matière (en kg, invariable) ; le poids est une force gravitationnelle (en N, varie selon le lieu)", "La masse est en N, le poids en kg", "La masse varie selon le lieu"],
+      correct: 1,
+      explication: "Masse = quantité de matière, mesurée en kg, constante partout. Poids = force gravitationnelle, en N, qui varie selon g (Terre, Lune, Mars…)."
+    },
+    {
+      q: "SCH freine pour s'arrêter. Son mouvement est :",
+      options: ["MRU", "MRUA (accéléré)", "MRUF (décéléré/freiné)", "Circulaire uniforme"],
+      correct: 2,
+      explication: "Freiner = diminuer la vitesse de façon progressive → MRUF (mouvement rectiligne uniformément freiné). La force de freinage s'oppose au mouvement."
+    },
+    {
+      q: "Un vecteur force a :",
+      options: ["Uniquement une valeur (intensité)", "Une direction, un sens, une valeur et un point d'application", "Uniquement une direction", "Une couleur et une forme"],
+      correct: 1,
+      explication: "Un vecteur force se caractérise par 4 éléments : point d'application (où ?), direction (horizontal, vertical…), sens (↑↓→←) et valeur (intensité en N)."
+    },
+    {
+      q: "Si un objet accélère vers le haut, la somme des forces est :",
+      options: ["Nulle", "Vers le bas", "Vers le haut (déséquilibre)", "Horizontale"],
+      correct: 2,
+      explication: "Si l'objet accélère vers le haut (déséquilibre), c'est que la force vers le haut est plus grande que la force vers le bas (poids). Somme des forces ≠ 0."
+    },
+    {
+      q: "Quelle unité utilise-t-on pour la vitesse dans le Système International ?",
+      options: ["km/h", "m/s", "cm/s", "mph"],
+      correct: 1,
+      explication: "Dans le Système International (SI), la vitesse s'exprime en m/s (mètres par seconde). Le km/h est pratique mais pas l'unité SI."
+    },
+    {
+      q: "67 Elephant roule à 54 km/h. En combien de temps parcourt-il 450 m ? (en secondes)",
+      options: ["30 s", "45 s", "60 s", "90 s"],
+      correct: 0,
+      explication: "54 km/h = 15 m/s. t = d/v = 450/15 = 30 s."
+    },
+    {
+      q: "Un mouvement circulaire uniforme signifie que :",
+      options: ["La vitesse augmente et la trajectoire est un cercle", "La vitesse est constante et la trajectoire est un cercle", "L'objet est immobile", "Les forces sont équilibrées"],
+      correct: 1,
+      explication: "Circulaire uniforme = trajectoire circulaire + vitesse constante. Mais la direction change continuellement → une force centripète est nécessaire."
+    }
+  ]);
+  </script>
+</body>
+</html>

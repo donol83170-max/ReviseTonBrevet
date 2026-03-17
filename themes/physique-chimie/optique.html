@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours optique & lumière brevet + 20 QCM corrigés : propagation, miroirs, lentilles, couleurs, spectre. ReviseTonBrevet."/>
+  <title>Optique & lumière — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .key-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.1rem; margin: .7rem 0; font-size: .9rem; color: #4c1d95; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+    .rainbow-bar { height: 20px; border-radius: 6px; background: linear-gradient(to right, #dc2626, #f97316, #facc15, #4ade80, #06b6d4, #6366f1, #a855f7); margin: .8rem 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/physique-chimie.html">Physique-Chimie</a> → Optique & lumière</p>
+    <h1>🔦 Optique & lumière</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>💡 Propagation de la lumière</h2>
+    <p>La lumière se propage en <strong>ligne droite</strong> (propagation rectiligne) dans un milieu homogène. C'est pourquoi on ne voit pas derrière un mur — comme quand Jul enregistre en cabine, personne ne voit à travers !</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.95rem">
+      <li><strong>Vitesse de la lumière :</strong> c = 300 000 km/s dans le vide (≈ 3×10⁸ m/s)</li>
+      <li><strong>Source primaire :</strong> émet sa propre lumière (soleil, bougie, LED)</li>
+      <li><strong>Objet éclairé :</strong> reçoit et diffuse la lumière (lune, livre)</li>
+      <li><strong>Ombre :</strong> zone privée de lumière derrière un objet opaque</li>
+    </ul>
+
+    <!-- SVG rayon de lumière et ombre -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="260" height="100" viewBox="0 0 260 100">
+          <!-- Source lumineuse -->
+          <circle cx="20" cy="50" r="14" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+          <text x="20" y="85" text-anchor="middle" font-size="9" fill="#78350f" font-weight="700">Source</text>
+          <!-- Rayons -->
+          <line x1="34" y1="42" x2="120" y2="25" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="34" y1="50" x2="120" y2="50" stroke="#fbbf24" stroke-width="2"/>
+          <line x1="34" y1="58" x2="120" y2="75" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <!-- Obstacle opaque -->
+          <rect x="120" y="35" width="12" height="30" fill="#374151" rx="2"/>
+          <text x="126" y="85" text-anchor="middle" font-size="9" fill="#374151" font-weight="700">Objet</text>
+          <!-- Zone d'ombre (pénombre + ombre) -->
+          <polygon points="132,35 260,10 260,90 132,65" fill="#e5e7eb" opacity="0.6"/>
+          <polygon points="132,38 260,30 260,70 132,62" fill="#9ca3af" opacity="0.5"/>
+          <text x="195" y="52" font-size="10" fill="#374151" font-weight="700">OMBRE</text>
+        </svg>
+        <div class="vis-caption">Propagation rectiligne → formation d'une ombre</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2rem">🔄 Réflexion et réfraction</h2>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.95rem">
+      <li><strong>Réflexion :</strong> la lumière rebondit sur une surface (miroir). Loi : angle d'incidence = angle de réflexion</li>
+      <li><strong>Réfraction :</strong> la lumière change de direction en passant d'un milieu à un autre (air → eau → verre). C'est pourquoi une paille dans l'eau semble "cassée".</li>
+      <li><strong>Indice de réfraction (n) :</strong> mesure de la "déviation" de la lumière dans un milieu. n(vide) = 1, n(verre) ≈ 1,5</li>
+    </ul>
+
+    <h2 style="margin-top:2.5rem">🔎 Les lentilles</h2>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.92rem">
+      <li><strong>Lentille convergente :</strong> fait converger les rayons vers un point (foyer). Grossit les images proches. Ex : loupe, œil, objectif photo.</li>
+      <li><strong>Lentille divergente :</strong> fait diverger les rayons. Ex : lunettes pour myopes.</li>
+      <li><strong>Distance focale (f') :</strong> distance entre le centre de la lentille et le foyer image</li>
+    </ul>
+
+    <h2 style="margin-top:2.5rem">🌈 Le spectre lumineux et les couleurs</h2>
+    <p>La lumière blanche du soleil est composée de toutes les couleurs. Un prisme la décompose en spectre (arc-en-ciel).</p>
+
+    <div class="rainbow-bar"></div>
+    <p style="text-align:center;font-size:.85rem;color:var(--text-muted);">Rouge — Orange — Jaune — Vert — Cyan — Bleu — Violet</p>
+
+    <div class="key-box">🎨 <strong>Synthèse additive (lumière) :</strong> Rouge + Vert + Bleu = Blanc (écrans TV, téléphone)<br/>🖨️ <strong>Synthèse soustractive (pigments) :</strong> Cyan + Magenta + Jaune = Noir (imprimerie)</div>
+
+    <p>La couleur d'un objet éclairé en lumière blanche = la couleur de la lumière qu'il <strong>réfléchit</strong>. Il absorbe les autres. Un objet rouge absorbe tout sauf le rouge.</p>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/physique-chimie.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Comment la lumière se propage-t-elle dans un milieu homogène ?",
+      options: ["En courbe", "En zigzag", "En ligne droite (propagation rectiligne)", "Aléatoirement"],
+      correct: 2,
+      explication: "La lumière se propage en ligne droite dans un milieu homogène. C'est le principe de la propagation rectiligne de la lumière."
+    },
+    {
+      q: "Quelle est la vitesse de la lumière dans le vide ?",
+      options: ["3 000 km/s", "300 000 km/s", "300 km/s", "3 000 000 km/s"],
+      correct: 1,
+      explication: "c ≈ 300 000 km/s = 3×10⁸ m/s. C'est la vitesse maximale de l'univers (rien ne peut aller plus vite)."
+    },
+    {
+      q: "Une source lumineuse primaire est :",
+      options: ["La Lune", "Un miroir", "Le Soleil (qui émet sa propre lumière)", "Un livre blanc"],
+      correct: 2,
+      explication: "Source primaire = émet sa propre lumière. La Lune est une source secondaire (elle réfléchit la lumière du Soleil)."
+    },
+    {
+      q: "Lors d'une réflexion sur un miroir plan, l'angle d'incidence est :",
+      options: ["Plus grand que l'angle de réflexion", "Égal à l'angle de réflexion", "Égal à 90°", "Toujours nul"],
+      correct: 1,
+      explication: "Loi de la réflexion : angle d'incidence = angle de réflexion (tous deux mesurés par rapport à la normale au miroir)."
+    },
+    {
+      q: "Pourquoi une paille dans un verre d'eau semble-t-elle «cassée» ?",
+      options: ["La paille se déforme sous l'eau", "La lumière se réfléchit", "La lumière se réfracte (change de direction) en passant de l'eau à l'air", "L'eau change la couleur"],
+      correct: 2,
+      explication: "La réfraction : en passant de l'eau à l'air (indices de réfraction différents), la lumière change de direction → la paille paraît cassée."
+    },
+    {
+      q: "Une lentille convergente :",
+      options: ["Écarte les rayons lumineux", "Fait converger les rayons vers un point focal", "N'affecte pas la lumière", "Absorbe la lumière"],
+      correct: 1,
+      explication: "La lentille convergente (plus épaisse au centre) fait converger les rayons vers son foyer image F'. Ex : loupe, objectif photo."
+    },
+    {
+      q: "La lumière blanche est :",
+      options: ["Une lumière sans couleur", "La synthèse de toutes les couleurs visibles", "La couleur avec la plus grande longueur d'onde", "Uniquement de la lumière rouge et bleue"],
+      correct: 1,
+      explication: "La lumière blanche est la superposition de toutes les couleurs du spectre visible (rouge, orange, jaune, vert, bleu, violet). Un prisme la décompose."
+    },
+    {
+      q: "Quel objet peut décomposer la lumière blanche en spectre (arc-en-ciel) ?",
+      options: ["Un miroir plan", "Un prisme ou une goutte d'eau", "Une lentille divergente", "Un filtre coloré"],
+      correct: 1,
+      explication: "Un prisme (ou une goutte d'eau dans un arc-en-ciel naturel) réfracte différemment chaque couleur → décomposition en spectre."
+    },
+    {
+      q: "En synthèse additive (lumières colorées), quelle combinaison donne du blanc ?",
+      options: ["Rouge + Bleu", "Rouge + Vert + Bleu", "Cyan + Magenta + Jaune", "Vert + Bleu"],
+      correct: 1,
+      explication: "Synthèse additive (lumières) : Rouge + Vert + Bleu = Blanc. C'est le principe des écrans (TV, smartphone)."
+    },
+    {
+      q: "En synthèse soustractive (pigments), quelle combinaison donne du noir ?",
+      options: ["Rouge + Vert + Bleu", "Cyan + Magenta + Jaune", "Orange + Violet", "Blanc + Noir"],
+      correct: 1,
+      explication: "Synthèse soustractive (pigments) : Cyan + Magenta + Jaune = Noir (en théorie). C'est le principe de l'imprimerie (CMJN)."
+    },
+    {
+      q: "Strawberry Cat porte un t-shirt rouge éclairé en lumière blanche. Son t-shirt :",
+      options: ["Absorbe uniquement le rouge", "Réfléchit le rouge et absorbe les autres couleurs", "Émet de la lumière rouge", "Réfracte la lumière"],
+      correct: 1,
+      explication: "Un objet rouge réfléchit la lumière rouge et absorbe toutes les autres couleurs. C'est ce qui lui donne sa couleur rouge."
+    },
+    {
+      q: "Si on éclaire un objet rouge avec une lumière verte, l'objet apparaît :",
+      options: ["Rouge", "Vert brillant", "Noir (il n'y a pas de rouge à réfléchir)", "Blanc"],
+      correct: 2,
+      explication: "L'objet rouge ne peut réfléchir que le rouge. Sous lumière verte, il n'y a pas de rouge → l'objet absorbe tout → il apparaît noir."
+    },
+    {
+      q: "Quelle est la différence entre une source primaire et une source secondaire ?",
+      options: ["La taille", "La source primaire émet sa propre lumière ; la source secondaire réfléchit la lumière reçue", "La couleur", "La distance"],
+      correct: 1,
+      explication: "Primaire = émet (Soleil, étoile, ampoule). Secondaire = diffuse la lumière reçue (Lune, livre, écran blanc)."
+    },
+    {
+      q: "La distance focale d'une lentille est :",
+      options: ["La taille de la lentille", "La distance entre le centre de la lentille et son foyer image", "L'épaisseur de la lentille", "La distance entre l'objet et l'image"],
+      correct: 1,
+      explication: "La distance focale f' = distance OF' (du centre optique au foyer image). Plus f' est petite, plus la lentille est convergente (puissante)."
+    },
+    {
+      q: "L'indice de réfraction de l'eau est ≈ 1,33. Cela signifie que :",
+      options: ["La lumière va 1,33 fois plus vite dans l'eau que dans le vide", "La lumière va 1,33 fois moins vite dans l'eau que dans le vide", "L'eau absorbe 1,33% de la lumière", "L'eau réfléchit 1,33 fois plus"],
+      correct: 1,
+      explication: "n = c/v → v = c/n. Avec n = 1,33 : v dans l'eau = 300 000/1,33 ≈ 225 000 km/s. La lumière ralentit dans l'eau."
+    },
+    {
+      q: "L'ombre d'un objet se forme parce que :",
+      options: ["L'objet est transparent", "L'objet absorbe la lumière et ne laisse pas passer les rayons", "L'objet réfracte la lumière", "L'objet est une source de lumière"],
+      correct: 1,
+      explication: "Un objet opaque bloque les rayons lumineux (propagation rectiligne) → derrière lui se forme une zone sans lumière = ombre."
+    },
+    {
+      q: "Les lunettes de myope utilisent des lentilles :",
+      options: ["Convergentes", "Divergentes", "Planes", "Prismatiques"],
+      correct: 1,
+      explication: "Le myope voit flou de loin car son œil converge trop → on corrige avec des lentilles divergentes qui écartent un peu les rayons avant l'œil."
+    },
+    {
+      q: "Les couleurs primaires en synthèse additive (lumière) sont :",
+      options: ["Rouge, Jaune, Bleu", "Cyan, Magenta, Jaune", "Rouge, Vert, Bleu", "Orange, Violet, Vert"],
+      correct: 2,
+      explication: "Synthèse additive : les 3 couleurs primaires sont le Rouge, le Vert et le Bleu (RVB / RGB). Mélangées à puissance max → blanc."
+    },
+    {
+      q: "Le spectre visible de la lumière va :",
+      options: ["Des ondes radio aux rayons gamma", "Du rouge au violet (longueurs d'onde de ~700 nm à ~400 nm)", "Du blanc au noir", "Des infrarouges aux ultraviolets"],
+      correct: 1,
+      explication: "Le spectre visible va du rouge (~700 nm) au violet (~400 nm). En dehors : infrarouges (IR) et ultraviolets (UV), invisibles à l'œil nu."
+    },
+    {
+      q: "Qu'est-ce qu'un arc-en-ciel dans la nature ?",
+      options: ["Un reflet de la lumière sur l'eau", "La décomposition de la lumière blanche par des gouttes d'eau (réfraction + réflexion)", "Une illusion optique de la cornée", "Un phénomène uniquement dû à la chaleur"],
+      correct: 1,
+      explication: "L'arc-en-ciel = chaque goutte d'eau agit comme un prisme. La lumière blanche est réfractée, réfléchie à l'intérieur, et réfractée à nouveau → spectre visible."
+    }
+  ]);
+  </script>
+</body>
+</html>
