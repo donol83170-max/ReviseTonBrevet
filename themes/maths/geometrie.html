@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours géométrie plane brevet + 20 QCM corrigés : Pythagore, Thalès, aires, périmètres, angles, transformations. ReviseTonBrevet."/>
+  <title>Géométrie plane — Maths Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    sup { font-size: .7em; vertical-align: super; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .vis svg { max-width: 100%; height: auto; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+    .formula-box {
+      background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px;
+      padding: .9rem 1.2rem; font-size: 1rem; font-weight: 700; color: #4c1d95;
+      margin: 1rem 0; font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/maths.html">Maths</a> → Géométrie plane</p>
+    <h1>📐 Géométrie plane</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <!-- ════════════════════════════════════════════
+       FICHE DE COURS
+  ════════════════════════════════════════════ -->
+  <div class="fiche-section">
+
+    <h2>📐 Théorème de Pythagore</h2>
+    <p>Dans un triangle <strong>rectangle</strong>, le carré de l'hypoténuse (le grand côté en face de l'angle droit) est égal à la somme des carrés des deux autres côtés.</p>
+
+    <p>Imagine que SCH doit traverser un parking rectangulaire à pied. Il peut soit longer les côtés (6m et 8m), soit couper en diagonale. La diagonale c'est : </p>
+
+    <div class="formula-box">c² = a² + b²   →   Hypoténuse² = Côté₁² + Côté₂²</div>
+
+    <!-- SVG triangle rectangle Pythagore -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="240" height="200" viewBox="0 0 240 200">
+          <!-- Triangle rectangle -->
+          <polygon points="30,170 30,50 190,170" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+          <!-- Angle droit -->
+          <rect x="30" y="150" width="20" height="20" fill="none" stroke="#7c3aed" stroke-width="2"/>
+          <!-- Labels côtés -->
+          <text x="14" y="115" font-size="15" font-weight="700" fill="#7c3aed">a=6</text>
+          <text x="100" y="190" font-size="15" font-weight="700" fill="#7c3aed">b=8</text>
+          <text x="118" y="100" font-size="15" font-weight="700" fill="#dc2626">c=?</text>
+          <!-- Arc angle droit symbol -->
+          <text x="38" y="147" font-size="13" fill="#4c1d95">90°</text>
+        </svg>
+        <div class="vis-caption">c² = 6² + 8² = 36 + 64 = 100 → c = 10m<br/>SCH gagne 4m en coupant 💨</div>
+      </div>
+    </div>
+
+    <p><strong>Réciproque :</strong> Si a² + b² = c², alors le triangle est rectangle. C'est le test Pythagore inverse — tu vérifies si l'angle est bien droit.</p>
+
+    <!-- ─── Thalès ─── -->
+    <h2 style="margin-top:2.5rem">📏 Théorème de Thalès</h2>
+    <p>Si deux droites parallèles coupent deux sécantes, elles créent des longueurs proportionnelles. En gros : des triangles "emboîtés" avec les mêmes rapports.</p>
+
+    <div class="formula-box">AM/AB = AN/AC = MN/BC</div>
+
+    <!-- SVG Thalès -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="200" viewBox="0 0 220 200">
+          <!-- Grand triangle -->
+          <line x1="110" y1="20" x2="30" y2="180" stroke="#7c3aed" stroke-width="2.5"/>
+          <line x1="110" y1="20" x2="190" y2="180" stroke="#7c3aed" stroke-width="2.5"/>
+          <line x1="30" y1="180" x2="190" y2="180" stroke="#7c3aed" stroke-width="2.5"/>
+          <!-- Ligne parallèle (Thalès) -->
+          <line x1="70" y1="100" x2="150" y2="100" stroke="#f472b6" stroke-width="2.5" stroke-dasharray="6,3"/>
+          <!-- Points -->
+          <circle cx="110" cy="20" r="4" fill="#7c3aed"/>
+          <circle cx="70" cy="100" r="4" fill="#f472b6"/>
+          <circle cx="150" cy="100" r="4" fill="#f472b6"/>
+          <circle cx="30" cy="180" r="4" fill="#7c3aed"/>
+          <circle cx="190" cy="180" r="4" fill="#7c3aed"/>
+          <!-- Labels -->
+          <text x="112" y="16" font-size="13" font-weight="700" fill="#4c1d95">A</text>
+          <text x="56" y="99" font-size="13" font-weight="700" fill="#be185d">M</text>
+          <text x="154" y="99" font-size="13" font-weight="700" fill="#be185d">N</text>
+          <text x="18" y="180" font-size="13" font-weight="700" fill="#4c1d95">B</text>
+          <text x="192" y="180" font-size="13" font-weight="700" fill="#4c1d95">C</text>
+          <!-- Parallel arrows -->
+          <text x="82" y="95" font-size="10" fill="#be185d">∥</text>
+        </svg>
+        <div class="vis-caption">MN ∥ BC → AM/AB = AN/AC = MN/BC</div>
+      </div>
+    </div>
+
+    <!-- ─── Aires & Périmètres ─── -->
+    <h2 style="margin-top:2.5rem">📊 Aires & Périmètres</h2>
+    <p>Le <strong>périmètre</strong> c'est le tour (longueur totale du contour). L'<strong>aire</strong> c'est la surface intérieure. 67 Elephant dit toujours "j'prends le plus grand" — il a besoin de savoir l'aire, pas le périmètre 😄</p>
+
+    <!-- Tableau formules -->
+    <div class="vis" style="align-items:flex-start">
+      <div style="text-align:center">
+        <svg width="200" height="140" viewBox="0 0 200 140">
+          <!-- Rectangle -->
+          <rect x="20" y="30" width="120" height="80" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5" rx="4"/>
+          <text x="68" y="77" font-size="14" font-weight="700" fill="#4c1d95">l × L</text>
+          <text x="72" y="24" font-size="12" fill="#7c3aed" font-weight="600">L</text>
+          <text x="150" y="75" font-size="12" fill="#7c3aed" font-weight="600">l</text>
+          <text x="18" y="130" font-size="11" fill="#6d28d9" font-weight="700">Aire = l × L</text>
+          <text x="18" y="143" font-size="10" fill="#7c3aed">Périm = 2×(l+L)</text>
+        </svg>
+        <div class="vis-caption">Rectangle</div>
+      </div>
+      <div style="text-align:center">
+        <svg width="160" height="155" viewBox="0 0 160 155">
+          <!-- Triangle -->
+          <polygon points="80,20 10,130 150,130" fill="#fce7f3" stroke="#db2777" stroke-width="2.5"/>
+          <!-- Hauteur -->
+          <line x1="80" y1="20" x2="80" y2="130" stroke="#db2777" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <rect x="80" y="118" width="12" height="12" fill="none" stroke="#db2777" stroke-width="1.5"/>
+          <text x="85" y="82" font-size="12" fill="#9d174d" font-weight="700">h</text>
+          <text x="98" y="145" font-size="12" fill="#9d174d" font-weight="700">b</text>
+          <text x="8" y="152" font-size="11" fill="#be185d" font-weight="700">Aire = (b × h) / 2</text>
+        </svg>
+        <div class="vis-caption">Triangle</div>
+      </div>
+      <div style="text-align:center">
+        <svg width="160" height="155" viewBox="0 0 160 155">
+          <!-- Cercle -->
+          <circle cx="80" cy="75" r="55" fill="#ecfdf5" stroke="#059669" stroke-width="2.5"/>
+          <!-- Rayon -->
+          <line x1="80" y1="75" x2="135" y2="75" stroke="#059669" stroke-width="2"/>
+          <circle cx="80" cy="75" r="4" fill="#059669"/>
+          <text x="98" y="68" font-size="13" fill="#065f46" font-weight="700">r</text>
+          <text x="4" y="148" font-size="11" fill="#059669" font-weight="700">Aire = π × r²</text>
+          <text x="4" y="161" font-size="10" fill="#047857">Périm = 2 × π × r</text>
+        </svg>
+        <div class="vis-caption">Cercle (π ≈ 3,14)</div>
+      </div>
+    </div>
+
+    <!-- ─── Angles ─── -->
+    <h2 style="margin-top:2.5rem">🔺 Angles dans un triangle</h2>
+    <p>La somme des 3 angles d'un triangle est <strong>toujours 180°</strong>. Toujours. Sans exception. Comme Jul sort toujours un album — c'est une constante de l'univers.</p>
+
+    <div class="formula-box">α + β + γ = 180°</div>
+
+    <p>Types d'angles importants :</p>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2">
+      <li><strong>Angle aigu</strong> : &lt; 90° (ex: 45°)</li>
+      <li><strong>Angle droit</strong> : = 90° (marqué par un petit carré)</li>
+      <li><strong>Angle obtus</strong> : entre 90° et 180° (ex: 120°)</li>
+      <li><strong>Angles alternes-internes</strong> : égaux quand les droites sont parallèles</li>
+    </ul>
+
+    <!-- ─── Transformations ─── -->
+    <h2 style="margin-top:2.5rem">🔄 Transformations géométriques</h2>
+    <p>Strawberry Cat fait des transformations en permanence — il se reflète, glisse, tourne… voilà ce que ça donne en géométrie :</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2">
+      <li><strong>Symétrie axiale</strong> : on "retourne" la figure par rapport à un axe (miroir). Conserve les distances et les angles.</li>
+      <li><strong>Symétrie centrale</strong> : on "retourne" par rapport à un point. Chaque point passe de l'autre côté du centre, à la même distance.</li>
+      <li><strong>Translation</strong> : on "glisse" la figure dans une direction. Tous les points se déplacent du même vecteur.</li>
+      <li><strong>Rotation</strong> : on "tourne" la figure autour d'un centre, d'un angle donné.</li>
+    </ul>
+
+    <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:8px;padding:.9rem 1.2rem;font-size:.92rem;margin-top:1rem;color:#78350f;">
+      💡 <strong>Astuce brevet :</strong> Toutes ces transformations conservent les longueurs et les angles — ce sont des <strong>isométries</strong>. L'homothétie, elle, change les tailles (mais conserve les formes).
+    </div>
+
+  </div><!-- /fiche-section -->
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <!-- ════════════════════════════════════════════
+       QCM DUOLINGO
+  ════════════════════════════════════════════ -->
+  <section class="qcm-section" data-next="../../pages/maths.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Dans un triangle rectangle, les deux côtés de l'angle droit mesurent 3 cm et 4 cm. Quelle est la longueur de l'hypoténuse ?",
+      options: ["5 cm", "7 cm", "3,5 cm", "√7 cm"],
+      correct: 0,
+      explication: "3² + 4² = 9 + 16 = 25, donc c = √25 = 5 cm. C'est le fameux triplet 3-4-5 !"
+    },
+    {
+      q: "La somme des angles d'un triangle est toujours :",
+      options: ["90°", "360°", "180°", "270°"],
+      correct: 2,
+      explication: "La somme des 3 angles d'un triangle vaut toujours 180°. C'est une propriété fondamentale !"
+    },
+    {
+      q: "Dans un triangle, deux angles mesurent 60° et 80°. Combien mesure le troisième ?",
+      options: ["40°", "50°", "60°", "70°"],
+      correct: 0,
+      explication: "60 + 80 = 140°. Troisième angle = 180 - 140 = 40°."
+    },
+    {
+      q: "L'aire d'un rectangle de longueur 7 cm et de largeur 4 cm est :",
+      options: ["11 cm²", "22 cm²", "28 cm²", "14 cm²"],
+      correct: 2,
+      explication: "Aire = L × l = 7 × 4 = 28 cm². Le périmètre, lui, serait 2×(7+4) = 22 cm."
+    },
+    {
+      q: "L'aire d'un triangle de base 10 cm et de hauteur 6 cm est :",
+      options: ["60 cm²", "30 cm²", "16 cm²", "20 cm²"],
+      correct: 1,
+      explication: "Aire = (base × hauteur) / 2 = (10 × 6) / 2 = 30 cm²."
+    },
+    {
+      q: "Le périmètre d'un cercle de rayon 5 cm est (π ≈ 3,14) :",
+      options: ["15,7 cm", "31,4 cm", "78,5 cm", "10 cm"],
+      correct: 1,
+      explication: "Périmètre = 2 × π × r = 2 × 3,14 × 5 = 31,4 cm. Attention à ne pas confondre avec l'aire (π × r² = 78,5 cm²)."
+    },
+    {
+      q: "L'aire d'un disque de rayon 3 cm est (π ≈ 3,14) :",
+      options: ["9,42 cm²", "18,84 cm²", "28,26 cm²", "6 cm²"],
+      correct: 2,
+      explication: "Aire = π × r² = 3,14 × 3² = 3,14 × 9 = 28,26 cm²."
+    },
+    {
+      q: "Le théorème de Pythagore s'applique :",
+      options: ["À tous les triangles", "Uniquement aux triangles rectangles", "Uniquement aux triangles équilatéraux", "Aux quadrilatères"],
+      correct: 1,
+      explication: "Pythagore ne fonctionne QUE dans un triangle rectangle. Si pas d'angle droit → pas de Pythagore !"
+    },
+    {
+      q: "Dans un triangle rectangle, l'hypoténuse est :",
+      options: ["Le plus petit côté", "Le côté adjacent à l'angle droit", "Le côté opposé à l'angle droit", "N'importe quel côté"],
+      correct: 2,
+      explication: "L'hypoténuse est toujours le côté en face de l'angle droit — c'est le plus long des 3 côtés."
+    },
+    {
+      q: "Quelle transformation 'retourne' une figure par rapport à un axe, comme un miroir ?",
+      options: ["Translation", "Rotation", "Symétrie centrale", "Symétrie axiale"],
+      correct: 3,
+      explication: "La symétrie axiale est une réflexion par rapport à un axe (une droite). La figure image est le 'reflet miroir'."
+    },
+    {
+      q: "Une translation déplace une figure :",
+      options: ["En la faisant tourner autour d'un point", "En la faisant glisser sans la retourner ni la faire tourner", "En changeant sa taille", "En la retournant par rapport à un axe"],
+      correct: 1,
+      explication: "La translation déplace tous les points d'un même vecteur — comme faire glisser une pièce sur une table."
+    },
+    {
+      q: "Dans une symétrie centrale de centre O, si A est un point, alors son image A' vérifie :",
+      options: ["OA = OA' et A, O, A' sont alignés", "OA = 2 × OA'", "L'angle AOA' = 90°", "A et A' sont symétriques par rapport à un axe"],
+      correct: 0,
+      explication: "O est le milieu de [AA']. Donc OA = OA' et les 3 points sont alignés — O est exactement entre A et A'."
+    },
+    {
+      q: "Le théorème de Thalès permet de :",
+      options: ["Calculer un angle dans un triangle", "Calculer des longueurs proportionnelles dans des droites parallèles", "Trouver l'hypoténuse d'un triangle rectangle", "Calculer l'aire d'un triangle"],
+      correct: 1,
+      explication: "Thalès donne des rapports de longueurs quand deux droites sont coupées par des parallèles — des longueurs proportionnelles."
+    },
+    {
+      q: "Deux triangles sont semblables si :",
+      options: ["Ils ont les mêmes longueurs", "Ils ont le même périmètre", "Ils ont les mêmes angles", "Ils ont la même aire"],
+      correct: 2,
+      explication: "Des triangles semblables ont les mêmes angles — ils ont la même forme mais pas forcément la même taille."
+    },
+    {
+      q: "Un carré a un côté de 6 cm. Quelle est son aire ?",
+      options: ["24 cm²", "12 cm²", "36 cm²", "18 cm²"],
+      correct: 2,
+      explication: "Aire du carré = côté² = 6² = 36 cm². Le périmètre serait 4 × 6 = 24 cm."
+    },
+    {
+      q: "Un angle droit mesure :",
+      options: ["45°", "60°", "90°", "180°"],
+      correct: 2,
+      explication: "Un angle droit = 90°. Il est symbolisé par un petit carré dans le coin du triangle."
+    },
+    {
+      q: "Dans un trapèze de bases 8 cm et 4 cm, et de hauteur 5 cm, l'aire est :",
+      options: ["30 cm²", "40 cm²", "20 cm²", "60 cm²"],
+      correct: 0,
+      explication: "Aire du trapèze = (grande base + petite base) × hauteur / 2 = (8+4) × 5 / 2 = 12 × 5 / 2 = 30 cm²."
+    },
+    {
+      q: "SCH constate qu'un triangle a des côtés de 5, 12 et 13. Est-il rectangle ?",
+      options: ["Oui, car 5² + 12² = 13²", "Non, car 5 + 12 ≠ 13", "Oui, car il a 3 côtés différents", "Impossible à savoir"],
+      correct: 0,
+      explication: "5² + 12² = 25 + 144 = 169 = 13². La réciproque de Pythagore confirme : ce triangle est rectangle ! (triplet 5-12-13)"
+    },
+    {
+      q: "Le 67 Elephant mesure 1,80 m. Son ombre fait 2,40 m. Un arbre voisin a une ombre de 8 m. Quelle est la hauteur de l'arbre ? (Thalès)",
+      options: ["4 m", "6 m", "8 m", "10 m"],
+      correct: 1,
+      explication: "Rapport ombre/hauteur = 2,40/1,80 = 4/3. Hauteur arbre = 8 × (3/4) = 6 m. Thalès dans la vraie vie !"
+    },
+    {
+      q: "Quel est le périmètre d'un triangle équilatéral de côté 7 cm ?",
+      options: ["14 cm", "21 cm", "28 cm", "49 cm"],
+      correct: 1,
+      explication: "Équilatéral = 3 côtés égaux. Périmètre = 3 × 7 = 21 cm. Facile comme du Jul !"
+    }
+  ]);
+  </script>
+</body>
+</html>

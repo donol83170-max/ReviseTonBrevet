@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours équations & algèbre brevet + 20 QCM corrigés : équations du 1er degré, systèmes, développement, factorisation. ReviseTonBrevet."/>
+  <title>Équations & algèbre — Maths Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+    .formula-box {
+      background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px;
+      padding: .9rem 1.2rem; font-size: 1rem; font-weight: 700; color: #4c1d95;
+      margin: 1rem 0; font-family: monospace;
+    }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+    }
+    .steps li {
+      counter-increment: step;
+      padding: .6rem .8rem .6rem 2.8rem;
+      position: relative;
+      border-left: 3px solid #e9d5ff;
+      margin-bottom: .6rem;
+      font-size: .95rem;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: .5rem;
+      top: .6rem;
+      background: #8b5cf6;
+      color: white;
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      font-size: .75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/maths.html">Maths</a> → Équations & algèbre</p>
+    <h1>🧮 Équations & algèbre</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>🔍 Équation du 1er degré</h2>
+    <p>Une équation, c'est trouver la valeur inconnue (souvent x) qui rend l'égalité vraie. C'est comme trouver le beat manquant dans un son de Jul — il y a une seule réponse !</p>
+
+    <div class="formula-box">ax + b = cx + d   →   on isole x d'un côté</div>
+
+    <p><strong>Méthode en 3 étapes</strong> pour résoudre <code>3x + 5 = 2x + 12</code> :</p>
+
+    <ol class="steps">
+      <li><strong>Regrouper les x à gauche :</strong> 3x − 2x + 5 = 12  →  x + 5 = 12</li>
+      <li><strong>Isoler x :</strong> x = 12 − 5  →  x = 7</li>
+      <li><strong>Vérifier :</strong> 3(7)+5 = 26 et 2(7)+12 = 26 ✓</li>
+    </ol>
+
+    <!-- SVG balance -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="240" height="160" viewBox="0 0 240 160">
+          <!-- Pied de la balance -->
+          <rect x="112" y="110" width="16" height="40" fill="#7c3aed" rx="4"/>
+          <rect x="90" y="145" width="60" height="10" fill="#7c3aed" rx="4"/>
+          <!-- Bras de la balance -->
+          <line x1="30" y1="95" x2="210" y2="95" stroke="#7c3aed" stroke-width="3"/>
+          <circle cx="120" cy="110" r="8" fill="#8b5cf6"/>
+          <!-- Plateaux -->
+          <line x1="30" y1="95" x2="30" y2="115" stroke="#a78bfa" stroke-width="2"/>
+          <ellipse cx="30" cy="116" rx="28" ry="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+          <line x1="210" y1="95" x2="210" y2="115" stroke="#a78bfa" stroke-width="2"/>
+          <ellipse cx="210" cy="116" rx="28" ry="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+          <!-- Texte plateaux -->
+          <text x="8" y="113" font-size="13" font-weight="700" fill="#4c1d95">3x+5</text>
+          <text x="186" y="113" font-size="13" font-weight="700" fill="#4c1d95">2x+12</text>
+          <!-- Égalité -->
+          <text x="100" y="80" font-size="14" font-weight="800" fill="#8b5cf6">=</text>
+          <text x="70" y="155" font-size="11" fill="#6d28d9">x = 7 rééquilibre tout !</text>
+        </svg>
+        <div class="vis-caption">Une équation = une balance à équilibrer</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem">🔢 Développement & factorisation</h2>
+    <p>SCH développe ses albums (il étale tout) ; Jul factorise son énergie (il met en commun). En maths c'est pareil !</p>
+
+    <div class="formula-box">Développer : a(b+c) = ab + ac</div>
+    <div class="formula-box">Factoriser : ab + ac = a(b+c)</div>
+
+    <p><strong>Identités remarquables</strong> à connaître par cœur :</p>
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.2;font-size:.95rem">
+      <li>(a+b)² = a² + 2ab + b²</li>
+      <li>(a−b)² = a² − 2ab + b²</li>
+      <li>(a+b)(a−b) = a² − b²  ← <strong>différence de carrés</strong></li>
+    </ul>
+
+    <h2 style="margin-top:2.5rem">🔗 Système d'équations</h2>
+    <p>Deux équations à deux inconnues — on cherche le (x, y) qui satisfait les deux en même temps. Comme deux contraintes pour le même problème.</p>
+
+    <div class="formula-box">{"{ x + y = 10\n{ 2x - y = 5   →   résoudre par substitution ou addition"}</div>
+
+    <p><strong>Méthode par substitution :</strong></p>
+    <ol class="steps">
+      <li>De la 1re équation : y = 10 − x</li>
+      <li>Substituer dans la 2e : 2x − (10−x) = 5  →  3x = 15  →  x = 5</li>
+      <li>y = 10 − 5 = 5. Solution : (5, 5)</li>
+    </ol>
+
+    <h2 style="margin-top:2.5rem">📐 Inéquations</h2>
+    <p>Comme une équation mais avec &lt;, &gt;, ≤ ou ≥. <strong>Attention :</strong> si on multiplie ou divise par un nombre négatif, le sens de l'inégalité s'inverse !</p>
+
+    <div class="formula-box">−2x &gt; 6  →  x &lt; −3  (inversion car ÷ par −2)</div>
+
+    <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:8px;padding:.9rem 1.2rem;font-size:.92rem;margin-top:1rem;color:#78350f;">
+      💡 <strong>Règle d'or :</strong> Ce qu'on fait d'un côté, on le fait de l'autre. L'équation est une balance — elle doit toujours rester en équilibre !
+    </div>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/maths.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Résoudre : x + 7 = 12",
+      options: ["x = 5", "x = 19", "x = -5", "x = 84"],
+      correct: 0,
+      explication: "x = 12 − 7 = 5. On soustrait 7 des deux côtés."
+    },
+    {
+      q: "Résoudre : 3x = 21",
+      options: ["x = 18", "x = 63", "x = 7", "x = 3"],
+      correct: 2,
+      explication: "x = 21 ÷ 3 = 7. On divise les deux membres par 3."
+    },
+    {
+      q: "Résoudre : 2x + 4 = 10",
+      options: ["x = 7", "x = 3", "x = 4", "x = 2"],
+      correct: 1,
+      explication: "2x = 10 − 4 = 6, donc x = 3."
+    },
+    {
+      q: "Développer : 3(x + 5)",
+      options: ["3x + 5", "3x + 15", "x + 15", "3x + 8"],
+      correct: 1,
+      explication: "3(x+5) = 3×x + 3×5 = 3x + 15."
+    },
+    {
+      q: "Factoriser : 6x + 10",
+      options: ["2(3x + 10)", "2(3x + 5)", "6(x + 10)", "2x(3 + 5)"],
+      correct: 1,
+      explication: "PGCD de 6 et 10 = 2. Donc 6x + 10 = 2(3x + 5)."
+    },
+    {
+      q: "Développer (a+b)² :",
+      options: ["a² + b²", "a² + ab + b²", "a² + 2ab + b²", "2a + 2b"],
+      correct: 2,
+      explication: "(a+b)² = a² + 2ab + b². C'est l'identité remarquable numéro 1, à mémoriser !"
+    },
+    {
+      q: "Factoriser : a² − b²",
+      options: ["(a−b)²", "(a+b)(a−b)", "(a+b)²", "(a−b)(a−b)"],
+      correct: 1,
+      explication: "a² − b² = (a+b)(a−b). C'est la différence de deux carrés — identité remarquable n°3."
+    },
+    {
+      q: "SCH a x années de plus que Jul. La somme de leurs âges est 52 ans. Jul a 22 ans. Quel est x ?",
+      options: ["x = 8", "x = 30", "x = 74", "x = 26"],
+      correct: 0,
+      explication: "SCH = 22 + x. Somme = 22 + 22 + x = 52 → 2x+44 = 52... en fait : 22 + (22+x) = 52 → 44+x = 52 → x = 8."
+    },
+    {
+      q: "Résoudre : 5x − 3 = 2x + 9",
+      options: ["x = 2", "x = 3", "x = 4", "x = 6"],
+      correct: 2,
+      explication: "5x − 2x = 9 + 3 → 3x = 12 → x = 4."
+    },
+    {
+      q: "Développer (x − 3)² :",
+      options: ["x² − 9", "x² − 3x + 9", "x² − 6x + 9", "x² + 6x + 9"],
+      correct: 2,
+      explication: "(x−3)² = x² − 2×x×3 + 3² = x² − 6x + 9."
+    },
+    {
+      q: "Résoudre : −3x > 12",
+      options: ["x > −4", "x < −4", "x > 4", "x < 4"],
+      correct: 1,
+      explication: "x < −4. Division par −3 (négatif) → le sens s'inverse ! x > 12÷(−3) = x > −4 devient x < −4."
+    },
+    {
+      q: "Quel est le développement de (2x + 1)(x − 3) ?",
+      options: ["2x² − 5x − 3", "2x² − 6x + 1", "2x² + 5x − 3", "2x² − 3"],
+      correct: 0,
+      explication: "(2x+1)(x−3) = 2x×x + 2x×(−3) + 1×x + 1×(−3) = 2x² − 6x + x − 3 = 2x² − 5x − 3."
+    },
+    {
+      q: "Résoudre le système : x+y=8 et x−y=2",
+      options: ["(5,3)", "(4,4)", "(6,2)", "(3,5)"],
+      correct: 0,
+      explication: "Addition des 2 équations : 2x = 10 → x = 5. Puis y = 8−5 = 3. Solution : (5, 3)."
+    },
+    {
+      q: "Factoriser : x² − 25",
+      options: ["(x−5)²", "(x+5)(x−5)", "(x−5)(x−5)", "(x²−5)"],
+      correct: 1,
+      explication: "x² − 25 = x² − 5² = (x+5)(x−5). Différence de carrés !"
+    },
+    {
+      q: "67 Elephant achète n t-shirts à 18€ et dépense 90€. Quelle équation traduit ça ?",
+      options: ["n + 18 = 90", "18n = 90", "18 + n = 90", "n/18 = 90"],
+      correct: 1,
+      explication: "Prix total = prix unitaire × quantité → 18n = 90 → n = 5 t-shirts."
+    },
+    {
+      q: "Résoudre : x/4 = 3",
+      options: ["x = 12", "x = 7", "x = 0,75", "x = 3/4"],
+      correct: 0,
+      explication: "x = 3 × 4 = 12. On multiplie les deux membres par 4."
+    },
+    {
+      q: "Développer (x+4)(x−4) :",
+      options: ["x² + 16", "x² − 16", "x² − 8x + 16", "x² + 8x − 16"],
+      correct: 1,
+      explication: "(x+4)(x−4) = x² − 4² = x² − 16. Identité remarquable : (a+b)(a−b) = a²−b²."
+    },
+    {
+      q: "Quelle est la solution de 0 × x = 5 ?",
+      options: ["x = 5", "x = 0", "x = 1/5", "Pas de solution"],
+      correct: 3,
+      explication: "0 × x = 0 pour toute valeur de x. Jamais égal à 5. Cette équation n'a aucune solution !"
+    },
+    {
+      q: "Résoudre : 2(x − 3) = 4",
+      options: ["x = 5", "x = 2", "x = 7", "x = 1"],
+      correct: 0,
+      explication: "2x − 6 = 4 → 2x = 10 → x = 5."
+    },
+    {
+      q: "Strawberry Cat veut que 3x + 2 < 14. Les valeurs de x acceptables sont :",
+      options: ["x < 4", "x > 4", "x < 5,3", "x ≤ 4"],
+      correct: 0,
+      explication: "3x < 12 → x < 4. (Strictement inférieur car l'inégalité est stricte.)"
+    }
+  ]);
+  </script>
+</body>
+</html>

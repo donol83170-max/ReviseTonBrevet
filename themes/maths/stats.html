@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours statistiques & probabilités brevet + 20 QCM corrigés : moyenne, médiane, étendue, fréquences, probabilités. ReviseTonBrevet."/>
+  <title>Statistiques & probabilités — Maths Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
+    .vis svg { max-width: 100%; height: auto; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+    .formula-box {
+      background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px;
+      padding: .9rem 1.2rem; font-size: 1rem; font-weight: 700; color: #4c1d95;
+      margin: 1rem 0; font-family: monospace;
+    }
+    .data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .92rem; }
+    .data-table th { background: #7c3aed; color: white; padding: .5rem .8rem; text-align: center; }
+    .data-table td { border: 1px solid #e9d5ff; padding: .5rem .8rem; text-align: center; }
+    .data-table tr:nth-child(even) td { background: #f5f3ff; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/maths.html">Maths</a> → Statistiques & probabilités</p>
+    <h1>📊 Statistiques & probabilités</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>📊 Statistiques — Les indicateurs</h2>
+    <p>Les stats c'est résumer des données. Imagine que Jul mesure les streams de ses 7 derniers sons (en millions) : <strong>3, 7, 5, 9, 5, 4, 11</strong>. Comment décrire ça en un seul chiffre ?</p>
+
+    <!-- Tableau exemple -->
+    <table class="data-table">
+      <tr><th>Indicateur</th><th>Définition</th><th>Exemple (3, 4, 5, 5, 7, 9, 11)</th></tr>
+      <tr><td><strong>Moyenne</strong></td><td>Somme ÷ effectif total</td><td>(3+4+5+5+7+9+11) ÷ 7 = <strong>44/7 ≈ 6,3</strong></td></tr>
+      <tr><td><strong>Médiane</strong></td><td>Valeur du milieu (données triées)</td><td>3, 4, 5, <strong>5</strong>, 7, 9, 11 → médiane = <strong>5</strong></td></tr>
+      <tr><td><strong>Étendue</strong></td><td>Max − Min</td><td>11 − 3 = <strong>8</strong></td></tr>
+      <tr><td><strong>Mode</strong></td><td>Valeur la plus fréquente</td><td>5 apparaît 2 fois → mode = <strong>5</strong></td></tr>
+    </table>
+
+    <!-- SVG diagramme en barres -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="260" height="180" viewBox="0 0 260 180">
+          <!-- Axe y -->
+          <line x1="35" y1="10" x2="35" y2="155" stroke="#9ca3af" stroke-width="1.5"/>
+          <!-- Axe x -->
+          <line x1="35" y1="155" x2="245" y2="155" stroke="#9ca3af" stroke-width="1.5"/>
+          <!-- Barres -->
+          <rect x="45" y="128" width="22" height="27" fill="#8b5cf6" rx="3"/>
+          <rect x="75" y="115" width="22" height="40" fill="#8b5cf6" rx="3"/>
+          <rect x="105" y="101" width="22" height="54" fill="#8b5cf6" rx="3"/>
+          <rect x="135" y="101" width="22" height="54" fill="#f472b6" rx="3"/>
+          <rect x="165" y="75" width="22" height="80" fill="#8b5cf6" rx="3"/>
+          <rect x="195" y="48" width="22" height="107" fill="#8b5cf6" rx="3"/>
+          <rect x="225" y="21" width="22" height="134" fill="#8b5cf6" rx="3"/>
+          <!-- Labels x -->
+          <text x="50" y="168" font-size="10" fill="#6b7280">3</text>
+          <text x="80" y="168" font-size="10" fill="#6b7280">4</text>
+          <text x="110" y="168" font-size="10" fill="#6b7280">5</text>
+          <text x="140" y="168" font-size="10" fill="#6b7280">5</text>
+          <text x="170" y="168" font-size="10" fill="#6b7280">7</text>
+          <text x="200" y="168" font-size="10" fill="#6b7280">9</text>
+          <text x="230" y="168" font-size="10" fill="#6b7280">11</text>
+          <!-- Médiane label -->
+          <text x="133" y="96" font-size="10" fill="#be185d" font-weight="700">médiane</text>
+          <line x1="146" y1="99" x2="146" y2="155" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="4,2"/>
+        </svg>
+        <div class="vis-caption">Streams de Jul — la médiane (rose) sépare en 2 moitiés égales</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem">🎲 Probabilités</h2>
+    <p>La probabilité, c'est mesurer les chances qu'un événement se produise. Si le 67 Elephant tire une carte dans un jeu de 52 cartes, la probabilité de tirer un as c'est :</p>
+
+    <div class="formula-box">P(événement) = Nombre de cas favorables / Nombre de cas possibles</div>
+
+    <p>La probabilité est toujours entre <strong>0</strong> (impossible) et <strong>1</strong> (certain). Elle peut s'exprimer en fraction, décimal ou pourcentage.</p>
+
+    <!-- SVG dé -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="200" height="160" viewBox="0 0 200 160">
+          <!-- Dé -->
+          <rect x="60" y="20" width="80" height="80" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+          <!-- Points du dé : face 5 -->
+          <circle cx="82" cy="42" r="6" fill="#7c3aed"/>
+          <circle cx="118" cy="42" r="6" fill="#7c3aed"/>
+          <circle cx="100" cy="60" r="6" fill="#f472b6"/>
+          <circle cx="82" cy="78" r="6" fill="#7c3aed"/>
+          <circle cx="118" cy="78" r="6" fill="#7c3aed"/>
+          <!-- Labels proba -->
+          <text x="30" y="126" font-size="12" fill="#4c1d95" font-weight="700">P(5) = 1/6 ≈ 16,7%</text>
+          <text x="20" y="145" font-size="12" fill="#6d28d9">P(pair) = 3/6 = 1/2 = 50%</text>
+          <text x="28" y="162" font-size="12" fill="#6d28d9">P(≤6) = 6/6 = 1 (certain)</text>
+        </svg>
+        <div class="vis-caption">Probabilités sur un dé à 6 faces</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem">📋 Fréquences</h2>
+    <p>La fréquence c'est la proportion d'une valeur dans la série. Si Strawberry Cat a fait 100 vidéos et que 25 sont des gaming : fréquence = 25/100 = 0,25 = 25%.</p>
+
+    <div class="formula-box">Fréquence = Effectif de la valeur / Effectif total</div>
+
+    <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:8px;padding:.9rem 1.2rem;font-size:.92rem;margin-top:1rem;color:#78350f;">
+      💡 <strong>Astuce :</strong> La somme de toutes les fréquences = 1 (ou 100%). Utile pour vérifier tes calculs !
+    </div>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/maths.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Jul a ces notes sur 5 contrôles : 8, 12, 10, 14, 6. Quelle est sa moyenne ?",
+      options: ["9", "10", "11", "12"],
+      correct: 1,
+      explication: "Moyenne = (8+12+10+14+6) / 5 = 50 / 5 = 10. Jul est pile au milieu !"
+    },
+    {
+      q: "Quelle est la médiane de la série : 2, 5, 7, 9, 11 ?",
+      options: ["5", "7", "9", "6,8"],
+      correct: 1,
+      explication: "La série est déjà triée. Elle a 5 valeurs → la médiane est la 3ème : 7."
+    },
+    {
+      q: "L'étendue de la série 3, 8, 15, 6, 12 est :",
+      options: ["12", "9", "15", "3"],
+      correct: 0,
+      explication: "Étendue = Max − Min = 15 − 3 = 12."
+    },
+    {
+      q: "Quelle est la médiane de : 4, 6, 8, 10 (nombre pair de valeurs) ?",
+      options: ["6", "7", "8", "4"],
+      correct: 1,
+      explication: "Nombre pair de valeurs → médiane = moyenne des 2 du milieu = (6+8)/2 = 7."
+    },
+    {
+      q: "SCH tire une carte au hasard dans un jeu de 52 cartes. Quelle est la probabilité d'avoir un cœur ?",
+      options: ["1/4", "1/13", "1/52", "1/2"],
+      correct: 0,
+      explication: "Il y a 13 cœurs dans 52 cartes. P = 13/52 = 1/4 = 25%."
+    },
+    {
+      q: "On lance un dé à 6 faces. P(obtenir un nombre pair) = ?",
+      options: ["1/6", "1/3", "1/2", "2/3"],
+      correct: 2,
+      explication: "Nombres pairs : 2, 4, 6 → 3 cas favorables sur 6. P = 3/6 = 1/2."
+    },
+    {
+      q: "La probabilité d'un événement impossible est :",
+      options: ["0,5", "1", "0", "Indéfinie"],
+      correct: 2,
+      explication: "Un événement impossible a une probabilité de 0. Un événement certain a une probabilité de 1."
+    },
+    {
+      q: "Dans une classe de 30 élèves, 12 sont en club sport. Quelle est la fréquence des sportifs ?",
+      options: ["0,3", "0,4", "0,5", "0,6"],
+      correct: 1,
+      explication: "Fréquence = 12/30 = 0,4 = 40%."
+    },
+    {
+      q: "Le mode d'une série de données est :",
+      options: ["La valeur la plus grande", "La valeur du milieu", "La valeur la plus fréquente", "La moyenne"],
+      correct: 2,
+      explication: "Le mode est la valeur qui apparaît le plus souvent dans la série."
+    },
+    {
+      q: "67 Elephant tire une bille dans un sac contenant 3 rouges, 2 bleues, 5 vertes. P(rouge) = ?",
+      options: ["1/3", "3/10", "3/5", "2/10"],
+      correct: 1,
+      explication: "Total = 3+2+5 = 10. P(rouge) = 3/10 = 0,3 = 30%."
+    },
+    {
+      q: "Quelle est la moyenne de 0, 0, 0, 0, 10 ?",
+      options: ["0", "2", "10", "5"],
+      correct: 1,
+      explication: "Moyenne = (0+0+0+0+10) / 5 = 10/5 = 2. La moyenne est très sensible aux valeurs extrêmes !"
+    },
+    {
+      q: "La somme de toutes les fréquences d'une distribution est toujours :",
+      options: ["0", "100", "1", "Variable"],
+      correct: 2,
+      explication: "La somme des fréquences = 1 (ou 100% si en pourcentages). C'est une règle fondamentale."
+    },
+    {
+      q: "Dans une urne : 4 boules blanches, 6 boules noires. On tire 1 boule. P(blanche) = ?",
+      options: ["4/10", "6/10", "4/6", "1/4"],
+      correct: 0,
+      explication: "P(blanche) = 4/(4+6) = 4/10 = 2/5 = 40%."
+    },
+    {
+      q: "Quelle est la médiane de la série : 1, 3, 5, 7, 9, 11 ?",
+      options: ["5", "6", "7", "5,5"],
+      correct: 1,
+      explication: "6 valeurs → médiane = (5+7)/2 = 12/2 = 6."
+    },
+    {
+      q: "Strawberry Cat a eu ces vues sur 4 jours : 500, 1500, 800, 1200. Quelle est l'étendue ?",
+      options: ["700", "800", "1000", "1200"],
+      correct: 2,
+      explication: "Étendue = 1500 − 500 = 1000 vues."
+    },
+    {
+      q: "P(A) = 0,3. Quelle est la probabilité de l'événement contraire (non A) ?",
+      options: ["0,3", "0,7", "0,6", "1,3"],
+      correct: 1,
+      explication: "P(non A) = 1 − P(A) = 1 − 0,3 = 0,7. Les probabilités complémentaires s'additionnent à 1."
+    },
+    {
+      q: "Un QCM a 4 réponses possibles. Si on répond au hasard, P(bonne réponse) = ?",
+      options: ["1/4", "1/2", "3/4", "1"],
+      correct: 0,
+      explication: "1 bonne réponse sur 4 possibles → P = 1/4 = 25%. Comme Strawberry Cat qui tente sa chance !"
+    },
+    {
+      q: "La moyenne d'une série est 8. On ajoute la valeur 8. La nouvelle moyenne est :",
+      options: ["Plus grande que 8", "Moins grande que 8", "Toujours 8", "Le double"],
+      correct: 2,
+      explication: "Ajouter une valeur égale à la moyenne ne change pas la moyenne. Elle reste 8."
+    },
+    {
+      q: "Dans une classe, 60% des élèves sont filles. Il y a 30 élèves. Combien de garçons ?",
+      options: ["12", "18", "20", "6"],
+      correct: 0,
+      explication: "40% sont garçons → 0,4 × 30 = 12 garçons."
+    },
+    {
+      q: "Jul a ces scores au basket : 5, 8, 8, 12, 15, 8. Quel est le mode ?",
+      options: ["8", "9,3", "12", "5"],
+      correct: 0,
+      explication: "8 apparaît 3 fois, c'est la valeur la plus fréquente → mode = 8."
+    }
+  ]);
+  </script>
+</body>
+</html>

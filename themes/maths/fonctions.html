@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours fonctions & proportionnalité brevet + 20 QCM corrigés : fonctions linéaires, affines, lecture graphique, tableaux de valeurs. ReviseTonBrevet."/>
+  <title>Fonctions & proportionnalité — Maths Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    sup { font-size: .7em; vertical-align: super; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
+    .vis svg { max-width: 100%; height: auto; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+    .formula-box {
+      background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px;
+      padding: .9rem 1.2rem; font-size: 1rem; font-weight: 700; color: #4c1d95;
+      margin: 1rem 0; font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/maths.html">Maths</a> → Fonctions & proportionnalité</p>
+    <h1>📈 Fonctions & proportionnalité</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>📈 Fonction linéaire</h2>
+    <p>Une fonction linéaire, c'est de la proportionnalité pure. Si Jul vend des albums à <strong>15€ pièce</strong>, son chiffre d'affaires est <strong>15 fois</strong> le nombre d'albums. C'est une fonction linéaire de coefficient 15.</p>
+
+    <div class="formula-box">f(x) = a × x   (passe toujours par l'origine O)</div>
+
+    <p>Sa représentation graphique est une droite qui passe par <strong>(0, 0)</strong>. Plus <code>a</code> est grand, plus la droite est "raide".</p>
+
+    <!-- SVG graphe fonction linéaire -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="200" viewBox="0 0 220 200">
+          <!-- Axes -->
+          <line x1="30" y1="170" x2="200" y2="170" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="30" y1="170" x2="30" y2="10" stroke="#9ca3af" stroke-width="1.5"/>
+          <!-- Flèches axes -->
+          <polygon points="200,166 210,170 200,174" fill="#9ca3af"/>
+          <polygon points="26,10 30,0 34,10" fill="#9ca3af"/>
+          <!-- Labels axes -->
+          <text x="205" y="174" font-size="12" fill="#6b7280">x</text>
+          <text x="22" y="6" font-size="12" fill="#6b7280">y</text>
+          <!-- Grille légère -->
+          <line x1="80" y1="170" x2="80" y2="10" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="130" y1="170" x2="130" y2="10" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="180" y1="170" x2="180" y2="10" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="30" y1="120" x2="200" y2="120" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="30" y1="70" x2="200" y2="70" stroke="#e5e7eb" stroke-width="1"/>
+          <!-- Droite f(x) = 2x -->
+          <line x1="30" y1="170" x2="155" y2="45" stroke="#8b5cf6" stroke-width="2.5"/>
+          <text x="155" y="40" font-size="13" font-weight="700" fill="#7c3aed">f(x)=2x</text>
+          <!-- Point remarquable -->
+          <circle cx="80" cy="120" r="4" fill="#8b5cf6"/>
+          <text x="84" y="116" font-size="11" fill="#4c1d95">(1, 2)</text>
+          <!-- Origine -->
+          <circle cx="30" cy="170" r="4" fill="#8b5cf6"/>
+          <text x="14" y="185" font-size="11" fill="#4c1d95">O</text>
+        </svg>
+        <div class="vis-caption">f(x) = 2x — droite passant par O<br/>coefficient directeur a = 2</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem">📉 Fonction affine</h2>
+    <p>La fonction affine ajoute un <strong>ordonnée à l'origine</strong> (le b). Imagine que SCH loue son studio d'enregistrement : 200€ de caution fixe + 50€/heure. Le coût total c'est une fonction affine.</p>
+
+    <div class="formula-box">f(x) = a × x + b   (ne passe PAS par O si b ≠ 0)</div>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2">
+      <li><strong>a</strong> = coefficient directeur (pente) → indique si ça monte (a &gt; 0) ou descend (a &lt; 0)</li>
+      <li><strong>b</strong> = ordonnée à l'origine → valeur de f(0), là où la droite coupe l'axe y</li>
+    </ul>
+
+    <!-- SVG fonction affine -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="200" viewBox="0 0 220 200">
+          <!-- Axes -->
+          <line x1="30" y1="170" x2="200" y2="170" stroke="#9ca3af" stroke-width="1.5"/>
+          <line x1="30" y1="170" x2="30" y2="10" stroke="#9ca3af" stroke-width="1.5"/>
+          <polygon points="200,166 210,170 200,174" fill="#9ca3af"/>
+          <polygon points="26,10 30,0 34,10" fill="#9ca3af"/>
+          <text x="205" y="174" font-size="12" fill="#6b7280">x</text>
+          <text x="22" y="6" font-size="12" fill="#6b7280">y</text>
+          <!-- Grille -->
+          <line x1="80" y1="170" x2="80" y2="10" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="130" y1="170" x2="130" y2="10" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="30" y1="120" x2="200" y2="120" stroke="#e5e7eb" stroke-width="1"/>
+          <!-- Droite f(x) = x + 1 — b=1 donc coupe y en (0,1) → pixel y=163 si 1 case = 50px -->
+          <line x1="30" y1="163" x2="185" y2="8" stroke="#f472b6" stroke-width="2.5"/>
+          <text x="160" y="22" font-size="13" font-weight="700" fill="#db2777">f(x)=x+1</text>
+          <!-- Ordonnée à l'origine -->
+          <circle cx="30" cy="163" r="4" fill="#f472b6"/>
+          <text x="34" y="159" font-size="11" fill="#9d174d">b=1</text>
+        </svg>
+        <div class="vis-caption">f(x) = x + 1 — ne passe pas par O<br/>b = 1 (ordonnée à l'origine)</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem">⚖️ Proportionnalité</h2>
+    <p>Deux grandeurs sont proportionnelles si leur rapport est constant. C'est-à-dire qu'en multipliant l'une, on multiplie l'autre du même coefficient. Le 67 Elephant mange <strong>3 bananes</strong> en 2 min → en 6 min il en mange <strong>9</strong>.</p>
+
+    <div class="formula-box">y / x = k (constante)   →   y = k × x</div>
+
+    <p>Le <strong>coefficient de proportionnalité</strong> k est la pente de la droite qui passe par l'origine.</p>
+
+    <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:8px;padding:.9rem 1.2rem;font-size:.92rem;margin-top:1rem;color:#78350f;">
+      💡 <strong>Tableau de proportionnalité :</strong> On peut vérifier avec le produit en croix. Si a/b = c/d → a × d = b × c.
+    </div>
+
+    <h2 style="margin-top:2.5rem">🔍 Lecture graphique</h2>
+    <p>Lire une valeur sur un graphe, c'est partir d'une valeur connue, tracer une droite verticale ou horizontale jusqu'à la courbe, puis lire la valeur correspondante sur l'autre axe.</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2">
+      <li>Pour trouver <strong>f(3)</strong> : on part de x=3 sur l'axe horizontal → on monte jusqu'à la courbe → on lit y</li>
+      <li>Pour trouver <strong>x tel que f(x) = 5</strong> : on part de y=5 → on va jusqu'à la courbe → on lit x</li>
+    </ul>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/maths.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Une fonction linéaire f(x) = 3x. Quelle est la valeur de f(4) ?",
+      options: ["7", "12", "34", "1"],
+      correct: 1,
+      explication: "f(4) = 3 × 4 = 12. Une fonction linéaire multiplie toujours par le coefficient a."
+    },
+    {
+      q: "La représentation graphique d'une fonction linéaire est :",
+      options: ["Une courbe en U", "Une droite passant par l'origine", "Une droite ne passant pas par l'origine", "Un cercle"],
+      correct: 1,
+      explication: "f(x) = ax est toujours une droite passant par l'origine O(0,0)."
+    },
+    {
+      q: "f(x) = 2x + 3. Quelle est l'ordonnée à l'origine ?",
+      options: ["2", "3", "5", "0"],
+      correct: 1,
+      explication: "Dans f(x) = ax + b, b est l'ordonnée à l'origine. Ici b = 3, donc la droite coupe l'axe y en (0, 3)."
+    },
+    {
+      q: "f(x) = -x + 5. La droite est :",
+      options: ["Croissante", "Décroissante", "Constante", "Verticale"],
+      correct: 1,
+      explication: "Le coefficient directeur a = -1 est négatif, donc la fonction est décroissante (la droite descend de gauche à droite)."
+    },
+    {
+      q: "Jul vend des beats à 20€ l'unité. Le prix total P en fonction du nombre n est :",
+      options: ["P = 20 + n", "P = n/20", "P = 20n", "P = 20n + 20"],
+      correct: 2,
+      explication: "C'est une fonction linéaire : P = 20 × n. Zéro beat = zéro euro (passe par l'origine)."
+    },
+    {
+      q: "SCH loue un studio : 100€ de caution + 30€/heure. Le coût pour x heures est :",
+      options: ["C = 30x", "C = 100x + 30", "C = 30x + 100", "C = 130x"],
+      correct: 2,
+      explication: "Caution fixe = 100 (ordonnée à l'origine), coût/heure = 30 (coefficient directeur). Donc C = 30x + 100."
+    },
+    {
+      q: "Deux grandeurs sont proportionnelles si :",
+      options: ["Leur somme est constante", "Leur différence est constante", "Leur rapport est constant", "L'une est le carré de l'autre"],
+      correct: 2,
+      explication: "La proportionnalité, c'est y/x = k = constante. Aussi écrit y = kx."
+    },
+    {
+      q: "Dans un tableau de proportionnalité, si x=2 donne y=6, et x=5 donne y=?",
+      options: ["9", "11", "15", "10"],
+      correct: 2,
+      explication: "Coefficient k = 6/2 = 3. Pour x=5 : y = 3 × 5 = 15."
+    },
+    {
+      q: "Le produit en croix : si 4/6 = x/9, alors x vaut :",
+      options: ["6", "12", "24", "36"],
+      correct: 0,
+      explication: "4 × 9 = 6 × x → 36 = 6x → x = 6."
+    },
+    {
+      q: "f(x) = 4x - 1. Quelle est la valeur de x pour laquelle f(x) = 7 ?",
+      options: ["x = 1", "x = 2", "x = 3", "x = 4"],
+      correct: 1,
+      explication: "4x - 1 = 7 → 4x = 8 → x = 2. Vérif : f(2) = 4×2 - 1 = 7 ✓"
+    },
+    {
+      q: "Quelle droite a le coefficient directeur le plus grand (pente la plus raide) ?",
+      options: ["f(x) = 0,5x", "f(x) = x + 3", "f(x) = 3x", "f(x) = 2x - 1"],
+      correct: 2,
+      explication: "Le coefficient directeur a de f(x)=3x est 3, c'est le plus grand. Plus a est grand, plus la droite est raide."
+    },
+    {
+      q: "f(x) = x. Comment appelle-t-on cette fonction particulière ?",
+      options: ["Fonction nulle", "Fonction identité", "Fonction inverse", "Fonction carré"],
+      correct: 1,
+      explication: "f(x) = x est la fonction identité. Elle renvoie la même valeur que celle donnée en entrée."
+    },
+    {
+      q: "Sur un graphe, la droite coupe l'axe y en (0, -2) et passe par (1, 1). Quelle est son équation ?",
+      options: ["y = -2x", "y = 3x - 2", "y = x - 2", "y = -2x + 1"],
+      correct: 1,
+      explication: "b = -2 (ordonnée à l'origine). a = (1-(-2))/(1-0) = 3. Donc y = 3x - 2."
+    },
+    {
+      q: "Le 67 Elephant roule à vitesse constante. En 2h il parcourt 120 km. En 5h il parcourt :",
+      options: ["240 km", "300 km", "360 km", "250 km"],
+      correct: 1,
+      explication: "Vitesse = 120/2 = 60 km/h. En 5h : 60 × 5 = 300 km. Proportionnalité directe."
+    },
+    {
+      q: "Deux droites sont parallèles si elles ont :",
+      options: ["Le même coefficient directeur", "La même ordonnée à l'origine", "Le même signe", "Aucun point commun seulement"],
+      correct: 0,
+      explication: "Deux droites sont parallèles si et seulement si elles ont le même coefficient directeur a (mais pas le même b)."
+    },
+    {
+      q: "f(x) = -2x + 6. Pour quelle valeur de x a-t-on f(x) = 0 ?",
+      options: ["x = -3", "x = 3", "x = 6", "x = -6"],
+      correct: 1,
+      explication: "-2x + 6 = 0 → -2x = -6 → x = 3. C'est le zéro de la fonction (racine)."
+    },
+    {
+      q: "Strawberry Cat reçoit 0,15€ par vue sur ses vidéos. Pour 800 vues, il gagne :",
+      options: ["80€", "120€", "150€", "200€"],
+      correct: 1,
+      explication: "C'est une fonction linéaire : gain = 0,15 × 800 = 120€."
+    },
+    {
+      q: "Un tableau de valeurs donne : x: 0, 1, 2, 3 et y: 5, 8, 11, 14. Quelle est l'équation de cette fonction affine ?",
+      options: ["y = 3x + 5", "y = 5x + 3", "y = 2x + 5", "y = 3x"],
+      correct: 0,
+      explication: "Pour x=0, y=5 → b=5. Pour x=1, y=8 → a = (8-5)/1 = 3. Donc y = 3x + 5."
+    },
+    {
+      q: "La fonction f(x) = 7 (constante) est une fonction :",
+      options: ["Linéaire avec a=7", "Affine avec a=0 et b=7", "Croissante", "Non définie"],
+      correct: 1,
+      explication: "f(x) = 7 = 0×x + 7 est une fonction affine avec a=0. Sa droite est horizontale."
+    },
+    {
+      q: "SCH compare deux offres de streaming : A = 5€/mois + 1€/film, B = 2€/film. À partir de combien de films l'offre A est-elle moins chère ?",
+      options: ["3 films", "5 films", "6 films", "10 films"],
+      correct: 2,
+      explication: "A = x+5, B = 2x. A = B quand x+5 = 2x → x = 5. Pour x > 5 (à partir de 6 films), A est moins cher."
+    }
+  ]);
+  </script>
+</body>
+</html>
