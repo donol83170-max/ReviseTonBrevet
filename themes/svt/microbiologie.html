@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de cours microbiologie & immunité brevet + 20 QCM corrigés : bactéries, virus, système immunitaire, vaccins, antibiotiques. ReviseTonBrevet."/>
+  <title>Microbiologie & immunité — SVT Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .key-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.1rem; margin: .7rem 0; font-size: .9rem; color: #4c1d95; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .compare-card { background: #faf5ff; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 1rem; }
+    .compare-card.virus { background: #fef2f2; border-color: #fca5a5; }
+    .compare-card h4 { font-weight: 800; color: #7c3aed; font-size: .92rem; margin-bottom: .5rem; }
+    .compare-card.virus h4 { color: #dc2626; }
+    .compare-card p { font-size: .84rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+    .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+    .vis svg { max-width: 100%; height: auto; }
+    .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../../pages/maths.html">Maths</a></li>
+      <li><a href="../../pages/francais.html">Français</a></li>
+      <li><a href="../../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../../pages/svt.html">SVT</a></li>
+      <li><a href="../../pages/physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../../index.html">Accueil</a> → <a href="../../pages/svt.html">SVT</a> → Microbiologie & immunité</p>
+    <h1>🦠 Microbiologie & immunité</h1>
+    <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div class="fiche-section">
+
+    <h2>🦠 Bactéries vs Virus</h2>
+    <p>Quand SCH est malade avant un concert, est-ce un virus ou une bactérie ? La réponse change tout pour le traitement !</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>🦠 Bactérie</h4>
+        <p><strong>Cellule procaryote</strong> (pas de noyau, mais vivante autonome). Se reproduit seule. Sensible aux <strong>antibiotiques</strong>. Ex : angine bactérienne, tuberculose, salmonelle.</p>
+      </div>
+      <div class="compare-card virus">
+        <h4>🔴 Virus</h4>
+        <p><strong>Non-vivant</strong> (ni cellule, ni métabolisme). Parasite obligatoire des cellules. <strong>Insensible aux antibiotiques</strong>. Ex : grippe, COVID-19, rhume, VIH. Traitement : antiviraux ou vaccins.</p>
+      </div>
+    </div>
+
+    <!-- SVG cellule immunitaire vs virus -->
+    <div class="vis">
+      <div style="text-align:center">
+        <svg width="220" height="120" viewBox="0 0 220 120">
+          <!-- Globule blanc -->
+          <ellipse cx="60" cy="60" rx="45" ry="40" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+          <ellipse cx="60" cy="60" rx="18" ry="15" fill="#8b5cf6" stroke="#4c1d95" stroke-width="1.5"/>
+          <text x="60" y="64" text-anchor="middle" font-size="9" fill="white" font-weight="700">Noyau</text>
+          <text x="60" y="110" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="700">Globule blanc</text>
+          <!-- Flèche attaque -->
+          <line x1="108" y1="60" x2="138" y2="60" stroke="#dc2626" stroke-width="2"/>
+          <polygon points="138,56 148,60 138,64" fill="#dc2626"/>
+          <!-- Virus (hexagone) -->
+          <polygon points="170,42 190,42 200,60 190,78 170,78 160,60" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+          <circle cx="175" cy="52" r="3" fill="#dc2626"/>
+          <circle cx="185" cy="52" r="3" fill="#dc2626"/>
+          <circle cx="180" cy="65" r="3" fill="#dc2626"/>
+          <text x="180" y="100" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="700">Virus</text>
+          <!-- Picots virus -->
+          <line x1="160" y1="60" x2="148" y2="60" stroke="#dc2626" stroke-width="1.5"/>
+          <line x1="170" y1="42" x2="163" y2="33" stroke="#dc2626" stroke-width="1.5"/>
+          <line x1="190" y1="42" x2="197" y2="33" stroke="#dc2626" stroke-width="1.5"/>
+          <line x1="200" y1="60" x2="212" y2="60" stroke="#dc2626" stroke-width="1.5"/>
+        </svg>
+        <div class="vis-caption">Le globule blanc (défenseur) affronte le virus (envahisseur)</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2rem">🛡️ Le système immunitaire</h2>
+    <p>Notre corps possède trois lignes de défense :</p>
+
+    <ul style="color:var(--text);padding-left:1.5rem;line-height:2.4;font-size:.95rem">
+      <li><strong>1ère ligne (barrières physiques) :</strong> peau, muqueuses, cils, larmes, acidité gastrique → empêchent l'entrée des agents pathogènes</li>
+      <li><strong>2ème ligne (immunité innée) :</strong> inflammation, phagocytose (les phagocytes "mangent" les envahisseurs). Rapide mais non spécifique.</li>
+      <li><strong>3ème ligne (immunité adaptative) :</strong> production d'<strong>anticorps</strong> spécifiques par les lymphocytes B. Mémorisation. Plus lente mais très précise.</li>
+    </ul>
+
+    <div class="key-box">🔬 <strong>Phagocytose :</strong> les macrophages et neutrophiles ingèrent et détruisent les agents pathogènes.<br/>💉 <strong>Anticorps :</strong> protéines produites par les lymphocytes B, spécifiques d'un antigène (marqueur de l'envahisseur).</div>
+
+    <h2 style="margin-top:2.5rem">💉 Vaccins & antibiotiques</h2>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>💉 Vaccin</h4>
+        <p>Introduit un antigène (agent pathogène affaibli, inactivé ou fragment de protéine) → le système immunitaire fabrique des anticorps et mémorise → <strong>protection durable</strong> sans tomber malade.</p>
+      </div>
+      <div class="compare-card virus">
+        <h4>💊 Antibiotique</h4>
+        <p>Détruit les <strong>bactéries</strong> uniquement. <strong>Inefficace contre les virus</strong> ! Problème majeur : antibiorésistance (les bactéries s'adaptent et résistent).</p>
+      </div>
+    </div>
+
+    <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:8px;padding:.9rem 1.2rem;font-size:.92rem;margin-top:1rem;color:#78350f;">
+      💡 <strong>Antibiorésistance :</strong> si on prend des antibiotiques inutilement (contre un virus) ou si on ne finit pas son traitement, les bactéries s'adaptent et deviennent résistantes. C'est un problème de santé publique mondial.
+    </div>
+
+    <h2 style="margin-top:2.5rem">🧬 Immunité et mémoire</h2>
+    <p>Lors d'une 2ème infection par le même pathogène, la réponse immunitaire est plus rapide et plus forte grâce aux <strong>cellules mémoire</strong>. C'est ce principe que les vaccins exploitent.</p>
+
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <section class="qcm-section" data-next="../../pages/svt.html">
+    <div id="qcm" class="qcm-container"></div>
+    <div id="result" class="qcm-result hidden"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../../js/qcm.js"></script>
+  <script>
+  initQCM([
+    {
+      q: "Quelle est la différence principale entre une bactérie et un virus ?",
+      options: ["La bactérie est plus dangereuse", "La bactérie est une cellule vivante autonome ; le virus n'est pas une cellule et parasite les cellules hôtes", "Le virus est plus grand que la bactérie", "Les deux sont identiques en taille"],
+      correct: 1,
+      explication: "Bactérie = cellule procaryote vivante qui se reproduit seule. Virus = non-vivant, simplement de l'ARN/ADN dans une enveloppe protéique, parasite obligatoire des cellules."
+    },
+    {
+      q: "Un antibiotique est efficace contre :",
+      options: ["Les virus uniquement", "Les bactéries et les virus", "Les bactéries uniquement", "Les champignons uniquement"],
+      correct: 2,
+      explication: "Les antibiotiques tuent ou bloquent la croissance des bactéries. Ils sont totalement inefficaces contre les virus (grippe, rhume, COVID…)."
+    },
+    {
+      q: "SCH a une angine virale. Son médecin prescrit-il des antibiotiques ?",
+      options: ["Oui, pour prévention", "Non, les antibiotiques sont inefficaces contre les virus", "Oui, systématiquement pour toute angine", "Non, il prescrit des antiparasitaires"],
+      correct: 1,
+      explication: "Angine virale = causée par un virus → antibiotiques inutiles et dangereux (favorisent l'antibiorésistance). Le médecin prescrit repos, antipyrétiques."
+    },
+    {
+      q: "Qu'est-ce qu'un anticorps ?",
+      options: ["Une bactérie produite par l'organisme", "Une protéine produite par les lymphocytes B, spécifique d'un antigène", "Un globule rouge spécialisé", "Un médicament anti-viral"],
+      correct: 1,
+      explication: "Les anticorps sont des protéines produites par les lymphocytes B. Chaque anticorps est spécifique d'un antigène (marqueur de l'envahisseur) et le neutralise."
+    },
+    {
+      q: "Qu'est-ce qu'un antigène ?",
+      options: ["Un anticorps produit par l'organisme", "Un médicament qui tue les bactéries", "Une molécule à la surface d'un agent pathogène reconnue par le système immunitaire", "Un globule blanc"],
+      correct: 2,
+      explication: "L'antigène est une molécule (souvent une protéine) à la surface d'un virus, d'une bactérie, qui déclenche la réponse immunitaire et sert de cible aux anticorps."
+    },
+    {
+      q: "Comment fonctionne un vaccin ?",
+      options: ["Il tue directement le pathogène", "Il introduit un antigène inoffensif → le système immunitaire mémorise et produit des anticorps pour une protection future", "Il bloque la réplication des virus", "Il renforce les barrières cutanées uniquement"],
+      correct: 1,
+      explication: "Le vaccin \"entraîne\" le système immunitaire sans provoquer la maladie. En cas de vrai contact avec le pathogène, la réponse est rapide et efficace (mémoire immunitaire)."
+    },
+    {
+      q: "Quel type de cellule du sang réalise la phagocytose ?",
+      options: ["Globules rouges", "Plaquettes", "Globules blancs (phagocytes : macrophages, neutrophiles)", "Plasma"],
+      correct: 2,
+      explication: "Les phagocytes (macrophages, neutrophiles) = globules blancs spécialisés qui ingèrent et détruisent les agents pathogènes. C'est la 2ème ligne de défense."
+    },
+    {
+      q: "Qu'est-ce que la phagocytose ?",
+      options: ["La production d'anticorps", "L'ingestion et la destruction d'agents pathogènes par des cellules immunitaires", "La réplication d'un virus dans une cellule", "La mémorisation d'un antigène"],
+      correct: 1,
+      explication: "Phagocytose = les phagocytes \"mangent\" les bactéries et débris cellulaires. C'est une réponse immunitaire innée (non spécifique, rapide)."
+    },
+    {
+      q: "Quelle est la première ligne de défense du corps contre les pathogènes ?",
+      options: ["Les anticorps", "La phagocytose", "Les barrières physiques (peau, muqueuses, larmes)", "Les lymphocytes"],
+      correct: 2,
+      explication: "La 1ère ligne = barrières physiques et chimiques : peau, muqueuses, larmes (lysozyme), acide gastrique, cils des bronches. Elles empêchent l'entrée des pathogènes."
+    },
+    {
+      q: "Pourquoi l'antibiorésistance est-elle un problème grave ?",
+      options: ["Les antibiotiques coûtent trop cher", "Les bactéries mutent et deviennent résistantes aux antibiotiques → infections insoignables", "Les virus s'habituent aux antibiotiques", "Les patients développent des allergies"],
+      correct: 1,
+      explication: "L'usage excessif ou mal ciblé des antibiotiques sélectionne des bactéries résistantes (\"super-bactéries\"). L'OMS considère ça comme une des plus grandes menaces sanitaires."
+    },
+    {
+      q: "Les cellules mémoire immunitaires permettent :",
+      options: ["De produire plus de globules rouges", "Une réponse plus rapide et plus forte lors d'une 2ème infection par le même pathogène", "De détruire les virus directement", "De remplacer les anticorps détruits"],
+      correct: 1,
+      explication: "Après une 1ère infection, des lymphocytes mémoire persistent. Lors d'une 2ème exposition, ils permettent une réponse immunitaire beaucoup plus rapide."
+    },
+    {
+      q: "Quel type de virus a causé la pandémie COVID-19 ?",
+      options: ["Une bactérie", "Un champignon", "Un coronavirus (SARS-CoV-2)", "Un parasite"],
+      correct: 2,
+      explication: "Le COVID-19 est causé par le SARS-CoV-2, un coronavirus. C'est donc un virus → antibiotiques inefficaces (traitement : antiviraux, vaccins)."
+    },
+    {
+      q: "Quel organe joue un rôle central dans la production des lymphocytes ?",
+      options: ["Le foie", "Les reins", "La moelle osseuse (et le thymus pour les lymphocytes T)", "Le pancréas"],
+      correct: 2,
+      explication: "Les lymphocytes B et T sont produits dans la moelle osseuse. Les lymphocytes T mature dans le thymus. Ces organes forment l'\"école\" du système immunitaire."
+    },
+    {
+      q: "Qu'est-ce qu'une inflammation ?",
+      options: ["Une réaction allergique uniquement", "Une réponse immunitaire locale (rougeur, chaleur, gonflement) qui combat l'infection", "Une maladie auto-immune", "Un effet secondaire des antibiotiques"],
+      correct: 1,
+      explication: "L'inflammation (rougeur, chaleur, gonflement, douleur) est une réponse immunitaire innée. Elle attire les phagocytes vers le lieu d'infection."
+    },
+    {
+      q: "Un virus du rhume s'attaque aux cellules des voies respiratoires. Pourquoi ?",
+      options: ["Par hasard", "Car le virus possède des protéines qui se fixent spécifiquement sur des récepteurs de ces cellules", "Car les voies respiratoires n'ont pas d'immunité", "Car les virus adorent le froid"],
+      correct: 1,
+      explication: "Chaque virus a des protéines de surface (spike) qui se lient spécifiquement à certains récepteurs cellulaires → le virus cible ses cellules hôtes précises."
+    },
+    {
+      q: "Quelle différence entre immunité innée et immunité adaptative ?",
+      options: ["L'innée est spécifique, l'adaptative est générale", "L'innée est rapide et non spécifique ; l'adaptative est lente mais très précise et mémorisée", "Elles sont identiques", "L'innée produit des anticorps, l'adaptative fait la phagocytose"],
+      correct: 1,
+      explication: "Immunité innée = réponse rapide mais non spécifique (tous pathogènes). Adaptative = lente (plusieurs jours) mais spécifique et avec mémoire (lymphocytes, anticorps)."
+    },
+    {
+      q: "Le VIH attaque particulièrement quel type de cellule immunitaire ?",
+      options: ["Les globules rouges", "Les plaquettes", "Les lymphocytes T (CD4)", "Les macrophages du foie"],
+      correct: 2,
+      explication: "Le VIH cible et détruit les lymphocytes T CD4 (coordinateurs de la réponse immunitaire). Leur diminution provoque le SIDA (système immunitaire affaibli)."
+    },
+    {
+      q: "La vaccination de masse crée :",
+      options: ["L'immunité individuelle uniquement", "L'immunité collective (de groupe) qui protège même les non-vaccinés", "Une résistance aux antibiotiques", "Des effets secondaires chez tous"],
+      correct: 1,
+      explication: "Immunité de groupe = quand suffisamment de personnes sont immunisées, le pathogène ne peut plus circuler librement → les personnes vulnérables (non vaccinées, immunodéprimées) sont protégées indirectement."
+    },
+    {
+      q: "Strawberry Cat a eu la varicelle à 5 ans. Pourquoi risque-t-il peu de l'avoir à nouveau ?",
+      options: ["La varicelle ne revient jamais", "Son système immunitaire a mémorisé le virus → réponse rapide si réexposition", "Il a pris des antibiotiques", "Les adultes sont naturellement immunisés"],
+      correct: 1,
+      explication: "Après la varicelle, le système immunitaire conserve des cellules mémoire spécifiques du virus varicelle-zona. Une 2ème infection déclencherait une réponse immunitaire immédiate."
+    },
+    {
+      q: "Quelle molécule transportée par les globules rouges est essentielle pour combattre les infections en amenant l'O₂ aux cellules immunitaires ?",
+      options: ["Le glucose", "L'hémoglobine (qui transporte O₂)", "Les anticorps", "Le fibrinogène"],
+      correct: 1,
+      explication: "L'hémoglobine transporte l'oxygène aux cellules, y compris les cellules immunitaires qui en ont besoin pour fonctionner (phagocytose, production d'anticorps)."
+    }
+  ]);
+  </script>
+</body>
+</html>
