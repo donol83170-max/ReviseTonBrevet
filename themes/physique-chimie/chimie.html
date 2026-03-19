@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours chimie des solutions brevet + 20 QCM corrigés : atomes, molécules, réactions chimiques, pH, acides et bases. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours chimie des solutions brevet + 20 QCM corrigés : atomes, molécules, réactions chimiques, pH, acides et bases. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Chimie des solutions — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Chimie des solutions — Physique-Chimie Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
@@ -21,6 +32,8 @@
     .ph-labels span:first-child { color: #dc2626; }
     .ph-labels span:last-child { color: #6366f1; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi un atome ?","acceptedAnswer":{"@type":"Answer","text":"La plus petite unité d'un élément chimique : noyau (protons+neutrons) + électrons."}},{"@type":"Question","name":"C'est quoi une réaction chimique ?","acceptedAnswer":{"@type":"Answer","text":"Transformation où les réactifs forment des produits, avec conservation de la matière."}},{"@type":"Question","name":"C'est quoi le pH ?","acceptedAnswer":{"@type":"Answer","text":"Mesure de l'acidité : pH<7 acide, pH=7 neutre, pH>7 basique."}}]}</script>
 </head>
 <body>
 
@@ -41,6 +54,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Chimie des solutions</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi un atome ?</summary><div class="faq-a">La plus petite unité d'un élément chimique. Il est composé d'un noyau (protons + neutrons) entouré d'électrons. Les atomes se lient pour former des molécules.</div></details>
+    <details class="faq-item"><summary>C'est quoi une réaction chimique ?</summary><div class="faq-a">Une transformation qui modifie la nature des substances : les réactifs disparaissent pour former des produits. La matière est conservée (même nombre d'atomes avant et après).</div></details>
+    <details class="faq-item"><summary>C'est quoi le pH ?</summary><div class="faq-a">Le pH mesure l'acidité d'une solution. pH < 7 = acide, pH = 7 = neutre, pH > 7 = basique. Plus le pH est bas, plus la solution est acide.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -108,12 +127,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -238,5 +258,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

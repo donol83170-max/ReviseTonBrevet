@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours optique & lumière brevet + 20 QCM corrigés : propagation, miroirs, lentilles, couleurs, spectre. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours optique & lumière brevet + 20 QCM corrigés : propagation, miroirs, lentilles, couleurs, spectre. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Optique & lumière — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Optique & lumière — Physique-Chimie Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .key-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.1rem; margin: .7rem 0; font-size: .9rem; color: #4c1d95; }
@@ -13,6 +24,8 @@
     .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
     .rainbow-bar { height: 20px; border-radius: 6px; background: linear-gradient(to right, #dc2626, #f97316, #facc15, #4ade80, #06b6d4, #6366f1, #a855f7); margin: .8rem 0; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi la réfraction ?","acceptedAnswer":{"@type":"Answer","text":"Déviation d'un rayon lumineux lors du passage entre deux milieux différents."}},{"@type":"Question","name":"C'est quoi le spectre de la lumière blanche ?","acceptedAnswer":{"@type":"Answer","text":"L'ensemble des couleurs (rouge au violet) qui composent la lumière blanche, séparables par un prisme."}},{"@type":"Question","name":"C'est quoi une lentille convergente ?","acceptedAnswer":{"@type":"Answer","text":"Lentille plus épaisse au centre qui fait converger les rayons en un foyer."}}]}</script>
 </head>
 <body>
 
@@ -33,6 +46,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Optique & Lumière</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi la réfraction de la lumière ?</summary><div class="faq-a">La déviation d'un rayon lumineux quand il passe d'un milieu à un autre (ex : air vers eau). La lumière change de direction à cause du changement de vitesse de propagation.</div></details>
+    <details class="faq-item"><summary>C'est quoi le spectre de la lumière blanche ?</summary><div class="faq-a">La lumière blanche est composée de toutes les couleurs de l'arc-en-ciel (rouge, orange, jaune, vert, bleu, indigo, violet). Un prisme permet de les séparer par réfraction.</div></details>
+    <details class="faq-item"><summary>C'est quoi une lentille convergente ?</summary><div class="faq-a">Une lentille qui fait converger les rayons lumineux en un point appelé foyer. Elle est plus épaisse au centre. Elle est utilisée dans les lunettes pour les personnes hypermétropes et dans les appareils photo.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -107,12 +126,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -237,5 +257,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours statistiques & probabilités brevet + 20 QCM corrigés : moyenne, médiane, étendue, fréquences, probabilités. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours statistiques & probabilités brevet + 20 QCM corrigés : moyenne, médiane, étendue, fréquences, probabilités. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Statistiques & probabilités — Maths Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Statistiques & probabilités — Maths Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; }
@@ -21,6 +32,8 @@
     .data-table td { border: 1px solid #e9d5ff; padding: .5rem .8rem; text-align: center; }
     .data-table tr:nth-child(even) td { background: #f5f3ff; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi la médiane ?","acceptedAnswer":{"@type":"Answer","text":"La valeur centrale d'une série triée, qui partage les données en deux moitiés égales."}},{"@type":"Question","name":"Comment calculer une probabilité ?","acceptedAnswer":{"@type":"Answer","text":"P = cas favorables ÷ cas totaux, entre 0 et 1."}},{"@type":"Question","name":"C'est quoi l'étendue ?","acceptedAnswer":{"@type":"Answer","text":"Max − Min. Mesure la dispersion d'une série de données."}}]}</script>
 </head>
 <body>
 
@@ -41,6 +54,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Statistiques & Probabilités</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi la médiane ?</summary><div class="faq-a">La valeur qui partage une série triée en deux moitiés égales. Si la série a un nombre pair de valeurs, c'est la moyenne des deux valeurs centrales.</div></details>
+    <details class="faq-item"><summary>Comment calculer une probabilité ?</summary><div class="faq-a">P(événement) = nombre de cas favorables ÷ nombre total de cas possibles. Elle est toujours entre 0 et 1.</div></details>
+    <details class="faq-item"><summary>C'est quoi l'étendue d'une série ?</summary><div class="faq-a">L'étendue = valeur maximale − valeur minimale. Elle mesure la dispersion des données.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -139,12 +158,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -269,5 +289,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

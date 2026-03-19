@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours électricité brevet + 20 QCM corrigés : circuits, tension, intensité, loi d'Ohm, effets du courant. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours électricité brevet + 20 QCM corrigés : circuits, tension, intensité, loi d'Ohm, effets du courant. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Électricité — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Électricité — Physique-Chimie Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
@@ -17,6 +28,8 @@
     .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
     .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi la loi d'Ohm ?","acceptedAnswer":{"@type":"Answer","text":"U = R × I : tension (V) = résistance (Ω) × intensité (A)."}},{"@type":"Question","name":"Série vs parallèle ?","acceptedAnswer":{"@type":"Answer","text":"En série les composants se suivent (rupture = tout s'arrête). En parallèle chaque branche est indépendante."}},{"@type":"Question","name":"Comment mesurer tension et intensité ?","acceptedAnswer":{"@type":"Answer","text":"Voltmètre en parallèle pour U, ampèremètre en série pour I."}}]}</script>
 </head>
 <body>
 
@@ -37,6 +50,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Électricité</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi la loi d'Ohm ?</summary><div class="faq-a">U = R × I, où U est la tension (Volt), R la résistance (Ohm) et I l'intensité (Ampère). Elle relie les trois grandeurs électriques fondamentales dans un circuit.</div></details>
+    <details class="faq-item"><summary>C'est quoi un circuit en série vs en parallèle ?</summary><div class="faq-a">En série : les composants sont branchés les uns à la suite des autres. En parallèle : chaque composant est branché directement entre les deux fils principaux. En série, une rupture coupe tout. En parallèle, les circuits sont indépendants.</div></details>
+    <details class="faq-item"><summary>Comment mesurer tension et intensité ?</summary><div class="faq-a">La tension (U) se mesure avec un voltmètre branché en parallèle. L'intensité (I) se mesure avec un ampèremètre branché en série.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -135,12 +154,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -265,5 +285,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours énergie brevet + 20 QCM corrigés : formes d'énergie, transferts, rendement, énergies renouvelables. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours énergie brevet + 20 QCM corrigés : formes d'énergie, transferts, rendement, énergies renouvelables. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Énergie — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Énergie — Physique-Chimie Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
@@ -16,6 +27,8 @@
     .energy-card h4 { font-weight: 800; color: #7c3aed; font-size: .85rem; margin-bottom: .2rem; }
     .energy-card p { font-size: .8rem; color: var(--text-muted); margin: 0; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi l'énergie cinétique ?","acceptedAnswer":{"@type":"Answer","text":"Energie de mouvement : Ec = ½mv², dépend de la masse et de la vitesse."}},{"@type":"Question","name":"C'est quoi une énergie renouvelable ?","acceptedAnswer":{"@type":"Answer","text":"Énergie se renouvelant naturellement plus vite qu'elle est consommée : solaire, éolien, hydraulique..."}},{"@type":"Question","name":"C'est quoi la conservation de l'énergie ?","acceptedAnswer":{"@type":"Answer","text":"L'énergie ne se crée pas, ne se détruit pas, elle se transforme d'une forme à une autre."}}]}</script>
 </head>
 <body>
 
@@ -36,6 +49,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Énergie</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi l'énergie cinétique ?</summary><div class="faq-a">L'énergie liée au mouvement d'un objet. Plus un objet est lourd et rapide, plus son énergie cinétique est grande. Formule : Ec = ½ × m × v² (m en kg, v en m/s).</div></details>
+    <details class="faq-item"><summary>C'est quoi une énergie renouvelable ?</summary><div class="faq-a">Une énergie issue d'une source naturelle qui se renouvelle plus vite qu'elle n'est consommée. Ex : solaire, éolien, hydraulique, géothermie. Elles s'opposent aux énergies fossiles (charbon, pétrole, gaz).</div></details>
+    <details class="faq-item"><summary>C'est quoi le principe de conservation de l'énergie ?</summary><div class="faq-a">L'énergie ne peut pas être créée ni détruite, seulement transformée d'une forme à une autre. Ex : l'énergie électrique d'une ampoule se transforme en lumière et en chaleur.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -133,12 +152,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -263,5 +283,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

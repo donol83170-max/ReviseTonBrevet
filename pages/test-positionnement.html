@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Test de positionnement Brevet — 25 questions sur toutes les matières (Maths, Français, Histoire-Géo, SVT, Physique-Chimie). Découvre tes points forts et tes lacunes. Gratuit."/>
+  <meta property="og:description" content="Test de positionnement Brevet — 25 questions sur toutes les matières (Maths, Français, Histoire-Géo, SVT, Physique-Chimie). Découvre tes points forts et tes lacunes. Gratuit."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
+  <title>Test de positionnement — ReviseTonBrevet</title>
+  <meta property="og:title" content="Test de positionnement — ReviseTonBrevet"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <script src="../js/qcm-data.js" defer></script>
+  <style>
+    /* ── Intro card ── */
+    .tp-intro {
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      background: var(--paper);
+      border: 1.5px solid #e0e7ff;
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(79,70,229,.06);
+    }
+    .tp-intro h2 { font-family: var(--font-display); font-size: 1.5rem; color: var(--deep); margin-bottom: .5rem; }
+    .tp-intro p  { color: var(--text-muted); font-size: .95rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    .tp-pills { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 1.6rem; }
+    .tp-pill {
+      background: #eef2ff; color: #4338ca;
+      border-radius: 99px; padding: .3rem .9rem;
+      font-size: .82rem; font-weight: 600;
+    }
+    .tp-btn-start {
+      display: inline-block;
+      background: var(--indigo); color: #fff;
+      border: none; border-radius: 12px;
+      padding: .85rem 2.2rem;
+      font-family: var(--font-display); font-size: 1.05rem;
+      font-weight: 700; cursor: pointer;
+      transition: background .2s, transform .15s;
+    }
+    .tp-btn-start:hover { background: #4338ca; transform: translateY(-2px); }
+
+    /* ── Loading ── */
+    .tp-loading {
+      text-align: center; padding: 3rem 1rem;
+      color: var(--text-muted); font-size: 1rem;
+    }
+    .tp-loading .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid #e0e7ff;
+      border-top-color: var(--indigo);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── QCM arena ── */
+    .tp-arena {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .tp-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .tp-progress-wrap {
+      flex: 1;
+      background: #e0e7ff;
+      border-radius: 99px;
+      height: 10px;
+      overflow: hidden;
+    }
+    .tp-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--indigo), #7c3aed);
+      border-radius: 99px;
+      transition: width .4s ease;
+    }
+    .tp-counter { font-weight: 700; color: var(--indigo); font-size: .92rem; white-space: nowrap; }
+
+    /* Theme badge shown above the question */
+    .tp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: #eef2ff;
+      color: #4338ca;
+      border-radius: 99px;
+      padding: .28rem .85rem;
+      font-size: .78rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .tp-card {
+      background: var(--paper);
+      border: 1.5px solid #e0e7ff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(79,70,229,.07);
+      animation: fadeInCard .35s ease;
+    }
+
+    .tp-question { font-size: 1.05rem; font-weight: 600; color: var(--deep); margin-bottom: 1.2rem; line-height: 1.55; }
+
+    .tp-options { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 1rem; }
+    .tp-option {
+      width: 100%;
+      background: #f8faff;
+      border: 2px solid #c7d2fe;
+      border-radius: 12px;
+      padding: .8rem 1.1rem;
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      text-align: left;
+      transition: background .15s, border-color .15s, transform .1s;
+    }
+    .tp-option:hover:not(:disabled) { background: #eef2ff; border-color: var(--indigo); transform: translateX(3px); }
+    .tp-option.correct  { background: #f0fdf4; border-color: #22c55e; color: #14532d; }
+    .tp-option.wrong    { background: #fef2f2; border-color: #ef4444; color: #7f1d1d; }
+    .tp-option:disabled { cursor: default; }
+
+    .tp-explication {
+      display: none;
+      background: #fef9c3;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: .8rem 1rem;
+      font-size: .88rem;
+      color: #78350f;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .tp-explication.visible { display: block; }
+
+    .tp-btn-next {
+      display: none;
+      width: 100%;
+      background: var(--indigo);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: .85rem;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .tp-btn-next.visible { display: block; }
+    .tp-btn-next:hover { background: #4338ca; }
+
+    /* ── Results ── */
+    .tp-result {
+      max-width: 680px;
+      margin: 0 auto;
+      animation: fadeInCard .4s ease;
+    }
+    .tp-result-hero {
+      text-align: center;
+      background: var(--paper);
+      border: 1.5px solid #e0e7ff;
+      border-radius: 20px;
+      padding: 2rem 2rem 1.5rem;
+      box-shadow: 0 4px 24px rgba(79,70,229,.07);
+      margin-bottom: 1.5rem;
+    }
+    .tp-result-emoji { font-size: 3rem; margin-bottom: .5rem; }
+    .tp-result-score { font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; color: var(--deep); line-height: 1; }
+    .tp-result-score span { font-size: 1.5rem; color: var(--text-muted); }
+    .tp-result-pct { color: var(--indigo); font-weight: 700; font-size: 1.1rem; margin: .3rem 0 .8rem; }
+    .tp-result-msg { color: var(--text-muted); font-size: .95rem; line-height: 1.6; }
+
+    .tp-breakdown-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--deep);
+      margin: 1.5rem 0 .8rem;
+      font-weight: 800;
+    }
+    .tp-breakdown { display: flex; flex-direction: column; gap: .7rem; }
+
+    .tp-mat-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--paper);
+      border: 1.5px solid #e0e7ff;
+      border-radius: 14px;
+      padding: .9rem 1.2rem;
+    }
+    .tp-mat-icon { font-size: 1.4rem; }
+    .tp-mat-name { font-weight: 700; color: var(--deep); font-size: .95rem; flex: 1; }
+    .tp-mat-score { font-weight: 800; font-family: var(--font-display); font-size: 1rem; color: var(--indigo); }
+    .tp-mat-bar-wrap { flex: 2; background: #e0e7ff; border-radius: 99px; height: 8px; overflow: hidden; }
+    .tp-mat-bar { height: 100%; border-radius: 99px; transition: width .6s ease; }
+    .tp-mat-emoji { font-size: 1.1rem; }
+
+    .tp-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .tp-actions .tp-btn-start { flex: 1; min-width: 140px; }
+    .tp-actions .tp-btn-ghost {
+      flex: 1; min-width: 140px;
+      display: inline-block;
+      text-align: center;
+      background: transparent;
+      border: 2px solid var(--indigo);
+      color: var(--indigo);
+      border-radius: 12px;
+      padding: .8rem 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .tp-actions .tp-btn-ghost:hover { background: #eef2ff; }
+
+    /* matière bar colors */
+    .bar-maths   { background: #f59e0b; }
+    .bar-francais { background: #ec4899; }
+    .bar-histoire-geo { background: #10b981; }
+    .bar-svt     { background: #6366f1; }
+    .bar-physique-chimie { background: #0ea5e9; }
+
+    /* ── Responsive ── */
+    @media (max-width: 560px) {
+      .tp-intro, .tp-card, .tp-result-hero { padding: 1.4rem 1.1rem; }
+      .tp-result-score { font-size: 2.8rem; }
+      .tp-mat-bar-wrap { display: none; }
+    }
+  </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="maths.html">Maths</a></li>
+      <li><a href="francais.html">Français</a></li>
+      <li><a href="histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="svt.html">SVT</a></li>
+      <li><a href="physique-chimie.html">Physique-Chimie</a></li>
+    </ul>
+  </nav>
+
+  <div class="theme-header">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → Test de positionnement</p>
+    <h1>🎯 Test de positionnement</h1>
+    <p class="theme-meta">25 questions · Toutes matières · Résultat par matière</p>
+  </div>
+
+  <div class="ad-banner"><!-- AdSense --></div>
+
+  <div style="padding: 0 1rem 3rem;">
+
+    <!-- INTRO -->
+    <div class="tp-intro" id="tp-intro">
+      <h2>Où en es-tu dans tes révisions ?</h2>
+      <p>
+        Ce test pioche <strong>1 question aléatoire par thème</strong>, dans les 5 matières du Brevet.
+        À la fin, tu reçois un bilan par matière pour savoir où concentrer tes efforts.
+      </p>
+      <div class="tp-pills">
+        <span class="tp-pill">📐 Maths</span>
+        <span class="tp-pill">📖 Français</span>
+        <span class="tp-pill">🌍 Histoire-Géo</span>
+        <span class="tp-pill">🧬 SVT</span>
+        <span class="tp-pill">⚗️ Physique-Chimie</span>
+      </div>
+      <button class="tp-btn-start" id="btn-start" onclick="demarrerTest()">Commencer le test →</button>
+    </div>
+
+    <!-- ARÈNE QCM -->
+    <div class="tp-arena" id="tp-arena" style="display:none">
+      <div class="tp-top">
+        <div class="tp-progress-wrap">
+          <div class="tp-progress-fill" id="tp-progress-fill" style="width:0%"></div>
+        </div>
+        <div class="tp-counter" id="tp-counter">1 / 25</div>
+      </div>
+
+      <div id="tp-badge" class="tp-badge"></div>
+
+      <div class="tp-card" id="tp-card">
+        <!-- rempli par JS -->
+      </div>
+    </div>
+
+    <!-- RÉSULTATS -->
+    <div class="tp-result" id="tp-result" style="display:none"></div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+  // ── Config matières ──────────────────────────────────────────────────────────
+  const MATIERES_META = {
+    'maths':           { icon: '📐', label: 'Maths',           barClass: 'bar-maths',           lien: 'maths.html' },
+    'francais':        { icon: '📖', label: 'Français',         barClass: 'bar-francais',         lien: 'francais.html' },
+    'histoire-geo':    { icon: '🌍', label: 'Histoire-Géo',     barClass: 'bar-histoire-geo',     lien: 'histoire-geo.html' },
+    'svt':             { icon: '🧬', label: 'SVT',              barClass: 'bar-svt',              lien: 'svt.html' },
+    'physique-chimie': { icon: '⚗️', label: 'Physique-Chimie',  barClass: 'bar-physique-chimie',  lien: 'physique-chimie.html' },
+  };
+
+  // ── State ────────────────────────────────────────────────────────────────────
+  let _questions = [];   // [{q, options, correct, explication, _theme, _themeIcon, _matiereId}]
+  let _current   = 0;
+  let _score     = 0;
+  let _results   = [];   // per-question: {correct: bool, matiereId}
+
+  // ── Démarrage ────────────────────────────────────────────────────────────────
+  function demarrerTest() {
+    document.getElementById('tp-intro').style.display = 'none';
+    _questions = buildQuestions(QCM_DATA);
+    document.getElementById('tp-arena').style.display = 'block';
+    afficherQuestion(0);
+  }
+
+  // ── Construction des 25 questions (1 par thème) ───────────────────────────
+  function buildQuestions(data) {
+    const list = [];
+    const THEME_ICONS = {
+      'maths':           '📐',
+      'francais':        '📖',
+      'histoire-geo':    '🌍',
+      'svt':             '🧬',
+      'physique-chimie': '⚗️',
+    };
+    for (const mat of data.matieres) {
+      for (const theme of mat.themes) {
+        if (!theme.questions || theme.questions.length === 0) continue;
+        const q = theme.questions[Math.floor(Math.random() * theme.questions.length)];
+        list.push({
+          ...q,
+          _theme:     theme.nom,
+          _matiereId: mat.id,
+        });
+      }
+    }
+    // Mélange léger (Fisher-Yates) pour varier l'ordre des matières
+    for (let i = list.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [list[i], list[j]] = [list[j], list[i]];
+    }
+    return list;
+  }
+
+  // ── Afficher une question ─────────────────────────────────────────────────
+  function afficherQuestion(index) {
+    const q     = _questions[index];
+    const total = _questions.length;
+    const meta  = MATIERES_META[q._matiereId] || { icon: '📚', label: q._matiereId };
+
+    // Mélanger les options et recalculer l'index correct
+    const indices = q.options.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    const shuffledOptions = indices.map(i => q.options[i]);
+    const newCorrect = indices.indexOf(q.correct);
+
+    // Progression
+    document.getElementById('tp-progress-fill').style.width = `${(index / total) * 100}%`;
+    document.getElementById('tp-counter').textContent = `${index + 1} / ${total}`;
+
+    // Badge thème
+    document.getElementById('tp-badge').innerHTML =
+      `${meta.icon} ${meta.label} — <em style="font-weight:500">${q._theme}</em>`;
+
+    // Carte
+    const card = document.getElementById('tp-card');
+    card.innerHTML = `
+      <div class="tp-question">${q.q}</div>
+      <div class="tp-options">
+        ${shuffledOptions.map((opt, j) => `
+          <button class="tp-option" id="opt-${j}" onclick="repondre(${j}, ${newCorrect})">
+            ${opt}
+          </button>
+        `).join('')}
+      </div>
+      <div class="tp-explication" id="tp-expl">💡 ${q.explication}</div>
+      <button class="tp-btn-next" id="tp-btn-next" onclick="questionSuivante()">
+        ${index + 1 < total ? 'Question suivante →' : 'Voir mon bilan 🏆'}
+      </button>
+    `;
+
+    // Animation
+    card.style.animation = 'none';
+    card.offsetHeight;
+    card.style.animation = 'fadeInCard .35s ease';
+  }
+
+  // ── Répondre ─────────────────────────────────────────────────────────────
+  function repondre(chosen, correct) {
+    const btns = document.querySelectorAll('.tp-option');
+    btns.forEach(b => b.disabled = true);
+
+    btns[correct].classList.add('correct');
+    const isCorrect = (chosen === correct);
+    if (!isCorrect) {
+      btns[chosen].classList.add('wrong');
+    } else {
+      _score++;
+    }
+
+    _results.push({ correct: isCorrect, matiereId: _questions[_current]._matiereId });
+
+    document.getElementById('tp-expl').classList.add('visible');
+    document.getElementById('tp-btn-next').classList.add('visible');
+  }
+
+  // ── Question suivante ──────────────────────────────────────────────────────
+  function questionSuivante() {
+    _current++;
+    if (_current < _questions.length) {
+      afficherQuestion(_current);
+    } else {
+      afficherResultats();
+    }
+  }
+
+  // ── Résultats ─────────────────────────────────────────────────────────────
+  function afficherResultats() {
+    document.getElementById('tp-arena').style.display  = 'none';
+    const resultEl = document.getElementById('tp-result');
+    resultEl.style.display = 'block';
+
+    const total = _questions.length;
+    const pct   = Math.round((_score / total) * 100);
+
+    let emoji, msg;
+    if      (pct < 25) { emoji = '😬'; msg = "C'est un début — tu sais maintenant où bosser !"; }
+    else if (pct < 50) { emoji = '📖'; msg = "La moitié ! Relis les fiches des matières en rouge."; }
+    else if (pct < 75) { emoji = '👏'; msg = "Beau travail ! Encore quelques révisions à cibler."; }
+    else if (pct < 100){ emoji = '🔥'; msg = "Excellent ! Tu es presque prêt(e) pour le Brevet."; }
+    else               { emoji = '🏆'; msg = "PARFAIT ! 25/25 — Tu maîtrises tout le programme !"; }
+
+    // Calcul par matière
+    const byMat = {};
+    for (const mat of Object.keys(MATIERES_META)) byMat[mat] = { bon: 0, total: 0 };
+    for (const r of _results) {
+      if (byMat[r.matiereId]) {
+        byMat[r.matiereId].total++;
+        if (r.correct) byMat[r.matiereId].bon++;
+      }
+    }
+
+    // Lignes breakdown
+    const breakdownHTML = Object.entries(MATIERES_META).map(([id, meta]) => {
+      const d   = byMat[id] || { bon: 0, total: 0 };
+      const pct = d.total ? Math.round((d.bon / d.total) * 100) : 0;
+      let rowEmoji;
+      if      (pct === 100) rowEmoji = '🏆';
+      else if (pct >= 60)   rowEmoji = '✅';
+      else if (pct >= 40)   rowEmoji = '⚠️';
+      else                  rowEmoji = '❌';
+
+      return `
+        <div class="tp-mat-row">
+          <span class="tp-mat-icon">${meta.icon}</span>
+          <span class="tp-mat-name">${meta.label}</span>
+          <div class="tp-mat-bar-wrap">
+            <div class="tp-mat-bar ${meta.barClass}" style="width:${pct}%"></div>
+          </div>
+          <span class="tp-mat-score">${d.bon}/${d.total}</span>
+          <span class="tp-mat-emoji">${rowEmoji}</span>
+        </div>
+      `;
+    }).join('');
+
+    // Trouver la matière la plus faible pour le lien de révision
+    let weakId = null, weakPct = 101;
+    for (const [id, d] of Object.entries(byMat)) {
+      if (d.total > 0) {
+        const p = d.bon / d.total;
+        if (p < weakPct) { weakPct = p; weakId = id; }
+      }
+    }
+    const weakMeta = weakId ? MATIERES_META[weakId] : null;
+
+    resultEl.innerHTML = `
+      <div class="tp-result-hero">
+        <div class="tp-result-emoji">${emoji}</div>
+        <div class="tp-result-score">${_score}<span> / ${total}</span></div>
+        <div class="tp-result-pct">${pct}%</div>
+        <p class="tp-result-msg">${msg}</p>
+      </div>
+
+      <p class="tp-breakdown-title">📊 Résultat par matière</p>
+      <div class="tp-breakdown">${breakdownHTML}</div>
+
+      <div class="tp-actions">
+        <button class="tp-btn-start" onclick="recommencer()">🔄 Recommencer le test</button>
+        ${weakMeta
+          ? `<a href="${weakMeta.lien}" class="tp-btn-ghost">Réviser ${weakMeta.label} ${weakMeta.icon}</a>`
+          : `<a href="../index.html" class="tp-btn-ghost">← Retour à l'accueil</a>`
+        }
+      </div>
+    `;
+
+    // Anime les barres après rendu
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.tp-mat-bar').forEach(b => {
+        const w = b.style.width;
+        b.style.width = '0%';
+        requestAnimationFrame(() => { b.style.width = w; });
+      });
+    });
+  }
+
+  // ── Recommencer ───────────────────────────────────────────────────────────
+  function recommencer() {
+    _questions = [];
+    _current   = 0;
+    _score     = 0;
+    _results   = [];
+    document.getElementById('tp-result').style.display  = 'none';
+    document.getElementById('tp-intro').style.display   = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  </script>
+  <script src="../js/cookie-banner.js" defer></script>
+</body>
+</html>

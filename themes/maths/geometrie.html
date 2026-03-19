@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours géométrie plane brevet + 20 QCM corrigés : Pythagore, Thalès, aires, périmètres, angles, transformations. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours géométrie plane brevet + 20 QCM corrigés : Pythagore, Thalès, aires, périmètres, angles, transformations. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Géométrie plane — Maths Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Géométrie plane — Maths Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     sup { font-size: .7em; vertical-align: super; }
@@ -18,6 +29,8 @@
       margin: 1rem 0; font-family: monospace;
     }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment utiliser le théorème de Pythagore ?","acceptedAnswer":{"@type":"Answer","text":"Dans un triangle rectangle : a² + b² = c² où c est l'hypoténuse."}},{"@type":"Question","name":"Comment calculer l'aire d'un triangle ?","acceptedAnswer":{"@type":"Answer","text":"Aire = (base × hauteur) ÷ 2."}},{"@type":"Question","name":"C'est quoi la symétrie axiale ?","acceptedAnswer":{"@type":"Answer","text":"Une transformation qui reflète une figure par rapport à un axe, comme un miroir."}}]}</script>
 </head>
 <body>
 
@@ -38,6 +51,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Géométrie</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Comment utiliser le théorème de Pythagore ?</summary><div class="faq-a">Dans un triangle rectangle : a² + b² = c² où c est l'hypoténuse (le côté opposé à l'angle droit). On vérifie ou calcule un côté.</div></details>
+    <details class="faq-item"><summary>Comment calculer l'aire d'un triangle ?</summary><div class="faq-a">Aire = (base × hauteur) ÷ 2. La hauteur doit être perpendiculaire à la base choisie.</div></details>
+    <details class="faq-item"><summary>C'est quoi la symétrie axiale ?</summary><div class="faq-a">C'est une transformation qui retourne une figure par rapport à un axe (comme un miroir). Chaque point et son image sont à égale distance de l'axe.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <!-- ════════════════════════════════════════════
@@ -199,12 +218,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -329,5 +349,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

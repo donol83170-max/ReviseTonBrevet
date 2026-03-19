@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours grammaire & conjugaison brevet + 20 QCM corrigés : nature et fonction des mots, temps verbaux, accords, subjonctif. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours grammaire & conjugaison brevet + 20 QCM corrigés : nature et fonction des mots, temps verbaux, accords, subjonctif. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Grammaire & conjugaison — Français Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Grammaire & conjugaison — Français Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .formula-box {
@@ -20,6 +31,8 @@
     .tag-nature { display: inline-block; background: #ede9fe; color: #4c1d95; padding: .2rem .7rem; border-radius: 100px; font-size: .8rem; font-weight: 700; margin: .2rem; }
     .tag-fonction { display: inline-block; background: #fce7f3; color: #9d174d; padding: .2rem .7rem; border-radius: 100px; font-size: .8rem; font-weight: 700; margin: .2rem; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi le COD et le COI ?","acceptedAnswer":{"@type":"Answer","text":"Le COD répond à qui/quoi sans préposition. Le COI répond à à qui/de quoi avec préposition."}},{"@type":"Question","name":"Comment conjuguer au subjonctif ?","acceptedAnswer":{"@type":"Answer","text":"Radical de la 3ème personne du pluriel du présent + terminaisons -e, -es, -e, -ions, -iez, -ent."}},{"@type":"Question","name":"Comment distinguer imparfait et passé composé ?","acceptedAnswer":{"@type":"Answer","text":"L'imparfait = action durable ou habituelle. Passé composé = action précise et achevée."}}]}</script>
 </head>
 <body>
 
@@ -40,6 +53,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Grammaire & Conjugaison</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi le COD et le COI ?</summary><div class="faq-a">Le COD (complément d'objet direct) répond à la question "quoi ?" ou "qui ?" sans préposition. Le COI répond avec une préposition : "à qui ?", "de quoi ?".</div></details>
+    <details class="faq-item"><summary>Comment conjuguer au subjonctif présent ?</summary><div class="faq-a">On utilise le radical de la 3ème personne du pluriel du présent + les terminaisons : -e, -es, -e, -ions, -iez, -ent. Ex : ils finissent → que je finisse.</div></details>
+    <details class="faq-item"><summary>Comment distinguer imparfait et passé composé ?</summary><div class="faq-a">L'imparfait décrit une action durable ou habituelle dans le passé. Le passé composé décrit une action précise et achevée.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -99,12 +118,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -229,5 +249,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

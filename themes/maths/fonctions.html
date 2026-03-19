@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours fonctions & proportionnalité brevet + 20 QCM corrigés : fonctions linéaires, affines, lecture graphique, tableaux de valeurs. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours fonctions & proportionnalité brevet + 20 QCM corrigés : fonctions linéaires, affines, lecture graphique, tableaux de valeurs. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Fonctions & proportionnalité — Maths Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Fonctions & proportionnalité — Maths Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     sup { font-size: .7em; vertical-align: super; }
@@ -18,6 +29,8 @@
       margin: 1rem 0; font-family: monospace;
     }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"C'est quoi une fonction affine ?","acceptedAnswer":{"@type":"Answer","text":"Une fonction f(x) = ax + b, avec a le coefficient directeur et b l'ordonnée à l'origine."}},{"@type":"Question","name":"Comment reconnaître une fonction linéaire ?","acceptedAnswer":{"@type":"Answer","text":"C'est f(x) = ax, sa droite passe par l'origine."}},{"@type":"Question","name":"C'est quoi le coefficient directeur ?","acceptedAnswer":{"@type":"Answer","text":"La valeur a dans f(x) = ax + b, indiquant la pente de la droite."}}]}</script>
 </head>
 <body>
 
@@ -38,6 +51,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Fonctions & Proportionnalité</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>C'est quoi une fonction affine ?</summary><div class="faq-a">Une fonction de la forme f(x) = ax + b. Le coefficient a est la pente (coefficient directeur) et b est l'ordonnée à l'origine.</div></details>
+    <details class="faq-item"><summary>Comment reconnaître une fonction linéaire ?</summary><div class="faq-a">C'est une fonction affine avec b = 0, donc f(x) = ax. Sa représentation graphique passe par l'origine O(0,0).</div></details>
+    <details class="faq-item"><summary>C'est quoi le coefficient directeur ?</summary><div class="faq-a">C'est la valeur a dans f(x) = ax + b. Il indique si la droite monte (a > 0), descend (a < 0) ou est horizontale (a = 0).</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -150,12 +169,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -280,5 +300,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

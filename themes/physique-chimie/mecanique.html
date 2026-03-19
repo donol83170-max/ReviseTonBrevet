@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours mécanique & mouvement brevet + 20 QCM corrigés : vitesse, forces, principe d'inertie, poids. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours mécanique & mouvement brevet + 20 QCM corrigés : vitesse, forces, principe d'inertie, poids. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Mécanique & mouvement — Physique-Chimie Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Mécanique & mouvement — Physique-Chimie Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .formula-box { background: #f3e8ff; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: .8rem 1.2rem; font-family: monospace; font-size: 1rem; font-weight: 700; color: #4c1d95; margin: 1rem 0; }
@@ -13,6 +24,8 @@
     .vis { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
     .vis-caption { text-align: center; font-size: .82rem; color: #7c3aed; font-weight: 600; margin-top: .4rem; }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment calculer la vitesse moyenne ?","acceptedAnswer":{"@type":"Answer","text":"Vitesse = distance ÷ temps, en m/s ou km/h."}},{"@type":"Question","name":"C'est quoi une force ?","acceptedAnswer":{"@type":"Answer","text":"Action modifiant le mouvement d'un objet, caractérisée par intensité (Newton), direction et sens."}},{"@type":"Question","name":"C'est quoi le principe d'inertie ?","acceptedAnswer":{"@type":"Answer","text":"Un objet garde son état de mouvement si les forces exercées sur lui se compensent (1ère loi de Newton)."}}]}</script>
 </head>
 <body>
 
@@ -33,6 +46,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Mécanique & Mouvement</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Comment calculer la vitesse moyenne ?</summary><div class="faq-a">Vitesse = distance ÷ temps. Unité : m/s ou km/h. Attention à bien convertir les unités. Ex : 120 km en 2h → v = 120/2 = 60 km/h.</div></details>
+    <details class="faq-item"><summary>C'est quoi une force ?</summary><div class="faq-a">Une force est une action d'un objet sur un autre qui peut modifier son mouvement ou le déformer. Elle est caractérisée par une intensité (Newton), une direction et un sens. Ex : poids, poussée, frottement.</div></details>
+    <details class="faq-item"><summary>C'est quoi le principe d'inertie ?</summary><div class="faq-a">Un objet reste immobile ou en mouvement rectiligne uniforme si les forces qui s'exercent sur lui se compensent (résultante nulle). C'est la 1ère loi de Newton.</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -114,12 +133,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -244,5 +264,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>

@@ -19,10 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
   style.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
   document.head.appendChild(style);
 
-  // Smooth scroll
+  // Smooth scroll (ancres internes uniquement, jamais href="#" seul)
   document.querySelectorAll('a[href^="#"]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
     a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });

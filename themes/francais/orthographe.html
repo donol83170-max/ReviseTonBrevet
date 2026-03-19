@@ -4,8 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Fiche de cours orthographe brevet + 20 QCM corrigés : homophones, accords participe passé, pluriel noms composés, majuscules. ReviseTonBrevet."/>
+  <meta property="og:description" content="Fiche de cours orthographe brevet + 20 QCM corrigés : homophones, accords participe passé, pluriel noms composés, majuscules. ReviseTonBrevet."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="ReviseTonBrevet"/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="ReviseTonBrevet — Révise. Réussis."/>
+  <meta name="robots" content="index, follow"/>
   <title>Orthographe — Français Brevet — ReviseTonBrevet</title>
+  <meta property="og:title" content="Orthographe — Français Brevet — ReviseTonBrevet"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     .homo-card {
@@ -32,6 +43,8 @@
       font-weight: 600;
     }
   </style>
+  <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment distinguer a et à ?","acceptedAnswer":{"@type":"Answer","text":"Remplace par 'avait' : si ça marche c'est 'a' (verbe), sinon 'à' (préposition)."}},{"@type":"Question","name":"Accord du participe passé avec avoir ?","acceptedAnswer":{"@type":"Answer","text":"On accorde avec le COD uniquement s'il est placé avant le verbe."}},{"@type":"Question","name":"Pluriel des noms composés ?","acceptedAnswer":{"@type":"Answer","text":"Nom+nom : les deux varient. Verbe+nom : seul le nom varie. Préposition+nom : seul le nom varie."}}]}</script>
 </head>
 <body>
 
@@ -52,6 +65,12 @@
     <p class="theme-meta">Brevet 3ème · Fiche de cours + 20 QCM corrigés · Gratuit</p>
   </div>
 
+  <h2 style="margin-top:2.5rem">❓ Questions fréquentes — Orthographe</h2>
+  <div class="faq-list">
+    <details class="faq-item"><summary>Comment distinguer 'a' et 'à' ?</summary><div class="faq-a">Remplace par 'avait'. Si ça marche, c'est 'a' (verbe avoir). Si ça ne marche pas, c'est 'à' (préposition). Ex : il a faim → il avait faim ✓ → 'a'.</div></details>
+    <details class="faq-item"><summary>C'est quoi l'accord du participe passé avec avoir ?</summary><div class="faq-a">Avec avoir, le participe s'accorde avec le COD seulement s'il est placé AVANT le verbe. Ex : 'les sons qu'il a composés' (COD avant) vs 'il a composé des sons' (COD après = pas d'accord).</div></details>
+    <details class="faq-item"><summary>Comment mettre au pluriel les noms composés ?</summary><div class="faq-a">Ça dépend de la structure : nom+nom = les deux prennent le pluriel (chefs-lieux), verbe+nom = seul le nom varie (tire-bouchons), préposition+nom = seul le nom varie (avant-gardes).</div></details>
+  </div>
   <div class="ad-banner"><!-- AdSense --></div>
 
   <div class="fiche-section">
@@ -170,12 +189,13 @@
     <div class="footer-logo">Révise<span>ton</span>Brevet</div>
     <p>© 2026 ReviseTonBrevet — Tous droits réservés</p>
     <div class="footer-links">
-      <a href="#">Mentions légales</a>
-      <a href="#">Contact</a>
+      <a href="../../pages/mentions-legales.html">Mentions légales</a>
+      <a href="../../pages/politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="../../pages/contact.html">Contact</a>
     </div>
   </footer>
 
-  <script src="../../js/qcm.js"></script>
+  <script src="../../js/qcm.js" defer></script>
   <script>
   initQCM([
     {
@@ -251,7 +271,7 @@
       explication: "\"Se\" est le pronom réfléchi du verbe pronominal \"se préparer\" (il se prépare = lui-même)."
     },
     {
-      q: "\"___ songs préférés\" — adjectif possessif pluriel de première personne :",
+      q: "\"___ sons préférés\" — adjectif possessif pluriel de première personne :",
       options: ["Mais", "Mes"],
       correct: 1,
       explication: "\"Mes\" = adjectif possessif 1ère personne pluriel. \"Mais\" = conjonction d'opposition."
@@ -281,7 +301,7 @@
       explication: "COD \"ses fans\" est APRÈS → pas d'accord. \"A remercié\" sans accord, et \"a\" (verbe avoir, pas de préposition)."
     },
     {
-      q: "\"Ni Jul ni SCH ne ___ venu.\" Accord du verbe :",
+      q: "\"Ni Jul ni SCH ne ___ venus.\" Accord du verbe :",
       options: ["est", "sont", "a", "ont"],
       correct: 1,
       explication: "\"Ni... ni...\" coordonne deux sujets singuliers → verbe au pluriel. \"Ni Jul ni SCH ne sont venus\"."
@@ -300,5 +320,6 @@
     }
   ]);
   </script>
+  <script src="../../js/cookie-banner.js" defer></script>
 </body>
 </html>
