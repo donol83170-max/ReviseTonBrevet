@@ -723,15 +723,13 @@ section { padding: 6rem 4rem; }
 .faq-item[open] { border-color: var(--indigo); }
 .faq-item summary {
   list-style: none;
-  padding: .9rem 1.2rem;
+  padding: .9rem 3rem .9rem 1.2rem;
   font-weight: 700;
   font-size: .95rem;
   color: var(--deep);
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  text-align: center;
+  position: relative;
   user-select: none;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
@@ -740,10 +738,13 @@ section { padding: 6rem 4rem; }
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--indigo);
-  flex-shrink: 0;
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
   transition: transform .2s;
 }
-.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq-item .faq-a {
   padding: 0 1.2rem 1rem;
   font-size: .9rem;
