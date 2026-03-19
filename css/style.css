@@ -712,6 +712,7 @@ section { padding: 6rem 4rem; }
 }
 
 /* ── FAQ Section ──────────────────────────────────────────────────────────── */
+.faq-section { max-width: 820px; margin: 0 auto; padding: 2rem 2rem 0; }
 .faq-list { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
 .faq-item {
   background: var(--paper);
