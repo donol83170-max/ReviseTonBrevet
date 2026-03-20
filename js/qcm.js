@@ -27,10 +27,11 @@ function initQCM(questions) {
           <span>✅ Corrigé instantanément</span>
         </div>
       </div>
-      <button class="qcm-launch-btn" onclick="lancerQCM()">Lancer le QCM →</button>
+      <button class="qcm-launch-btn" id="qcm-launch-btn">Lancer le QCM →</button>
     </div>
   `;
   ficheSection.appendChild(btnWrap);
+  btnWrap.querySelector('#qcm-launch-btn').addEventListener('click', lancerQCM);
 
   // Construire la structure Duolingo dans #qcm
   const container = document.getElementById('qcm');
@@ -51,25 +52,44 @@ function showQuestion(index) {
   const q     = _questions[index];
   const total = _questions.length;
 
-  // Barre de progression
   document.getElementById('qcm-progress-fill').style.width = `${(index / total) * 100}%`;
   document.getElementById('qcm-counter').textContent = `${index + 1} / ${total}`;
 
   const card = document.getElementById('qcm-card');
-  card.innerHTML = `
-    <div class="question-text">${q.q}</div>
-    <div class="options" id="options">
-      ${q.options.map((opt, j) => `
-        <button class="option-btn" onclick="repondre(${j}, ${q.correct}, \`${q.explication.replace(/`/g, "'")}\`)">
-          ${opt}
-        </button>
-      `).join('')}
-    </div>
-    <div class="explication" id="explication">💡 ${q.explication}</div>
-    <button class="btn-next" id="btn-next" onclick="nextQuestion()">
-      ${index + 1 < total ? 'Question suivante →' : 'Voir mon score 🏆'}
-    </button>
-  `;
+
+  // Construire le DOM sans innerHTML pour les données
+  const questionDiv = document.createElement('div');
+  questionDiv.className = 'question-text';
+  questionDiv.textContent = q.q;
+
+  const optionsDiv = document.createElement('div');
+  optionsDiv.className = 'options';
+  optionsDiv.id = 'options';
+
+  q.options.forEach((opt, j) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => repondre(j, q.correct));
+    optionsDiv.appendChild(btn);
+  });
+
+  const explDiv = document.createElement('div');
+  explDiv.className = 'explication';
+  explDiv.id = 'explication';
+  explDiv.textContent = '💡 ' + q.explication;
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'btn-next';
+  nextBtn.id = 'btn-next';
+  nextBtn.textContent = index + 1 < total ? 'Question suivante →' : 'Voir mon score 🏆';
+  nextBtn.addEventListener('click', nextQuestion);
+
+  card.innerHTML = '';
+  card.appendChild(questionDiv);
+  card.appendChild(optionsDiv);
+  card.appendChild(explDiv);
+  card.appendChild(nextBtn);
 
   // Animation d'entrée
   card.style.animation = 'none';
@@ -118,14 +138,33 @@ function showResult() {
   document.getElementById('qcm').style.display = 'none';
   const resultEl = document.getElementById('result');
   resultEl.classList.remove('hidden');
-  resultEl.innerHTML = `
-    <div class="result-emoji">${emoji}</div>
-    <div class="result-score">${_score}<span> / ${total}</span></div>
-    <div class="result-pct">${pct}%</div>
-    <p class="result-msg">${msg}</p>
-    <button class="btn-next visible" style="margin-top:1.5rem" onclick="resetQCM()">🔄 Recommencer</button>
-    ${_score === total ? `<a href="${nextPage}" class="btn-next-link">Thème suivant →</a>` : ''}
-  `;
+
+  const resultEmoji  = document.createElement('div'); resultEmoji.className  = 'result-emoji';  resultEmoji.textContent = emoji;
+  const resultScore  = document.createElement('div'); resultScore.className  = 'result-score';
+  const scoreSpan    = document.createElement('span'); scoreSpan.textContent = ` / ${total}`;
+  resultScore.textContent = _score; resultScore.appendChild(scoreSpan);
+  const resultPct    = document.createElement('div'); resultPct.className    = 'result-pct';    resultPct.textContent = pct + '%';
+  const resultMsg    = document.createElement('p');   resultMsg.className    = 'result-msg';    resultMsg.textContent = msg;
+  const resetBtn     = document.createElement('button');
+  resetBtn.className = 'btn-next visible';
+  resetBtn.style.marginTop = '1.5rem';
+  resetBtn.textContent = '🔄 Recommencer';
+  resetBtn.addEventListener('click', resetQCM);
+
+  resultEl.innerHTML = '';
+  resultEl.appendChild(resultEmoji);
+  resultEl.appendChild(resultScore);
+  resultEl.appendChild(resultPct);
+  resultEl.appendChild(resultMsg);
+  resultEl.appendChild(resetBtn);
+
+  if (_score === total) {
+    const nextLink = document.createElement('a');
+    nextLink.href = nextPage;
+    nextLink.className = 'btn-next-link';
+    nextLink.textContent = 'Thème suivant →';
+    resultEl.appendChild(nextLink);
+  }
 }
 
 function lancerQCM() {
