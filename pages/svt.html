@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8"/>
@@ -13,6 +13,11 @@
   <meta name="robots" content="index, follow"/>
   <title>SVT — ReviseTonBrevet</title>
   <meta property="og:title" content="SVT — ReviseTonBrevet"/>
+  <meta property="og:image" content="https://revisetonbrevet.fr/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:image" content="https://revisetonbrevet.fr/og-image.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -21,9 +26,11 @@
   <!-- Google Analytics GA4 — colle ton snippet ici quand tu auras ton Measurement ID (G-XXXXXXXXXX) -->
 </head>
 <body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
 
   <nav class="nav">
     <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="maths.html">Maths</a></li>
       <li><a href="francais.html">Français</a></li>
@@ -34,7 +41,7 @@
     </ul>
   </nav>
 
-  <div class="page-header">
+  <div class="page-header" id="main">
     <p style="font-size:.85rem;opacity:.5;margin-bottom:.5rem;"><a href="../index.html" style="color:white;text-decoration:none;">Accueil</a> → SVT</p>
     <h1>🧬 Sciences de la Vie et de la Terre</h1>
     <p>5 thèmes · 20 QCM corrigés par thème · Gratuit</p>
@@ -103,6 +110,23 @@
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "SVT (Sciences de la Vie et de la Terre)",
+    "description": "Corps humain, génétique, écologie, reproduction et microbiologie.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "ReviseTonBrevet",
+      "url": "https://revisetonbrevet.fr"
+    },
+    "inLanguage": "fr",
+    "isAccessibleForFree": true,
+    "educationalLevel": "Brevet des collèges (3ème)"
+  }
+  </script>
 
   <script src="../js/main.js" defer></script>
   <script src="../js/cookie-banner.js" defer></script>

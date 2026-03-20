@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="noindex"/>
   <title>Page introuvable — ReviseTonBrevet</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
   <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -45,9 +46,11 @@
   </style>
 </head>
 <body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
 
   <nav class="nav">
     <a href="index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="pages/maths.html">Maths</a></li>
       <li><a href="pages/francais.html">Français</a></li>
@@ -57,7 +60,7 @@
     </ul>
   </nav>
 
-  <div class="error-wrap">
+  <div class="error-wrap" id="main">
     <div class="error-code">404</div>
     <div class="error-msg">Page introuvable 😬</div>
     <p class="error-sub">Cette page n'existe pas ou a été déplacée. Pas de panique — retourne à l'accueil et continue tes révisions !</p>
@@ -77,6 +80,7 @@
     </div>
   </footer>
 
+  <script src="js/main.js" defer></script>
   <script src="js/cookie-banner.js" defer></script>
 </body>
 </html>
