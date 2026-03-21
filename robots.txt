@@ -1,4 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://revisetonbrevet.fr/sitemap.xml
+Sitemap: https://revise-ton-brevet.vercel.app/sitemap.xml
+
