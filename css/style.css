@@ -58,7 +58,7 @@ body {
   color: var(--ink);
 }
 .nav-logo span { color: var(--indigo); }
-.nav-links { display: flex; gap: 1.5rem; align-items: center; list-style: none; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 1rem; align-items: center; list-style: none; flex-wrap: wrap; }
 .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; transition: opacity .2s; font-size: .9rem; }
 .nav-links a:hover { opacity: 0.6; }
 .btn-nav {
