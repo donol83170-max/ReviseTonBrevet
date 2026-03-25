@@ -23,7 +23,19 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ],
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?!revise-ton-brevet\\.fr|www\\.revise-ton-brevet\\.fr).*"
+        }
+      ],
+      "destination": "https://revise-ton-brevet.fr/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/404", "destination": "/404.html" }
   ]
