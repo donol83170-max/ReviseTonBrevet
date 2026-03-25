@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sujet et corrigé du Brevet {{MATIERE}} {{LIEU}} {{ANNEE}}. Révisez avec ReviseTonBrevet."/>
+  <title>Brevet {{MATIERE}} {{LIEU}} {{ANNEE}} : Sujet et Corrigé — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/annales/{{ID}}.html" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links">
+      <li><a href="../pages/maths.html">Maths</a></li>
+      <li><a href="../pages/francais.html">Français</a></li>
+      <li><a href="../pages/histoire-geo.html">Histoire-Géo</a></li>
+      <li><a href="../pages/svt.html">SVT</a></li>
+      <li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li>
+      <li><a href="../conseils.html">Conseils</a></li>
+    </ul>
+  </nav>
+
+  <section class="theme-header">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/annales.html">Annales</a> → {{MATIERE}}</p>
+    <h1>{{MATIERE}} {{LIEU}} {{ANNEE}}</h1>
+    <p class="theme-meta">Sujet officiel et pistes de correction</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>Détails de l'épreuve</h2>
+    <p>L'épreuve de <strong>{{MATIERE}}</strong> du Brevet des collèges s'est tenue en <strong>{{ANNEE}}</strong> pour les candidats de la zone <strong>{{LIEU}}</strong>. Retrouvez ici les informations clés pour vous entraîner.</p>
+
+    <div class="retenir">
+      <h3>📌 Notions abordées dans ce sujet :</h3>
+      <ul>
+        {{NOTIONS_LIST}}
+      </ul>
+    </div>
+
+    <h2>Accéder au sujet et au corrigé</h2>
+    <p>Pour vous préparer efficacement, nous vous conseillons de réaliser le sujet en conditions réelles (chronométré) avant de consulter la correction.</p>
+    
+    <div class="vis">
+      <a href="{{URL_TELECHARGEMENT}}" class="btn-primary" target="_blank" rel="noopener">📥 Télécharger le sujet PDF</a>
+    </div>
+
+    <div class="exemple">
+      <strong>💡 Conseil de prof :</strong> Analysez bien les points attribués à chaque exercice. Ce sujet de {{LIEU}} est souvent un excellent indicateur des tendances pour la session de juin en métropole.
+    </div>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/annales.html" class="btn-ghost">← Voir toutes les annales</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet — Annuaire de révisions gratuit</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

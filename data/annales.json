@@ -1,0 +1,19 @@
+[
+  { "id": "maths-metropole-2024", "matiere": "Mathématiques", "lieu": "Métropole", "annee": "2024", "notions": ["Calcul littéral", "Thalès", "Probabilités", "Fonctions"], "telechargement": "https://www.education.gouv.fr/sujet-annale-maths-metropole-2024" },
+  { "id": "maths-centres-etrangers-2024", "matiere": "Mathématiques", "lieu": "Centres Étrangers", "annee": "2024", "notions": ["Arithmétique", "Géométrie dans l'espace", "Statistiques"], "telechargement": "#" },
+  { "id": "maths-amerique-nord-2024", "matiere": "Mathématiques", "lieu": "Amérique du Nord", "annee": "2024", "notions": ["Trigonométrie", "Équations", "Algorithmique"], "telechargement": "#" },
+  { "id": "maths-polynesie-2024", "matiere": "Mathématiques", "lieu": "Polynésie", "annee": "2024", "notions": ["Calcul", "Pythagore", "Fonctions affines"], "telechargement": "#" },
+  { "id": "maths-asie-2024", "matiere": "Mathématiques", "lieu": "Asie", "annee": "2024", "notions": ["Fractions", "Transformations", "Volumes"], "telechargement": "#" },
+
+  { "id": "francais-metropole-2024", "matiere": "Français", "lieu": "Métropole", "annee": "2024", "notions": ["Compréhension", "Grammaire", "Rédaction", "Dictée"], "telechargement": "#" },
+  { "id": "francais-centres-etrangers-2024", "matiere": "Français", "lieu": "Centres Étrangers", "annee": "2024", "notions": ["Analyse de texte", "Figures de style", "Sujet de réflexion"], "telechargement": "#" },
+
+  { "id": "hg-metropole-2024", "matiere": "Histoire-Géographie", "lieu": "Métropole", "annee": "2024", "notions": ["Guerre Froide", "Aménagement du territoire", "EMC"], "telechargement": "#" },
+  
+  { "id": "svt-metropole-2024", "matiere": "SVT", "lieu": "Métropole", "annee": "2024", "notions": ["Génétique", "Écosystèmes", "Immunologie"], "telechargement": "#" },
+  
+  { "id": "pc-metropole-2024", "matiere": "Physique-Chimie", "lieu": "Métropole", "annee": "2024", "notions": ["Atomes", "Électricité", "Mouvement"], "telechargement": "#" },
+
+  { "id": "maths-metropole-2023", "matiere": "Mathématiques", "lieu": "Métropole", "annee": "2023", "notions": ["Probabilités", "Ratio", "Pythagore"], "telechargement": "#" },
+  { "id": "maths-metropole-2022", "matiere": "Mathématiques", "lieu": "Métropole", "annee": "2022", "notions": ["Arithmétique", "Thalès", "Fonctions"], "telechargement": "#" }
+]

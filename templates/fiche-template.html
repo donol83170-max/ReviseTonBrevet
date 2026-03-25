@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision {{CONCEPT}} pour le Brevet 3ème. Définition, formules, erreurs à éviter et quiz express."/>
+  <title>{{CONCEPT}} : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/{{ID}}.html" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="pages/maths.html">Maths</a></li><li><a href="pages/francais.html">FranÃ§ais</a></li><li><a href="pages/histoire-geo.html">Histoire-GÃ©o</a></li><li><a href="pages/svt.html">SVT</a></li><li><a href="pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="pages/annales.html">Annales</a></li><li><a href="pages/fiches.html">Fiches</a></li><li><a href="pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → {{MATIERE}}</p>
+    <h1>{{CONCEPT}}</h1>
+    <p class="theme-meta">L'essentiel à retenir pour le jour J</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Définition et Contexte</h2>
+    <p>{{DEFINITION}}</p>
+
+    <div class="formule">
+      {{FORMULE}}
+    </div>
+
+    <h2>2. L'erreur à ne plus faire ❌</h2>
+    <div class="retenir" style="border-color: var(--pink); background: var(--pink-light);">
+      <p><strong>Attention :</strong> {{ERREUR}}</p>
+    </div>
+
+    <h2>3. Vérifie tes acquis (Quiz Express) ⚡</h2>
+    <div class="card" style="background: var(--deep); color: white;">
+      <p style="margin-bottom: 1rem;"><strong>Question :</strong> {{QUIZ_Q}}</p>
+      <button class="btn-primary" onclick="alert('Réponse : {{QUIZ_A}}')">Voir la réponse</button>
+    </div>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
