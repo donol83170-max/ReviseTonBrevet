@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision La Trigonométrie pour le Brevet 3ème. Cosinus, Sinus, Tangente, formules SOH CAH TOA."/>
+  <title>La Trigonométrie : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/trigonometrie.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3046664644252380" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="../pages/maths.html">Maths</a></li><li><a href="../pages/francais.html">Fran&ccedil;ais</a></li><li><a href="../pages/histoire-geo.html">Histoire-G&eacute;o</a></li><li><a href="../pages/svt.html">SVT</a></li><li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="../pages/annales.html">Annales</a></li><li><a href="../pages/fiches.html">Fiches</a></li><li><a href="../pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%);">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → Mathématiques</p>
+    <h1>La Trigonométrie</h1>
+    <p class="theme-meta">Maîtriser les sinus, cosinus et tangentes</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Les trois formules essentielles</h2>
+    <p>La trigonométrie s'utilise exclusivement dans un <strong>triangle rectangle</strong>. Elle permet de calculer des longueurs ou des angles.</p>
+    
+    <div class="formule">
+      SOH - CAH - TOA
+    </div>
+    
+    <ul style="margin: 1rem 0 1rem 1.5rem;">
+      <li><strong>SOH :</strong> <strong>S</strong>inus = <strong>O</strong>pposé / <strong>H</strong>ypoténuse</li>
+      <li><strong>CAH :</strong> <strong>C</strong>osinus = <strong>A</strong>djacent / <strong>H</strong>ypoténuse</li>
+      <li><strong>TOA :</strong> <strong>T</strong>angente = <strong>O</strong>pposé / <strong>A</strong>djacent</li>
+    </ul>
+
+    <h2>2. La méthode pour ne pas se tromper</h2>
+    <ol>
+      <li><strong>Repère l'hypoténuse</strong> (le côté le plus long, en face de l'angle droit).</li>
+      <li>Par rapport à l'angle choisi, identifie le <strong>côté opposé</strong> (en face) et le <strong>côté adjacent</strong> (à côté).</li>
+      <li>Choisis la formule qui contient les deux données que tu as et celle que tu cherches.</li>
+    </ol>
+
+    <div class="retenir">
+      <h3>⚡ Conseil Calculatrice :</h3>
+      <p>Vérifie bien que ta calculatrice est en mode <strong>Degrés (DEG)</strong> et non Radian (RAD) avant de faire tes calculs !</p>
+    </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Quelle formule permet de calculer le Cosinus d'un angle ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('adj/hyp', this)">Adjacent / Hypoténuse</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('opp/hyp', this)">Opposé / Hypoténuse</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('opp/adj', this)">Opposé / Adjacent</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'adj/hyp') {
+          feedback.innerHTML = "✅ Bien joué ! C'est le 'CAH' de SOH CAH TOA.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Erreur ! Relis le mémo technique SOH CAH TOA.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

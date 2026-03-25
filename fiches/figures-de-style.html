@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision Les figures de style pour le Brevet 3ème. Comparaison, métaphore, personnification, allégorie, hyperbole."/>
+  <title>Les figures de style : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/figures-de-style.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3046664644252380" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="../pages/maths.html">Maths</a></li><li><a href="../pages/francais.html">Fran&ccedil;ais</a></li><li><a href="../pages/histoire-geo.html">Histoire-G&eacute;o</a></li><li><a href="../pages/svt.html">SVT</a></li><li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="../pages/annales.html">Annales</a></li><li><a href="../pages/fiches.html">Fiches</a></li><li><a href="../pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → Français</p>
+    <h1>Les figures de style</h1>
+    <p class="theme-meta">Donner de la force à ses textes</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Images et Comparaisons</h2>
+    <p>Ces figures permettent d'illustrer une idée en créant un lien entre deux éléments.</p>
+    <ul>
+      <li><strong>La Comparaison :</strong> Elle utilise un outil de comparaison (comme, tel, pareil à). <br/><em>Ex: Il est rusé comme un renard.</em></li>
+      <li><strong>La Métaphore :</strong> C'est une comparaison sans outil. <br/><em>Ex: Cet homme est un lion.</em></li>
+      <li><strong>La Personnification :</strong> Elle donne des traits humains à un objet ou un animal. <br/><em>Ex: Le vent hurle dans la nuit.</em></li>
+    </ul>
+
+    <h2>2. L'exagération et l'atténuation</h2>
+    <ul>
+      <li><strong>L'Hyperbole :</strong> Une exagération forte. <br/><em>Ex: Je meurs de soif !</em></li>
+      <li><strong>L'Euphémisme :</strong> Atténuer une réalité triste ou brutale. <br/><em>Ex: Il nous a quittés (pour dire qu'il est mort).</em></li>
+      <li><strong>La Litote :</strong> Dire moins pour suggérer plus (souvent à la forme négative). <br/><em>Ex: Ce n'est pas mauvais (pour dire que c'est très bon).</em></li>
+    </ul>
+
+    <div class="retenir">
+      <h3>⚠️ À l'examen :</h3>
+      <p>On te demandera souvent d'identifier une figure et d'expliquer son <strong>effet</strong> (pourquoi l'auteur l'utilise ?). Ne te contente pas de donner le nom !</p>
+    </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Quelle figure est utilisée dans : "Une cascade de cheveux d'or" ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('métaphore', this)">Métaphore</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('comparaison', this)">Comparaison</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('hyperbole', this)">Hyperbole</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'métaphore') {
+          feedback.innerHTML = "✅ Bravo ! C'est une métaphore car on compare les cheveux à de l'or sans utiliser 'comme'.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Erreur ! Il n'y a pas d'outil de comparaison (comme), c'est donc une métaphore.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

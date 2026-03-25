@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision Masse et Poids pour le Brevet 3ème. Différence entre kg et Newton, formule P = m x g."/>
+  <title>Masse et Poids : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/masse-poids.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3046664644252380" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="../pages/maths.html">Maths</a></li><li><a href="../pages/francais.html">Fran&ccedil;ais</a></li><li><a href="../pages/histoire-geo.html">Histoire-G&eacute;o</a></li><li><a href="../pages/svt.html">SVT</a></li><li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="../pages/annales.html">Annales</a></li><li><a href="../pages/fiches.html">Fiches</a></li><li><a href="../pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header" style="background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → Physique-Chimie</p>
+    <h1>Masse et Poids</h1>
+    <p class="theme-meta">Ne confonds plus les deux !</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Quelle différence ?</h2>
+    <p>Dans la vie courante, on mélange souvent les deux, mais en physique, ce sont deux notions bien distinctes.</p>
+    <ul>
+      <li><strong>La Masse (m) :</strong> C'est la quantité de matière. Elle ne change jamais, que tu sois sur la Terre ou sur la Lune. Son unité est le <strong>Kilogramme (kg)</strong>.</li>
+      <li><strong>Le Poids (P) :</strong> C'est la force d'attraction qu'exerce une planète sur toi. Il varie selon l'endroit où tu te trouves. Son unité est le <strong>Newton (N)</strong>.</li>
+    </ul>
+
+    <h2>2. La formule magique</h2>
+    <p>Le poids est proportionnel à la masse. On utilise la formule :</p>
+    <div class="formule">
+      P = m × g
+    </div>
+    <ul>
+      <li><strong>P :</strong> Poids en Newton (N).</li>
+      <li><strong>m :</strong> Masse en Kilogrammes (kg).</li>
+      <li><strong>g :</strong> Intensité de la pesanteur (sur Terre, g ≈ 9,8 N/kg).</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>🚀 Sur la Lune :</h3>
+      <p>Sur la Lune, <strong>g</strong> est 6 fois plus faible que sur Terre. Ton <strong>Poids</strong> sera donc 6 fois plus faible, mais ta <strong>Masse</strong> restera la même !</p>
+    </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Quelle est l'unité officielle du Poids en physique ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('newton', this)">Le Newton (N)</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('kilogramme', this)">Le Kilogramme (kg)</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('gramme', this)">Le Gramme (g)</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'newton') {
+          feedback.innerHTML = "✅ C'est juste ! Le Newton mesure une force. Le kg mesure une masse.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Attention ! Le kg est pour la masse. Le poids est une force, donc en Newton.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

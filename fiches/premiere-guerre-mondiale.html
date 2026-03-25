@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision La Première Guerre Mondiale (1914-1918) pour le Brevet 3ème. Tranchées, Verdun, civils dans la guerre."/>
+  <title>La Première Guerre Mondiale : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/premiere-guerre-mondiale.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3046664644252380" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="../pages/maths.html">Maths</a></li><li><a href="../pages/francais.html">Fran&ccedil;ais</a></li><li><a href="../pages/histoire-geo.html">Histoire-G&eacute;o</a></li><li><a href="../pages/svt.html">SVT</a></li><li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="../pages/annales.html">Annales</a></li><li><a href="../pages/fiches.html">Fiches</a></li><li><a href="../pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header" style="background: linear-gradient(135deg, #475569 0%, #1e293b 100%);">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → Histoire-Géo</p>
+    <h1>La Première Guerre Mondiale</h1>
+    <p class="theme-meta">1914 - 1918 : Une guerre totale</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Les grandes phases du conflit</h2>
+    <ul>
+      <li><strong>1914 :</strong> Guerre de mouvement (échec du plan Schlieffen, bataille de la Marne).</li>
+      <li><strong>1915 - 1917 :</strong> Guerre de position (les <strong>tranchées</strong>). Les soldats subissent l'enfer de la boue, du froid et des bombardements.</li>
+      <li><strong>1916 :</strong> Bataille de <strong>Verdun</strong> (plus de 700 000 victimes).</li>
+      <li><strong>1917 :</strong> Tournant de la guerre : entrée des USA, retrait de la Russie (révolution bolchevique).</li>
+      <li><strong>11 novembre 1918 :</strong> Armistice.</li>
+    </ul>
+
+    <h2>2. Une guerre totale et brutale</h2>
+    <p>La guerre mobilise toutes les ressources de l'État :</p>
+    <ul>
+      <li><strong>Les soldats :</strong> Les "Poilus" vivent dans des conditions inhumaines.</li>
+      <li><strong>Les civils :</strong> Ils participent à l'effort de guerre (les "Munitionnettes" dans les usines). Ils subissent aussi les pénuries et le génocide des Arméniens (1915).</li>
+      <li><strong>La propagande :</strong> Le "bourrage de crâne" pour maintenir le moral.</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>📅 Dates clés à connaître par cœur :</h3>
+      <p>- 1914 : Début de la guerre.<br/>- 1915 : Génocide Arménien.<br/>- 1916 : Bataille de Verdun.<br/>- 11 nov 1918 : Armistice.</p>
+    </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">En quelle année a eu lieu la bataille de Verdun ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1916, this)">1916</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1914, this)">1914</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1918, this)">1918</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 1916) {
+          feedback.innerHTML = "✅ Exact ! C'est la bataille la plus longue et l'une des plus meurtrières de la guerre.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Non ! 1914 est le début, 1918 la fin. Verdun, c'est 1916.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

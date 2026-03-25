@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fiche de révision Les espaces productifs français pour le Brevet 3ème. Industrie, Agriculture, Services et Tourisme."/>
+  <title>Les espaces productifs français : Fiche de Révision Brevet — ReviseTonBrevet</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="canonical" href="https://revise-ton-brevet.fr/fiches/espaces-productifs.html" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3046664644252380" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Révise<span>ton</span>Brevet</a>
+    <ul class="nav-links"><li><a href="../pages/maths.html">Maths</a></li><li><a href="../pages/francais.html">Fran&ccedil;ais</a></li><li><a href="../pages/histoire-geo.html">Histoire-G&eacute;o</a></li><li><a href="../pages/svt.html">SVT</a></li><li><a href="../pages/physique-chimie.html">Physique-Chimie</a></li><li><a href="../pages/annales.html">Annales</a></li><li><a href="../pages/fiches.html">Fiches</a></li><li><a href="../pages/conseils.html" style="font-weight:700;color:var(--indigo)">Conseils</a></li></ul>
+  </nav>
+
+  <section class="theme-header" style="background: linear-gradient(135deg, #10b981 0%, #064e3b 100%);">
+    <p class="breadcrumb"><a href="../index.html">Accueil</a> → <a href="../pages/fiches.html">Fiches</a> → Histoire-Géo</p>
+    <h1>Les espaces productifs</h1>
+    <p class="theme-meta">Comment la France produit des richesses</p>
+  </section>
+
+  <main class="fiche-section">
+    <h2>1. Les trois grands secteurs</h2>
+    <ul>
+      <li><strong>Le secteur Agricole :</strong> La France est le 1er producteur agricole européen. On trouve des grandes cultures intensives (Bassin parisien) et des cultures spécialisées (vignes, fruits).</li>
+      <li><strong>Le secteur Industriel :</strong> En mutation. Les vieilles régions du Nord/Est déclinent au profit des métropoles (Aérospatiale à Toulouse, Cosmétique à Orléans). On parle de <strong>technopôles</strong>.</li>
+      <li><strong>Le secteur des Services :</strong> C'est 80% de la richesse ! (Tourisme, finance, informatique). Paris et les littoraux en profitent.</li>
+    </ul>
+
+    <h2>2. Les facteurs de localisation</h2>
+    <p>Pourquoi s'installer ici plutôt qu'ailleurs ?</p>
+    <ul>
+      <li>La proximité des <strong>réseaux de transport</strong> (autoroutes, ports, TGV).</li>
+      <li>La présence de <strong>centres de recherche</strong> et d'universités (matière grise).</li>
+      <li>Le <strong>cadre de vie</strong> (héliotropisme : le soleil attire dans le Sud).</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>🌍 À retenir :</h3>
+      <p>Les espaces productifs français sont de plus en plus connectés à l'Europe et au monde (mondialisation). Les <strong>métropoles</strong> et les <strong>littoraux</strong> sont les grands gagnants.</p>
+    </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Comment appelle-t-on un parc d'activités regroupant recherche, industrie et universités ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('technopôle', this)">Un technopôle</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('friche', this)">Une friche industrielle</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('plateforme', this)">Une plateforme logistique</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'technopôle') {
+          feedback.innerHTML = "✅ C'est ça ! Toulouse (Airbus) est l'exemple le plus célèbre de technopôle en France.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Non ! Une friche est une usine abandonnée, un technopôle est un centre d'innovation.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">Révise<span>ton</span>Brevet</div>
+    <p>© 2026 ReviseTonBrevet</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
