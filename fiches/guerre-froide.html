@@ -28,23 +28,65 @@
   </section>
 
   <main class="fiche-section">
-    <h2>1. Définition et Contexte</h2>
-    <p>Confrontation idéologique, politique et technologique entre les USA et l'URSS de 1947 à 1991.</p>
+    <h2>1. Un monde bipolaire (1947 - 1991)</h2>
+    <p>La Guerre Froide est un conflit idéologique, politique et technologique entre les deux grandes puissances sorties victorieuses de la Seconde Guerre Mondiale : les <strong>États-Unis</strong> (bloc de l'Ouest) et l'<strong>URSS</strong> (bloc de l'Est).</p>
 
-    <div class="formule">
-      1947 - 1991
+    <div class="vis">
+      <div style="display: flex; justify-content: space-around; align-items: center; background: #f8fafc; padding: 1rem; border-radius: 8px;">
+        <div style="text-align: center;">
+          <div style="font-size: 2rem;">🇺🇸</div>
+          <div style="font-weight: bold; color: var(--accent-pc);">Capitalisme</div>
+          <div style="font-size: 0.8rem;">OTAN</div>
+        </div>
+        <div style="font-weight: bold; color: #64748b;">VS</div>
+        <div style="text-align: center;">
+          <div style="font-size: 2rem;">🇷🇺</div>
+          <div style="font-weight: bold; color: var(--pink);">Communisme</div>
+          <div style="font-size: 0.8rem;">Pacte de Varsovie</div>
+        </div>
+      </div>
     </div>
 
-    <h2>2. L'erreur à ne plus faire ❌</h2>
-    <div class="retenir" style="border-color: var(--pink); background: var(--pink-light);">
-      <p><strong>Attention :</strong> Confondre la chute du mur de Berlin (1989) avec la fin de l'URSS (1991).</p>
+    <h2>2. Les crises et les moments clés</h2>
+    <ul>
+      <li><strong>1948-1949 :</strong> Blocus de Berlin.</li>
+      <li><strong>1961 :</strong> Construction du Mur de Berlin.</li>
+      <li><strong>1962 :</strong> Crise des missiles de Cuba (le moment où on a été le plus proche d'une guerre nucléaire).</li>
+      <li><strong>1989 :</strong> Chute du Mur de Berlin.</li>
+      <li><strong>1991 :</strong> Éclatement de l'URSS et fin officielle du conflit.</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>🌍 Pourquoi "Froide" ?</h3>
+      <p>On l'appelle ainsi car les deux superpuissances ne se sont jamais affrontées <strong>directement</strong> (à cause de la dissuasion nucléaire), mais par l'intermédiaire d'autres conflits (Corée, Vietnam).</p>
     </div>
 
-    <h2>3. Vérifie tes acquis (Quiz Express) ⚡</h2>
-    <div class="card" style="background: var(--deep); color: white;">
-      <p style="margin-bottom: 1rem;"><strong>Question :</strong> Quelle année marque la fin officielle de l'URSS ?</p>
-      <button class="btn-primary" onclick="alert('Réponse : 1991')">Voir la réponse</button>
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">En quelle année l'URSS a-t-elle officiellement disparu ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1991, this)">1991</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1989, this)">1989</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(1945, this)">1945</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
     </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 1991) {
+          feedback.innerHTML = "✅ Bravo ! 1989 est la chute du Mur, mais c'est bien en 1991 que l'URSS est dissoute.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Erreur ! 1989 est la chute du Mur de Berlin. 1991 est la fin de l'URSS.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
 
     <div style="margin-top: 3rem; text-align: center;">
       <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>

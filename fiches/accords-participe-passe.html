@@ -28,23 +28,58 @@
   </section>
 
   <main class="fiche-section">
-    <h2>1. Définition et Contexte</h2>
-    <p>Règles d'accord du participe passé avec l'auxiliaire être ou avoir.</p>
-
-    <div class="formule">
-      Être = accord sujet / Avoir = accord COD si placé avant
+    <h2>1. Avec l'auxiliaire ÊTRE</h2>
+    <p>Le participe passé employé avec l'auxiliaire <strong>être</strong> s'accorde toujours en genre (masculin/féminin) et en nombre (singulier/pluriel) avec le <strong>sujet</strong> du verbe.</p>
+    
+    <div class="exemple">
+      <strong>Exemple :</strong> Elles sont <strong>parties</strong> en vacances. (Sujet "Elles" = féminin pluriel).
     </div>
 
-    <h2>2. L'erreur à ne plus faire ❌</h2>
-    <div class="retenir" style="border-color: var(--pink); background: var(--pink-light);">
-      <p><strong>Attention :</strong> Accorder avec le sujet quand on utilise l'auxiliaire avoir.</p>
+    <h2>2. Avec l'auxiliaire AVOIR</h2>
+    <p>C'est la règle qui piège tout le monde ! Le participe passé avec <strong>avoir</strong> ne s'accorde <strong>jamais</strong> avec le sujet.</p>
+    <p>Il s'accorde uniquement avec le <strong>COD</strong> (Complément d'Objet Direct) si celui-ci est placé <strong>avant</strong> le verbe.</p>
+    
+    <div class="retenir">
+      <h3>💡 La méthode infaillible :</h3>
+      <ol>
+        <li>Cherche le COD (Sujet + Verbe + QUI / QUOI ?).</li>
+        <li>S'il est après ou s'il n'y en a pas : pas d'accord (é).</li>
+        <li>S'il est avant : accord avec le COD.</li>
+      </ol>
     </div>
 
-    <h2>3. Vérifie tes acquis (Quiz Express) ⚡</h2>
-    <div class="card" style="background: var(--deep); color: white;">
-      <p style="margin-bottom: 1rem;"><strong>Question :</strong> Accordez : 'Les fleurs que j'ai (cueillir)...'</p>
-      <button class="btn-primary" onclick="alert('Réponse : cueillies')">Voir la réponse</button>
+    <div class="exemple">
+      <strong>Exemples :</strong><br/>
+      - J'ai <strong>mangé</strong> des pommes. (COD "des pommes" est après → pas d'accord).<br/>
+      - Les pommes que j'ai <strong>mangées</strong>. (COD "que" mis pour "les pommes" est avant → accord).
     </div>
+
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Accordez : "La lettre que j'ai (écrire)..."</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('écrite', this)">écrite</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('écrit', this)">écrit</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('écrites', this)">écrites</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
+    </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'écrite') {
+          feedback.innerHTML = "✅ Parfait ! Le COD 'que' (la lettre) est placé avant le verbe. On accorde au féminin singulier.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Attention ! Le COD est placé avant le verbe 'avoir'.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
 
     <div style="margin-top: 3rem; text-align: center;">
       <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>

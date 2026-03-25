@@ -28,23 +28,58 @@
   </section>
 
   <main class="fiche-section">
-    <h2>1. Définition et Contexte</h2>
-    <p>L'ADN est le support de l'information génétique, composé de gènes situés sur les chromosomes.</p>
+    <h2>1. Où se trouve l'information génétique ?</h2>
+    <p>Chaque cellule de notre corps (sauf les globules rouges) contient un noyau. Dans ce noyau, on trouve des <strong>chromosomes</strong> (46 chez l'humain). Ces chromosomes sont constitués d'une très longue molécule enroulée : l'<strong>ADN</strong> (Acide Désoxyribonucléique).</p>
 
-    <div class="formule">
-      Double hélice
+    <div class="vis">
+      <svg width="240" height="120" viewBox="0 0 240 120">
+        <!-- Chromosome shape -->
+        <path d="M100 20 Q120 60 100 100 M140 20 Q120 60 140 100" stroke="var(--accent-svt)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <circle cx="120" cy="60" r="10" fill="var(--accent-svt)"/>
+        <!-- Labels -->
+        <text x="50" y="65" font-size="12" font-weight="bold">Chromosome</text>
+        <path d="M150 60 L180 60" stroke="#ccc" stroke-dasharray="2"/>
+        <text x="185" y="65" font-size="12">Contient l'ADN</text>
+      </svg>
     </div>
 
-    <h2>2. L'erreur à ne plus faire ❌</h2>
-    <div class="retenir" style="border-color: var(--pink); background: var(--pink-light);">
-      <p><strong>Attention :</strong> Penser qu'un gène et un allèle sont exactement la même chose (l'allèle est une version du gène).</p>
+    <h2>2. Gènes et Allèles : ne les confonds pas !</h2>
+    <ul>
+      <li><strong>Le Gène :</strong> C'est une portion d'ADN qui contient une instruction (ex: la couleur des yeux). Chaque gène occupe une place précise sur un chromosome.</li>
+      <li><strong>L'Allèle :</strong> C'est une <strong>version</strong> d'un gène. Un même gène peut avoir plusieurs allèles (ex: allèle "yeux bleus" ou allèle "yeux marrons").</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>🧬 Le génotype :</h3>
+      <p>Pour chaque gène, nous possédons deux allèles (un venant du père, un de la mère). Si les deux allèles sont différents, celui qui s'exprime est l'allèle <strong>dominant</strong>, l'autre est <strong>récessif</strong>.</p>
     </div>
 
-    <h2>3. Vérifie tes acquis (Quiz Express) ⚡</h2>
-    <div class="card" style="background: var(--deep); color: white;">
-      <p style="margin-bottom: 1rem;"><strong>Question :</strong> Où se situent les gènes ?</p>
-      <button class="btn-primary" onclick="alert('Réponse : Sur les chromosomes')">Voir la réponse</button>
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Comment appelle-t-on une version différente d'un même gène ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('allèle', this)">Un allèle</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('chromosome', this)">Un chromosome</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer('adn', this)">Une molécule d'ADN</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
     </div>
+
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 'allèle') {
+          feedback.innerHTML = "✅ Exact ! L'allèle est une version possible d'un gène. Par exemple, le gène 'groupe sanguin' possède les allèles A, B et O.";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Faux ! Relis bien la définition de l'allèle.";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
 
     <div style="margin-top: 3rem; text-align: center;">
       <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>

@@ -28,23 +28,56 @@
   </section>
 
   <main class="fiche-section">
-    <h2>1. Définition et Contexte</h2>
-    <p>Un atome est composé d'un noyau (protons et neutrons) et d'électrons qui gravitent autour.</p>
+    <h2>1. La composition de l'atome</h2>
+    <p>Un atome est constitué d'un <strong>noyau central</strong> et d'un nuage d'<strong>électrons</strong> qui gravitent autour. L'atome est environ 100 000 fois plus grand que son noyau : il est essentiellement constitué de <strong>vide</strong>.</p>
 
+    <ul>
+      <li><strong>Le Noyau :</strong> Il contient des <strong>protons</strong> (chargés positivement) et des <strong>neutrons</strong> (neutres). On les appelle les nucléons.</li>
+      <li><strong>Les Électrons :</strong> Ils sont chargés <strong>négativement</strong>.</li>
+    </ul>
+
+    <h2>2. La notation symbolique</h2>
+    <p>On représente souvent un noyau d'atome par le symbole :</p>
     <div class="formule">
-      Électriquement neutre
+      <sup>A</sup><sub>Z</sub>X
+    </div>
+    <ul>
+      <li><strong>X :</strong> Le symbole de l'élément (ex: C pour Carbone).</li>
+      <li><strong>Z :</strong> Le numéro atomique (nombre de <strong>protons</strong>).</li>
+      <li><strong>A :</strong> Le nombre de masse (nombre de <strong>nucléons</strong> : protons + neutrons).</li>
+    </ul>
+
+    <div class="retenir">
+      <h3>⚡ Neutralité électrique :</h3>
+      <p>Un atome est toujours <strong>électriquement neutre</strong>. Cela signifie qu'il possède exactement autant de protons (+) que d'électrons (-).</p>
     </div>
 
-    <h2>2. L'erreur à ne plus faire ❌</h2>
-    <div class="retenir" style="border-color: var(--pink); background: var(--pink-light);">
-      <p><strong>Attention :</strong> Confondre le numéro atomique (Z) avec le nombre de masse (A).</p>
+    <h2 style="margin-top: 3rem;">3. Mini-Quiz Express ⚡</h2>
+    <div class="qcm-launch-card" style="margin-top: 1rem;">
+      <div id="quiz-container">
+        <p id="question" style="color: white; font-weight: 700; margin-bottom: 1rem;">Un atome possède 6 protons. Combien possède-t-il d'électrons ?</p>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(6, this)">6</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(12, this)">12</button>
+          <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="checkAnswer(0, this)">0</button>
+        </div>
+        <p id="feedback" style="margin-top: 1rem; font-weight: 600; font-size: 0.9rem; display: none;"></p>
+      </div>
     </div>
 
-    <h2>3. Vérifie tes acquis (Quiz Express) ⚡</h2>
-    <div class="card" style="background: var(--deep); color: white;">
-      <p style="margin-bottom: 1rem;"><strong>Question :</strong> Quelle est la charge globale d'un atome ?</p>
-      <button class="btn-primary" onclick="alert('Réponse : Neutre')">Voir la réponse</button>
-    </div>
+    <script>
+      function checkAnswer(val, btn) {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        if(val === 6) {
+          feedback.innerHTML = "✅ Bien vu ! Pour être neutre, l'atome doit avoir autant de charges négatives (électrons) que de positives (protons).";
+          feedback.style.color = "#34d399";
+        } else {
+          feedback.innerHTML = "❌ Erreur ! Rappelle-toi : l'atome est neutre !";
+          feedback.style.color = "#f472b6";
+        }
+      }
+    </script>
 
     <div style="margin-top: 3rem; text-align: center;">
       <a href="../pages/fiches.html" class="btn-ghost">← Toutes les fiches de révision</a>
