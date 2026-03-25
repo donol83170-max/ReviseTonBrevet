@@ -316,7 +316,7 @@
       <li><a href="histoire-geo.html">Histoire-Géo</a></li>
       <li><a href="svt.html">SVT</a></li>
       <li><a href="physique-chimie.html">Physique-Chimie</a></li>
-      <li><a href="../conseils.html">Conseils</a></li>
+      <li><a href="conseils.html">Conseils</a></li>
     </ul>
   </nav>
 
@@ -660,7 +660,7 @@
       <div class="tp-actions">
         <button class="tp-btn-start" onclick="recommencer()">🔄 Recommencer le test</button>
         ${weakMeta
-          ? `<a href="${weakMeta.lien}" class="tp-btn-ghost">Réviser ${weakMeta.label} ${weakMeta.icon}</a>`
+          ? `<a onclick="window.location.href='${weakMeta.lien}'" style="cursor:pointer" class="tp-btn-ghost">Réviser ${weakMeta.label} ${weakMeta.icon}</a>`
           : `<a href="../index.html" class="tp-btn-ghost">← Retour à l'accueil</a>`
         }
       </div>
