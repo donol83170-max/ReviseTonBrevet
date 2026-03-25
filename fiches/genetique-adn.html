@@ -31,15 +31,22 @@
     <h2>1. Où se trouve l'information génétique ?</h2>
     <p>Chaque cellule de notre corps (sauf les globules rouges) contient un noyau. Dans ce noyau, on trouve des <strong>chromosomes</strong> (46 chez l'humain). Ces chromosomes sont constitués d'une très longue molécule enroulée : l'<strong>ADN</strong> (Acide Désoxyribonucléique).</p>
 
-    <div class="vis">
-      <svg width="240" height="120" viewBox="0 0 240 120">
-        <!-- Chromosome shape -->
-        <path d="M100 20 Q120 60 100 100 M140 20 Q120 60 140 100" stroke="var(--accent-svt)" stroke-width="8" fill="none" stroke-linecap="round"/>
-        <circle cx="120" cy="60" r="10" fill="var(--accent-svt)"/>
-        <!-- Labels -->
-        <text x="50" y="65" font-size="12" font-weight="bold">Chromosome</text>
-        <path d="M150 60 L180 60" stroke="#ccc" stroke-dasharray="2"/>
-        <text x="185" y="65" font-size="12">Contient l'ADN</text>
+    <div class="vis" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <!-- Chromosome -->
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <path d="M40 20 Q60 60 40 100 M80 20 Q60 60 80 100" stroke="var(--accent-svt)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <circle cx="60" cy="60" r="8" fill="var(--accent-svt)"/>
+        <text x="60" y="115" font-size="10" text-anchor="middle" font-weight="bold" fill="var(--ink)">Chromosome</text>
+      </svg>
+      <!-- DNA Helix -->
+      <svg width="100" height="120" viewBox="0 0 100 120">
+        <path d="M30 10 Q70 30 30 50 Q70 70 30 90 Q70 110 30 130" stroke="var(--pink)" stroke-width="3" fill="none" opacity="0.6"/>
+        <path d="M70 10 Q30 30 70 50 Q30 70 70 90 Q30 110 70 130" stroke="var(--indigo)" stroke-width="3" fill="none" opacity="0.6"/>
+        <!-- Base pairs -->
+        <line x1="38" y1="28" x2="62" y2="28" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+        <line x1="38" y1="68" x2="62" y2="68" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+        <line x1="38" y1="108" x2="62" y2="108" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+        <text x="50" y="115" font-size="10" text-anchor="middle" font-weight="bold" fill="var(--ink)">Molécule d'ADN</text>
       </svg>
     </div>
 

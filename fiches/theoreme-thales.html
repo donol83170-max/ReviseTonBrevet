@@ -32,16 +32,19 @@
     <p>Le théorème de Thalès s'applique dans une configuration de deux triangles "emboîtés" ou "en papillon", à condition que deux droites soient <strong>parallèles</strong>.</p>
 
     <div class="vis">
-      <svg width="200" height="150" viewBox="0 0 200 150">
-        <path d="M20 130 L100 20 L180 130 Z" fill="none" stroke="var(--indigo)" stroke-width="2"/>
-        <line x1="50" y1="90" x2="150" y2="90" stroke="var(--pink)" stroke-width="2" stroke-dasharray="4"/>
-        <text x="95" y="15" font-size="12" font-weight="bold">A</text>
-        <text x="40" y="95" font-size="12">M</text>
-        <text x="155" y="95" font-size="12">N</text>
-        <text x="10" y="140" font-size="12">B</text>
-        <text x="185" y="140" font-size="12">C</text>
+      <svg width="220" height="150" viewBox="0 0 220 150">
+        <!-- Big triangle ABC -->
+        <path d="M30 130 L110 20 L190 130 Z" fill="none" stroke="var(--accent-maths)" stroke-width="3"/>
+        <!-- Parallel line MN -->
+        <line x1="62" y1="86" x2="158" y2="86" stroke="var(--accent-maths)" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Labels -->
+        <text x="105" y="15" font-size="12" font-weight="bold" fill="var(--ink)">A</text>
+        <text x="50" y="90" font-size="12" font-weight="bold" fill="var(--ink)">M</text>
+        <text x="165" y="90" font-size="12" font-weight="bold" fill="var(--ink)">N</text>
+        <text x="15" y="140" font-size="12" font-weight="bold" fill="var(--ink)">B</text>
+        <text x="195" y="140" font-size="12" font-weight="bold" fill="var(--ink)">C</text>
       </svg>
-      <div class="vis-caption">Configuration classique (M appartient à [AB], N à [AC])</div>
+      <div class="vis-caption">Configuration classique : (MN) // (BC)</div>
     </div>
 
     <p>Si les droites (MN) et (BC) sont parallèles, alors les longueurs des côtés des deux triangles (AMN et ABC) sont proportionnelles :</p>
