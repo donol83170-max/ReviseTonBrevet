@@ -4,8 +4,9 @@ $outputDir = "c:\Users\DL\ReviseTonBrevet\annales"
 
 if (!(Test-Path $outputDir)) { New-Item -ItemType Directory -Path $outputDir }
 
-$annales = Get-Content $dataPath | ConvertFrom-Json
-$template = Get-Content $templatePath -Raw
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$annales = [System.IO.File]::ReadAllText($dataPath, $utf8NoBom) | ConvertFrom-Json
+$template = [System.IO.File]::ReadAllText($templatePath, $utf8NoBom)
 
 foreach ($a in $annales) {
     $content = $template
@@ -22,6 +23,6 @@ foreach ($a in $annales) {
     $content = $content.Replace("{{NOTIONS_LIST}}", $notionsHtml)
     
     $outputPath = Join-Path $outputDir "$($a.id).html"
-    [System.IO.File]::WriteAllText($outputPath, $content, (New-Object System.Text.UTF8Encoding($false)))
+    [System.IO.File]::WriteAllText($outputPath, $content, $utf8NoBom)
     Write-Host "Généré : $($a.id).html"
 }
