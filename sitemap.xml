@@ -222,4 +222,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://revise-ton-brevet.fr/themes/conseils/gerer-temps-epreuves-brevet.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://revise-ton-brevet.fr/themes/conseils/reviser-brevet-1-mois.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://revise-ton-brevet.fr/themes/conseils/comment-avoir-mention-tres-bien.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://revise-ton-brevet.fr/themes/conseils/sujets-probables-histoire-geo-2026.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://revise-ton-brevet.fr/themes/conseils/calculatrice-mode-examen-brevet.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
